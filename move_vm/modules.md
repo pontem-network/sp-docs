@@ -1,0 +1,98 @@
+# Modules
+
+There are two types of smart contracts in Pontem: module and script.
+
+Difference between them is that a module is published into blockchain storage and is stored under the publisher account, while script is simply a transaction-as-script and can only operate with existing modules. Means, your and other developers can use your modules into their scripts or modules.
+
+Modules store resources, structures, functions, constants. Typically, module names start with an uppercase letter. A module named MyModule should be stored in a source file named `MyModule.move`.
+
+Each module is stored under the user address and it's own name, e.g. 'ss58_address/Math'. Address of deployer required during compilation, as during deploy Move VM verifies if module compiled indeed using deployer address.
+
+To include module into your script/module use next construction:
+
+```text
+use <address>::<module name>;
+```
+
+You can read more about modules in the [Diem Move](https://developers.diem.com/docs/move/move-modules-and-scripts/) documentation.
+
+## Write a module
+
+Let's see an example of a small module that will just add two numbers \(a and b\).
+
+Create a new project using **dove**:
+
+```text
+dove new my_modules --dialect polkadot --address <address>
+cd my_modules
+```
+
+{% hint style="info" %}
+Don't forget to replace `<address>` with your ss58 Polkadot address!
+{% endhint %}
+
+In modules folder create `Math.move` file and put next code inside:
+
+```rust
+module Math {
+    // Sum two numbers and return result.
+    public fun add(a: u64, b: u64): u64 {
+        a + b
+    }
+}
+```
+
+As you see the function `add` accepts two `u64` numbers and returns a sum of provided numbers.
+
+Let's compile this module using **dove**. Compiler requires the sender's address as it's included into the bytecode. This address will then be verified on module publish.
+
+```text
+dove build
+```
+
+And see compiled module ready for deploy:
+
+```text
+-la ./target/modules
+```
+
+You will see `0_Math.mv`, use this file to deploy your new module.
+
+TODO: link to how to publish module or execute script using polkadotjs or UI.
+
+## Module with resource 
+
+Resource is the main feature of **Move VM**. Resource is a special type in Move VM, which has strict rules of usage - therefore more safety, and is created to work with digital assets.
+
+Resource type can only be defined and managed in a single module. This module sets rules for accessing, destroying, transferring and checking existence of resources defined in it.
+
+This documentation is not going deep into resources, but still let's make a module containing resources for demo proposes. Read more about resources in Move language [documentation](../lang/resources.md) and in Diem Move [documentation](https://developers.diem.com/docs/move/move-structs-and-resources).
+ 
+Module stores the sum of two numbers into a resource. Create new module calling `Storage.move` and put next code inside it: 
+
+```rust
+module Storage {
+    // Include Math module.
+    use 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty::Math;
+
+    // Store U65 number into resource.
+    resource struct Sum {
+        val: u64
+    }
+
+    // The function 'store_sum' to store the sum of a + b into a resource.
+    public fun store_sum(account: &signer, a: u64, b: u64) {
+        let sum = Sum {val: Math::add(a, b)};
+        move_to<Sum>(account, sum);
+    }
+}
+```
+
+{% hint style="info" %}
+Don't forget to replace `<address>` with your ss58 Polkadot address!
+{% endhint %}
+
+Compile it and deploy, same like with previous module.
+
+Congrats! You just published your first modules, in the next part of this documentation we will write scripts and use our modules.
+If you want more advanced examples of modules, like new tokens, see our [tutorials](/tutorials/README.md).
