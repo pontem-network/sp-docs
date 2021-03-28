@@ -28,7 +28,7 @@ cd my_modules
 ```
 
 {% hint style="info" %}
-Don't forget to replace `<address>` with your ss58 Polkadot address!
+🧙‍♂️ Don't forget to replace `<address>` with your ss58 Polkadot address!
 {% endhint %}
 
 In modules folder create `Math.move` file and put next code inside:
@@ -89,7 +89,7 @@ module Storage {
 ```
 
 {% hint style="info" %}
-Don't forget to replace `<address>` with your ss58 Polkadot address!
+🧙‍♂️ Don't forget to replace `<address>` with your ss58 Polkadot address!
 {% endhint %}
 
 Compile it and deploy, same like with previous module.
