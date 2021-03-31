@@ -17,7 +17,7 @@
 * [Move VM](./move_vm/README.md)
   * [Pallet](./move_vm/pallet.md)
   * [Modules](./move_vm/modules.md)
-  * [Scripts]()
+  * [Scripts](./move_vm/scripts.md)
   * [Types & Arguments]()
   * [Gas]()
   * [Native Balances]()

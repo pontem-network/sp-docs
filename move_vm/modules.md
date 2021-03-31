@@ -14,7 +14,7 @@ To include module into your script/module use next construction:
 use <address>::<module name>;
 ```
 
-You can read more about modules in the [Diem Move](https://developers.diem.com/docs/move/move-modules-and-scripts/) documentation.
+You can read more about modules in the [Diem Modules](https://developers.diem.com/docs/move/move-modules-and-scripts/) documentation.
 
 ## Write a module
 
@@ -84,6 +84,11 @@ module Storage {
     public fun store_sum(account: &signer, a: u64, b: u64) {
         let sum = Sum {val: Math::add(a, b)};
         move_to<Sum>(account, sum);
+    }
+
+    // Get the sum stored under address resource.
+    public fun get_sum(addr: address): u64 acquires Sum {
+        borrow_global<Sum>(addr).val
     }
 }
 ```
