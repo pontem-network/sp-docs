@@ -7,5 +7,3 @@ Technology-wise Pontem aims to bring the Move VM and Move language to Polkadot a
 ![W3F Grant](/assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
 
 Pontem received a Web3 Foundation grant for the development of the pallet by [submitting proposal](https://github.com/w3f/Open-Grants-Program/blob/master/applications/pontem.md) to the Web3 Foundation [Open Grant Proposal](https://github.com/w3f/Open-Grants-Program#open-grants-program-) program.
-
-

@@ -2,7 +2,7 @@
 
 ## 01. WHAT'S PONTEM
 * [What's Pontem?](./pontem/README.md)
-* [What's problem is Pontem trying to solve?]()
+* [How is Pontem different to other blockchains?](./pontem/how_pontem_different.md)
 * [PONT Coin and Tokenomics]()
 * [What is the Coin Utility?]()
 * [Polkadot and Tech Details]()
