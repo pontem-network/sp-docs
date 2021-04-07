@@ -1,39 +1,46 @@
 # Table of contents
 
-* [Home](README.md)
+## 01. WHAT'S PONTEM
 * [What's Pontem?]()
-  * [What's problem is Pontem trying to solve?]()
-  * [PONT Coin and Tokenomics]()
-  * [What is the Coin Utility?]()
-  * [Polkadot and Tech Details]()
-  * [Roadmap]()
+* [What's problem is Pontem trying to solve?]()
+* [PONT Coin and Tokenomics]()
+* [What is the Coin Utility?]()
+* [Polkadot and Tech Details]()
+* [Roadmap]()
+
+## 02. GETTING STARTED
 * [Getting started]()
-  * [Meet Network]()
-  * [First Transaction]()
-  * [Addresses]()
-  * [Run Local Node]()
-  * [Configuring UI]()
-  * [Polkadot JS CLI]()
+* [Meet Network]()
+* [First Transaction]()
+* [Addresses]()
+* [Run Local Node]()
+* [Configuring UI]()
+* [Polkadot JS CLI]()
+
+## 03. MOVE VM
 * [Move VM](./move_vm/README.md)
-  * [Pallet](./move_vm/pallet.md)
-  * [Modules](./move_vm/modules.md)
-  * [Scripts](./move_vm/scripts.md)
-  * [Arguments](./move_vm/arguments.md)
-  * [Gas](./move_vm/gas.md)
-  * [Standard Library]()
-  * [Native Balances]()
-  * [Events]()
+* [Pallet](./move_vm/pallet.md)
+* [Modules](./move_vm/modules.md)
+* [Scripts](./move_vm/scripts.md)
+* [Arguments](./move_vm/arguments.md)
+* [Gas](./move_vm/gas.md)
+* [Standard Library](./move_vm/stdlib.md)
+* [Native Balances]()
+* [Events]()
+
+## 04. MOVE LANGUAGE
 * [Move Language](./lang/README.md)
-  * [Introduction to Diem's Move language]()
-  * [Resources](./lang/resources.md)
-  * [Useful docs]()
+* [Introduction to Diem's Move language]()
+* [Resources](./lang/resources.md)
+* [Useful docs]()
+
+## 05. TUTORIALS
 * [Tutorials]()
-  * [Transfer PONT via script]()
-  * [Launch the new token]()
-  * [Basic P2P DEX]()
+* [Transfer PONT via script]()
+* [Launch the new token]()
+* [Basic P2P DEX]()
 
-## Resources
-
+## 06. Resources
 * [API]()
 * [Wallet]()
 * [Site](https://pontem.network)
