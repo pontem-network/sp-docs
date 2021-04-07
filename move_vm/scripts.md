@@ -100,4 +100,4 @@ script {
 }
 ```
 
-Read more about resources in Move language [documentation](../lang/resources.md) and in Diem Move [documentation](https://developers.diem.com/docs/move/move-structs-and-resources).
+Read more about resources in our [Move]((../lang/resources.md)) and in [Diem Move]((https://developers.diem.com/docs/move/move-structs-and-resources)) documentation.
