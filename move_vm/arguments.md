@@ -11,7 +11,7 @@ dove ct --help
 Calling the main function, developers can pass arguments, example: 
 
 ```text
-dove ct my_script(1, [1, 2, 3], 1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, false)
+dove ct 'my_script(1, [1, 2, 3], 1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, false)'
 ```
 
 The command compiles both script file and adds arguments into one file with `*.mvt` extension. The file could be used to send `execute` (script one) transaction to the network.
