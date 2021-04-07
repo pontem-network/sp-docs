@@ -4,9 +4,9 @@ Every transaction in the Pontem network requires sender to pay fee, as well as i
 
 ## Weight
 
-Each transaction in the Pontem network has such parameter as weight. Weight is a cost of operation in the blockchain. When transaction executing it uses resources of validators, like: CPU, memory, storage write/read operations. Each described operation has a cost in weight. 
+**Each transaction in the Pontem network has such parameter as weight**. Weight is a cost of operation in the blockchain. When transaction executing it uses resources of validators, like: CPU, memory, storage write/read operations. Each described operation has a cost in weight. 
 
-Each block in Pontem network should be executed in time, usually it's 6 seconds, protocol converts these 6 seconds into weight using following logic ()From official Substrate documentation):
+Each block in Pontem network should be executed in time, usually it's 6 seconds, protocol converts these 6 seconds into weight using following logic (From official Substrate documentation):
 
 > The amount of weight a block may contain is limited, and optional weight consumption (i.e. weight that is not required to be deployed as part of the block's initialization or finalization phases nor used in mandatory inherent extrinsics) will generally be limited through economic measures --- or in simple terms, through transaction fees. The fee implications of the weight system are covered in the Transaction Fees document.
 
@@ -21,7 +21,7 @@ Read more about [weight](https://substrate.dev/docs/en/knowledgebase/learn-subst
 ## Gas
 
 {% hint style="info" %}
-When you don't use smart contracts transactions in the Pontem network you don't need to care about gas. Gas is used only in Move VM pallets and required by Move VM, this why we implemented compatibility gas <-> weight.
+🧙‍♂️ When you don't use smart contracts transactions in the Pontem network you don't need to care about gas. Gas is used only in Move VM pallets and required by Move VM, this why we implemented compatibility gas <-> weight.
 {% endhint %}
 
 Due to compatibility with Move VM Pontem network also supports gas parameters by converting the amount of gas provided by the user into weight. Gas is a cost of operation in a Move Virtual Machine using only during execution of VM related transaction (scripts and modules execution/publishing).
@@ -34,10 +34,12 @@ Gas converting to weight using next formula:
 
 // TODO: update values.
 
-1. Estimate how much gas VM spends during 1 second._
-2. Estimate how much weight spends for 1 second._
-3. WEIGHT_PER_SECOND / GAS_PER_SECOND and get the amount WEIGHT_PER_GAS._
+```text
+1. Estimate how much gas VM spends during 1 second.
+2. Estimate how much weight spends for 1 second.
+3. WEIGHT_PER_SECOND / GAS_PER_SECOND and get the amount WEIGHT_PER_GAS.
 4. Safe mul provided gas on WEIGHT_PER_GAS.
+```
 
 You can see it our Move VM pallet code:
 
@@ -71,7 +73,7 @@ Read [how to set]() Gas amount during sending transaction.
 
 You can estimate Gas before sending transaction using [RPC calls]().
 
-### Maximum block weight
+## Maximum block weight
 
 Average block time in Pontem network is 6 seconds. We reserve half of second for transaction processing, so maximum block weight is:
 
