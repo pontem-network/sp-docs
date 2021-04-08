@@ -39,7 +39,7 @@
 * [Launch the new token]()
 * [Basic P2P DEX]()
 
-## 📜 06. Resources
+## 🔗 06. Resources
 * [API]()
 * [Wallet]()
 * [Site](https://pontem.network)
