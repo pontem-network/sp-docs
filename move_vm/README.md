@@ -4,6 +4,9 @@
 
 
 Pontem uses Move VM to implement smart contracts functional: allow users to develop, publish and execute their smart contracts in Move language. 
+Pontem keeps full compatibility with Diem, so developers can use tools and their smart contracts on both networks.
+
+ ![Move <-> Diem compatibility](/assets/move_compatibility.png "Move <-> Diem compatibility")
 
 The [Move language](./../lang/README.md) and the Move Virtual Machine, both developed by [Facebook Diem](https://diem.com/), are among the safest technologies out there that enable the creation of smart contracts. While having built-in security by design such as resource-oriented architecture and formal verification.
 
