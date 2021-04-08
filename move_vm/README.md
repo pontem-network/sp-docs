@@ -1,9 +1,8 @@
 # Move VM
 
-![Move VM Introduction](/assets/move_vm.png "Move VM Introduction")
-
-
 Pontem uses Move VM to implement smart contracts functional: allow users to develop, publish and execute their smart contracts in Move language. 
+
+![Move VM Introduction](/assets/move_vm.png "Move VM Introduction")
 
 **Pontem keeps full compatibility with Diem, so developers can use tools and their smart contracts on both networks.**
 
