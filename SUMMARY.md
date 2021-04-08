@@ -4,8 +4,7 @@
 * [What's Pontem?](./pontem/README.md)
 * [How is Pontem different to other blockchains?](./pontem/how_pontem_different.md)
 * [PONT Coin and Tokenomics](./pontem/pont_coin_tokenomics.md)
-* [What is the Coin Utility?]()
-* [Polkadot and Tech Details]()
+* [Tooling & Functionality](./pontem/tooling.md)
 * [Roadmap]()
 
 ## 02. GETTING STARTED
@@ -20,6 +19,7 @@
 ## 03. MOVE VM
 * [Move VM](./move_vm/README.md)
 * [Pallet](./move_vm/pallet.md)
+* [Compiler & Toolset](./move_vm/compiler_&_toolset.md)
 * [Modules](./move_vm/modules.md)
 * [Scripts](./move_vm/scripts.md)
 * [Arguments](./move_vm/arguments.md)
