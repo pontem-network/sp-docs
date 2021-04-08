@@ -1,3 +1,3 @@
-# Pontem documentation
+# Pontem Documentation
 
-Official Pontem network documentation
+Visit [Gitbook](https://docs.pontem.network) to read.

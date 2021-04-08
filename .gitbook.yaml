@@ -1,4 +1,4 @@
 root: ./
 
 structure:
-    readme: README.md
+    readme: ./pontem/README.md
