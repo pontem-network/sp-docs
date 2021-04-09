@@ -20,7 +20,7 @@ module PONT {
 Developers use `PONT::T` to interact with native PONT coin, but first developer need to deposit PONT coins into Virtual Machine visibility space.
 
 {% hint style="info" %}
-🧙‍♂️ During deposit VM will create new resource with provided amount of PONT coins, in the same time native balance will be reduced on the same amount. Same happens when a developer withdraws his PONT balance using native functions, his PONT balance inside VM space will be reduced, and increased as native balance.
+🧙‍♂️ During deposit POINT coins to VM space, the VM will create new resource with provided amount of PONT coins, in the same time native balance will be reduced on the same amount. Same happens when a developer withdraws his PONT balance using native functions, his PONT balance inside VM space will be reduced, and increased as native balance.
 {% endhint %}
 
 ### Deposit.
