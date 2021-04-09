@@ -4,12 +4,14 @@
 * [How is Pontem different to other blockchains?](./pontem/how_pontem_different.md)
 * [PONT Coin and Tokenomics](./pontem/pont_coin_tokenomics.md)
 * [Tooling & Functionality](./pontem/tooling.md)
-* [Roadmap]()
+* [Use Cases](./pontem/use_cases.md)
+* [Team](./pontem/team.md)
 
 ## 🎓02. GETTING STARTED
 * [Getting started]()
 * [Meet Network]()
 * [First Transaction]()
+* [Substrate](./getting_started/substrate.md)
 * [Addresses]()
 * [Run Local Node]()
 * [Configuring UI]()
