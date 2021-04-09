@@ -24,7 +24,7 @@
 * [Arguments](./move_vm/arguments.md)
 * [Gas](./move_vm/gas.md)
 * [Standard Library](./move_vm/stdlib.md)
-* [Native Balances]()
+* [Native Balances](./move_vm/native_balances.md)
 * [Events]()
 
 ## 📘 04. MOVE LANGUAGE

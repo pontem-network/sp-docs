@@ -74,6 +74,10 @@ script {
 
 [PONT](https://github.com/pontem-network/move-stdlib/blob/master/modules/pont.move) module allow to get a PONT type of currency that you going to use in your code.
 
+{% hint style="warning" %}
+🧙‍♂️ PONT coin is a native coin, means it required to be deposited in VM space first, so before run this example read more about [native balances](./native_balances.md). 
+{% endhint %}
+
 ```rust
 script {
     use 0x1::Account;
