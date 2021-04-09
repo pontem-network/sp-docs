@@ -6,6 +6,7 @@
 * [Tooling & Functionality](./pontem/tooling.md)
 * [Use Cases](./pontem/use_cases.md)
 * [Team](./pontem/team.md)
+* [Technology Roadmap](./pontem/roadmap.md)
 
 ## 🎓02. GETTING STARTED
 * [Getting started]()
@@ -36,14 +37,13 @@
 * [Useful docs]()
 
 ## 🔧 05. TUTORIALS
-* [Tutorials]()
 * [Transfer PONT via script]()
 * [Launch the new token]()
 * [Basic P2P DEX]()
 
 ## 🔗 06. Resources
-* [API]()
-* [Wallet]()
+* [API](https://pontem.network)
+* [Wallet](https://pontem.network)
 * [Site](https://pontem.network)
 * [Github](https://github.com/pontem-network)
 * [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=PontemNetwork.move-language)
