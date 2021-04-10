@@ -32,14 +32,16 @@
 
 ## 📘 04. MOVE LANGUAGE
 * [Move Language](./lang/README.md)
-* [Introduction to Diem's Move language]()
-* [Resources](./lang/resources.md)
-* [Useful docs]()
+* [Introduction to Diem's Move language](./lang/introduction.md)
+* [Learn Resources](./lang/resources.md)
 
 ## 🔧 05. TUTORIALS
-* [Transfer PONT via script]()
-* [Launch the new token]()
-* [Basic P2P DEX]()
+* [Introduction](./tutorials/README.md)
+* [Transfer PONT via Script](./tutorials/transfer.md)
+* [Access Control](./tutorials/access_control.md)
+* [Errors Catching](./tutorials/errors.md)
+* [Own Token](./tutorials/token.md)
+* [NFT Marketplace](./tutorials/dex.md)
 
 ## 🔗 06. Resources
 * [API](https://pontem.network)

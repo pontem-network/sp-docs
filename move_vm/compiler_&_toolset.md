@@ -7,3 +7,5 @@ We've developed a toolset for the Move VM and language which allows for:
 * **Viewing** Move resources (stored data) from remote blockchain nodes.
 * **Disassembling** Move binary and even read human readable result.
 
+// TODO: describe each tools installations and examples.
+
