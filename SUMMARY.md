@@ -32,7 +32,7 @@
 
 ## 📘 04. MOVE LANGUAGE
 * [Introduction](./lang/README.md)
-* [Learn Resources](./lang/resources.md)
+* [Learn Resources](./lang/learn_resources.md)
 
 ## 🔧 05. TUTORIALS
 * [Introduction](./tutorials/README.md)
