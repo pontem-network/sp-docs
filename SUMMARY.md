@@ -31,8 +31,7 @@
 * [Events]()
 
 ## 📘 04. MOVE LANGUAGE
-* [Move Language](./lang/README.md)
-* [Introduction to Diem's Move language](./lang/introduction.md)
+* [Introduction](./lang/README.md)
 * [Learn Resources](./lang/resources.md)
 
 ## 🔧 05. TUTORIALS
