@@ -1,5 +1,7 @@
 # Introduction
 
+![Move Langugage](/assets/move_lang.png "Move Language")
+
 Many crypto-developers are also interested in using the Move language. The reasons for this are its high security and the emerging markets that will grow as soon as cryptographic and non-cryptographic users are united.
 
 We will lean on the prior developments and expertise of the Dfinance team, who were the first to integrate the Move VM into existing blockchains when working on the [Dfinance](https://dfinance.co) platform and now to Pontem.
