@@ -13,7 +13,7 @@
 * [Meet Network]()
 * [First Transaction]()
 * [Substrate](./getting_started/substrate.md)
-* [Addresses]()
+* [Addresses](./getting_started/addresses.md)
 * [Run Local Node](./getting_started/local_node.md)
 * [Configuring UI]()
 * [Polkadot JS CLI]()
@@ -29,6 +29,7 @@
 * [Standard Library](./move_vm/stdlib.md)
 * [Native Balances](./move_vm/native_balances.md)
 * [Events]()
+* [RPC](./move_vm/rpc.md)
 
 ## 📘 04. MOVE LANGUAGE
 * [Introduction](./lang/README.md)
