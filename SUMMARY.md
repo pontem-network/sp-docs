@@ -14,7 +14,7 @@
 * [First Transaction]()
 * [Substrate](./getting_started/substrate.md)
 * [Addresses]()
-* [Run Local Node](./local_node.md)
+* [Run Local Node](./getting_started/local_node.md)
 * [Configuring UI]()
 * [Polkadot JS CLI]()
 
