@@ -14,7 +14,7 @@
 * [First Transaction]()
 * [Substrate](./getting_started/substrate.md)
 * [Addresses]()
-* [Run Local Node]()
+* [Run Local Node](./local_node.md)
 * [Configuring UI]()
 * [Polkadot JS CLI]()
 
@@ -36,15 +36,13 @@
 
 ## 🔧 05. TUTORIALS
 * [Introduction](./tutorials/README.md)
-* [Transfer PONT via Script](./tutorials/transfer.md)
+* [Transfer PONT coins](./tutorials/transfer.md)
 * [Access Control](./tutorials/access_control.md)
 * [Errors Catching](./tutorials/errors.md)
 * [Own Token](./tutorials/token.md)
 * [NFT Marketplace](./tutorials/dex.md)
 
 ## 🔗 06. Resources
-* [API](https://pontem.network)
-* [Wallet](https://pontem.network)
 * [Site](https://pontem.network)
 * [Github](https://github.com/pontem-network)
 * [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=PontemNetwork.move-language)
