@@ -127,7 +127,7 @@ To deploy standard module:
 
 To speed up transaction you can provide additional tips to the transaction, when you click on **Submit Transaction** button it show modal where you can configure tip:
 
-![Tips](/assets/w3f_grant.png "Tips")
+![Tips](/assets/tips.png "Tips")
 
 See [gas, weight and tips](../move_vm/gas.md) documentation to learn more.
 
