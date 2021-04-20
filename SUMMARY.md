@@ -15,7 +15,7 @@
 * [Substrate](./getting_started/substrate.md)
 * [Addresses](./getting_started/addresses.md)
 * [Run Local Node](./getting_started/local_node.md)
-* [Configuring UI]()
+* [Polkadot JS UI](./getting_started/ui.md)
 * [Polkadot JS CLI]()
 
 ## ⚙️ 03. MOVE VM
