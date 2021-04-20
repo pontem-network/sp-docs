@@ -40,8 +40,8 @@
 * [Transfer PONT coins](./tutorials/transfer.md)
 * [Access Control](./tutorials/access_control.md)
 * [Errors Catching](./tutorials/errors.md)
+* [Watch Resources](./tutorials/watch_resources.md)
 * [Own Token](./tutorials/token.md)
-* [NFT Marketplace](./tutorials/dex.md)
 
 ## 🔗 06. Resources
 * [Site](https://pontem.network)

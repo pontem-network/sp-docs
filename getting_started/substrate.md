@@ -40,13 +40,3 @@ Validators will be rewarded in tokens for running and securing the Pontem networ
 ## Governance
 
 We implements official [gov pallet](https://wiki.polkadot.network/docs/en/learn-governance).
-
-## Financial Framework
-
-Our financial framework is in the pre-alpha stage and includes the following smart contracts:
-
-* Token contract
-* Auction contract
-* CDP contract
-
-Source code is available in our [FF](https://github.com/pontem-network/contracts) smart contracts repo.
