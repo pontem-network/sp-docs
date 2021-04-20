@@ -73,7 +73,7 @@ Module stores the sum of two numbers into a resource. Create new module calling 
 ```rust
 module Storage {
     // Include Math module.
-    use 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty::Math;
+    use {{sender}}::Math;
 
     // Store U65 number into resource.
     resource struct Sum {
@@ -92,10 +92,6 @@ module Storage {
     }
 }
 ```
-
-{% hint style="info" %}
-🧙‍♂️ Don't forget to replace `<address>` with your ss58 Polkadot address!
-{% endhint %}
 
 Compile it and deploy, same like with previous module.
 

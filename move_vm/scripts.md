@@ -18,7 +18,7 @@ Let's create new script calling `sum.move` in `./scripts/` folder and put next c
 ```rust
 script {
    use 0x1::Event;
-   use <address>::Math;
+   use {{sender}}::Math;
 
    fun sum(account: &signer, a: u64, b: u64) {
       let sum = Math::add(a, b);
@@ -26,10 +26,6 @@ script {
    }
 }
 ```
-
-{% hint style="info" %}
-🧙‍♂️ Don't forget to replace `<address>` with your ss58 Polkadot address!
-{% endhint %}
 
 The script accepts two arguments in function **"sum"**, then calculate the sum with provided arguments, and fire the event with this sum. Both arguments are **u64** integers.
 
@@ -57,7 +53,7 @@ Create a new script `store_sum.move` in `./scripts/` folder and put next code in
 ```rust
 script {
     use 0x01::Signer;
-    use <address>::Storage;
+    use {{sender}}::Storage;
 
     fun store_sum(account: &signer, a: u64, b: u64) {
         // Store sum.
@@ -72,10 +68,6 @@ script {
     }
 }
 ```
-
-{% hint style="info" %}
-🧙‍♂️ Don't forget to replace `<address>` with your ss58 Polkadot address!
-{% endhint %}
 
 Compile new script like previous example:
 
