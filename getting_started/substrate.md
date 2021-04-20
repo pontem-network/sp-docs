@@ -37,10 +37,6 @@ To fully implement the Pontem network we need to launch our own [Parathread](htt
 
 Validators will be rewarded in tokens for running and securing the Pontem network. 
 
-## Economic Model
-
-// TODO: describe.
-
 ## Governance
 
 We implements official [gov pallet](https://wiki.polkadot.network/docs/en/learn-governance).
