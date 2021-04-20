@@ -1,6 +1,7 @@
 # Access Control
 
 When you develop smart contracts there could be situations when you want to develop a module containing functions only your account can call.
+
 For example, in Solidity it's [Ownable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) Smart Contract, that brings modifier `onlyOwner`, that deny everyone to call specific functions, but allows to call it only by owner.
 
 Let's create a new module with the same logic, we will store. We will use the Signer module to extract the transaction sender address and compare it with the defined module owner.
