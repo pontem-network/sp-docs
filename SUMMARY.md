@@ -37,8 +37,8 @@
 ## 🔧 05. TUTORIALS
 * [Watch Resources](./tutorials/watch_resources.md)
 * [Access Control](./tutorials/access_control.md)
-* [Errors Catching](./tutorials/errors.md)
 * [Emit Events](./tutorials/events.md)
+* [Errors Catching](./tutorials/errors.md)
 * [Own Token](./tutorials/token.md)
 
 ## 🔗 06. Resources
