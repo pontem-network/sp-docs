@@ -95,7 +95,7 @@ To deploy compiled script transaction do following steps:
 1. Navigate to **Developer -> Extrinsics**.
 2. Choose **mvm** module.
 3. Choose the correct account.
-4. Choose execute transaction.
+4. Choose **execute** transaction.
 5. Choose **script_bc** field and enable file upload.
 6. Upload complied transaction file (with `.mvt` extension). 
 7. Configure the gas limit parameter (usually 100000 will be enough).
