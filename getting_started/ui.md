@@ -109,7 +109,7 @@ To deploy a standard library using `sudo` you need access to `sudo` account, in 
 
 Current Move VM pallet already contains the Standard Library by default, but if you want to deploy some additional library use next instruction.
 
-To deploy standard module:
+To deploy standard module do following steps:
 
 1. Navigate to **Developer -> Extrinsics**.
 2. Choose the origin account (usually it's Alice in case of local network).

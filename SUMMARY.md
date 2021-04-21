@@ -16,7 +16,7 @@
 * [Addresses](./getting_started/addresses.md)
 * [Run Local Node](./getting_started/local_node.md)
 * [Polkadot JS UI](./getting_started/ui.md)
-* [Polkadot JS CLI]()
+* [Polkadot JS CLI](./getting_started/cli.md)
 
 ## ⚙️ 03. MOVE VM
 * [Move VM](./move_vm/README.md)
@@ -28,7 +28,6 @@
 * [Gas](./move_vm/gas.md)
 * [Standard Library](./move_vm/stdlib.md)
 * [Native Balances](./move_vm/native_balances.md)
-* [Events]()
 * [RPC](./move_vm/rpc.md)
 
 ## 📘 04. MOVE LANGUAGE
@@ -40,6 +39,7 @@
 * [Transfer PONT coins](./tutorials/transfer.md)
 * [Access Control](./tutorials/access_control.md)
 * [Errors Catching](./tutorials/errors.md)
+* [Emit Events](./tutorials/events.md)
 * [Watch Resources](./tutorials/watch_resources.md)
 * [Own Token](./tutorials/token.md)
 
