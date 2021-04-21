@@ -43,7 +43,9 @@ ls -la ./target/transactions
 
 There must be a `sum.mvt` script transaction file you can use to send a new `execute` transaction to the network.
 
-TODO: link to how to send execute script using polkadotjs or UI.
+{% hint style="info" %}
+✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+{% endhint %}
 
 ## Store resource
 
@@ -75,7 +77,9 @@ Compile new script like previous example:
 dove ct 'store_sum(10, 20)'
 ```
 
-TODO: link to how to send execute script using polkadotjs or UI.
+{% hint style="info" %}
+✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+{% endhint %}
 
 After transaction executing, your sum resource will be stored in the Substrate storage, and you can query it any time using script:
 

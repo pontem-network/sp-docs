@@ -67,11 +67,11 @@ impl gas::GasWeightMapping for MoveVMGasWeightMapping {
 }
 ```
 
-// TODO: link to send transaction tutorial.
+{% hint style="info" %}
+✈️ See our instruction how to send transaction and configure gas using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+{% endhint %}
 
-Read [how to set]() Gas amount during sending transaction.
-
-You can estimate Gas before sending transaction using [RPC calls]().
+You can estimate Gas before sending transaction using [RPC calls](./rpc.md).
 
 ## Maximum block weight
 
@@ -95,8 +95,6 @@ fee =
   WeightToFee(weight)
 ```
 
-Additional fee to speed up transactions is a tip, which a user sets up when sending a transaction.
-
-// TODO: show how to choose fees and tips in UI/polka cli.
+Additional fee to speed up transactions is a tip, which a user sets up when sending a transaction. See how to configure tips in [Polkadot UI](../getting_started/ui.md).
 
 Read more about [fees](https://substrate.dev/docs/en/knowledgebase/runtime/fees) in Substrate documentation.

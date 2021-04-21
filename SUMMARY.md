@@ -35,12 +35,10 @@
 * [Learn Resources](./lang/learn_resources.md)
 
 ## 🔧 05. TUTORIALS
-* [Introduction](./tutorials/README.md)
-* [Transfer PONT coins](./tutorials/transfer.md)
+* [Watch Resources](./tutorials/watch_resources.md)
 * [Access Control](./tutorials/access_control.md)
 * [Errors Catching](./tutorials/errors.md)
 * [Emit Events](./tutorials/events.md)
-* [Watch Resources](./tutorials/watch_resources.md)
 * [Own Token](./tutorials/token.md)
 
 ## 🔗 06. Resources

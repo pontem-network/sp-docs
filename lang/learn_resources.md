@@ -6,7 +6,9 @@ Resource type can only be defined and managed in a single module. This module se
 
 ## Develop a resource
 
-// TODO: verify source code.
+{% hint style="info" %}
+✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+{% endhint %}
 
 Let's create a swap module, that will allow us to swap coins between users.
 

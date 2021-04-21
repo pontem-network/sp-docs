@@ -58,7 +58,9 @@ And see compiled module ready for deploy:
 
 You will see `0_Math.mv`, use this file to deploy your new module.
 
-TODO: link to how to publish module or execute script using polkadotjs or UI.
+{% hint style="info" %}
+✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+{% endhint %}
 
 ## Module with resource 
 
