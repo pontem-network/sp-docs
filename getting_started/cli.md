@@ -28,6 +28,8 @@ After installation you can use API CLI inside directory `pontem-tools`, e.g.:
 yarn run:api --help
 ```
 
+To configurate endpoint use parameter `--ws`, e.g.: `--ws ws://127.0.0.1:9944`.
+
 ### Transactions
  
 You can use the CLI to create new accounts, send transactions, and do RPC calls etc. In the current documentation we describe how to send `execute` script and `publish` module transactions.
