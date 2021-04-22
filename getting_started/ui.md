@@ -7,11 +7,11 @@ Easiest way to iterate with Polkadot based blockchain to use Polkadot JS App UI.
 Before start you need to configure UI. 
 
 {% hint style="info" %}
-🧙‍♂️ If you want to use remote node by Pontem team use ip address: ``, if you built node locally use local address `ws://127.0.0.1:9944`.
+🧙‍♂️ If you want to use remote node by Pontem team use ip address: `testnet.pontem.network`, if you built node locally use local address `ws://127.0.0.1:9944`.
 {% endhint %}
 
 1. Navigate to [Polkadot JS App UI](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/settings/developer).
-2. Setup UI to use an ip address if needed (to see network settings click on the orange circle in the top right corner and change custom endpoint).
+2. Setup UI to use an **IP address** if needed (to see network settings click on the orange circle in the top right corner and change custom endpoint).
 
 Go to `Settings -> Developer` and put there next JSON:
 
@@ -72,6 +72,8 @@ Next steps required to have  [dove](../move_vm/compiler_&_toolset.md) compiler i
 
 ### Module
 
+![Deploy Module](/assets/module.png "Deploy Module")
+
 To deploy compiled module do following steps:
 
 1. Navigate to **Developer -> Extrinsics**.
@@ -85,6 +87,8 @@ To deploy compiled module do following steps:
 9. Wait until the transaction is confirmed.
 
 ### Script
+
+![Execute script](/assets/script.png "Execute script")
 
 {% hint style="info" %}
 🧙‍♂️ Compile a script using dove with arguments using `ct` command, use file with `.mvt` extension.
