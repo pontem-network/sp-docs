@@ -30,6 +30,9 @@ yarn run:api --help
 
 To configurate endpoint use parameter `--ws`, e.g.: `--ws ws://127.0.0.1:9944`.
 
+Let's create account.
+
+
 Let's try to query account:
 
 ```text
