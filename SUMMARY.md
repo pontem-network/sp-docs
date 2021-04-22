@@ -9,7 +9,7 @@
 * [Technology Roadmap](./pontem/roadmap.md)
 
 ## 🎓02. GETTING STARTED
-* [Getting started]()
+* [Getting started](./getting_started/README.md)
 * [Meet Network]()
 * [First Transaction]()
 * [Substrate](./getting_started/substrate.md)
