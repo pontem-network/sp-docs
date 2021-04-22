@@ -58,6 +58,17 @@ Go to `Settings -> Developer` and put there next JSON:
 
 Save configuration.
 
+## Account creation
+
+![Account](/assets/module.png "Account")
+
+* Navigate to **"Accounts"** in the header menu.
+* Click on **"Add account"**.
+* **Write down your seed and store it safely!**
+* Put name and password.
+
+Otherwise you can use [Polkadot JS Extension](https://polkadot.js.org/extension/), just follow instructions.
+
 ## Transactions
 
 // TODO: link to dove and build.
