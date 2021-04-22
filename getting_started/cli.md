@@ -30,6 +30,14 @@ yarn run:api --help
 
 To configurate endpoint use parameter `--ws`, e.g.: `--ws ws://127.0.0.1:9944`.
 
+Let's try to query account:
+
+```text
+yarn run:api query.system.account <address>
+```
+
+Replace `<address>` with your account address, e.g. `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`.
+
 ### Transactions
  
 You can use the CLI to create new accounts, send transactions, and do RPC calls etc. In the current documentation we describe how to send `execute` script and `publish` module transactions.
