@@ -10,7 +10,7 @@ For example:
 
 {% hint style="info" %}
 🧙‍♂️ Learn more about [SS58 addresses](https://wiki.polkadot.network/docs/en/learn-accounts) in Polkadot documentation.
-{% endhint %
+{% endhint %}
 
 The Pontem network uses the `5` prefix now. To be in compatibility with Diem we also support the [Diem address format](https://developers.diem.com/main/docs/move-primitives-address), it's 16-byte hex. For example, the [Standard Library](../move_vm/stdlib.md) deployed using address `0x01`. Pontem network reaches compatibility by converting SS58 addresses to Diem ones in background, by adding empty bytes to the address if necessary.
 
