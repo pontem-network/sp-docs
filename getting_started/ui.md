@@ -108,6 +108,8 @@ To deploy compiled script transaction do following steps:
 
 ### Sudo
 
+![Sudo](/assets/sudo.png "Sudo")
+
 You can use `sudo` in Substrate to deploy [Standard Library](../move_vm/stdlib.md) to Move VM pallet. Standard library will be stored under the `0x01` address.
 To deploy a standard library using `sudo` you need access to `sudo` account, in case of local network it's usually `Alice` account.
 
