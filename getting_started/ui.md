@@ -71,7 +71,9 @@ Otherwise you can use [Polkadot JS Extension](https://polkadot.js.org/extension/
 
 ## Transactions
 
-// TODO: link to dove and build.
+{% hint style="info" %}
+🧙‍♂️ Read [Move VM](../move_vm/README.md) pallet documentation to build first modules and scripts.
+{% endhint %}
 
 You can use the UI to create new accounts, send transactions, and do RPC calls etc. In the current documentation we describe how to send execute script and publish module transactions, also how to deploy Standard Library using a sudo account.
 
