@@ -1,10 +1,10 @@
 # What is Pontem?
 
-![Pontem Network](/assets/whats_pontem.png "Pontem Network")
+![Pontem Network](/assets/illustrations/whats_pontem.png "Pontem Network")
 
-## Introduction
+## Features
 
-![Introducing Pontem](/assets/introduction.png "Introducing Pontem")
+![Features](/assets/illustrations/introduction.png "Features")
 
 {% hint style="info" %}
 🚀 Pontem is a bridge between the regulated and unregulated worlds that will allow exchanging value between the two. It is backed by Wings Foundation, a Swiss-based non-profit foundation established in 2016.
