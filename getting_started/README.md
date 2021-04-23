@@ -6,9 +6,7 @@ Here is a guide on how to connect to the Pontem network and execute your first t
 
 To connect to the network you can use UI or CLI.
 
-// TODO: testnet IP address.
-
-Our testnet node deployed at the following IP address: ``. 
+Our testnet node deployed at the following IP address: `wss://testnet.pontem.network`. 
 Use provided address to configure UI and CLI:
 
 * [How to configure UI](./ui.md)
