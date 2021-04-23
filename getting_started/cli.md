@@ -44,6 +44,10 @@ Replace `<address>` with your account address, e.g. `5GrwvaEF5zXb26Fz9rcQpDWS57C
 
 ### Transactions
  
+{% hint style="info" %}
+🧙‍♂️ Read [Move VM](../move_vm/README.md) pallet documentation to build first modules and scripts.
+{% endhint %}
+
 You can use the CLI to create new accounts, send transactions, and do RPC calls etc. In the current documentation we describe how to send `execute` script and `publish` module transactions.
  
 You need an account with balance, in case of local network use default accounts, in case of Pontem demo network, use faucet.
