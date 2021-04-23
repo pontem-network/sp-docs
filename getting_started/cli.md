@@ -64,9 +64,9 @@ yarn run:api tx.mvm.publishModule @<module.mv> <gas> --seed <seed>
  
 Replace parameters:
  
-* <module.mv> - compiled module file (`.mv` extension).
-* <gas> - amount of gas.
-* <seed> - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local nodes. 
+* `<module.mv>` - compiled module file (`.mv` extension).
+* `<gas>` - amount of gas.
+* `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local nodes. 
  
 You will see result of the transaction execution:
 
@@ -133,9 +133,9 @@ yarn run:api tx.mvm.execute @<script.mvt> <gas> --seed <seed>
 
 Replace parameters:
 
-* <script.mvt> - compiled script transaction file (`.mvt` extension).
-* <gas> - amount of gas.
-* <seed> - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local node.  
+* `<script.mvt>` - compiled script transaction file (`.mvt` extension).
+* `<gas>` - amount of gas.
+* `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local node.  
 
 ## RPC
 
