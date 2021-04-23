@@ -12,8 +12,6 @@ Check out the **[LIVE DEMO](https://www.figma.com/proto/Kx0rTu2qMYJVkWiGK9b5iK/P
 
 With the advent of user-friendly decentralized exchanges and DeFi Dapps such as [1inch Exchange](https://1inch.exchange/) and [Furucombo](https://furucombo.app/) which take complex multi-hop transactions and combine them into one transaction, users have become increasingly accustomed to simple interfaces for executing complex trades.
 
-
-
 {% hint style="success" %}
 🧙‍♂️ This is the concept that the No-Code tools on Pontem builds on in order to allow people without coding skills to:
 
