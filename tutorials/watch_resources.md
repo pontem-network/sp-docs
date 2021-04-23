@@ -2,7 +2,7 @@
 
 `move-resource-viewer` allows you to watch resources stored inside a blockchain node. First of all, install [move-resource-viewer](../move_vm/compiler_&_toolset.md) using our documentation.
 
-Compile using [dove](../move_vm/compiler_&_toolset.md) and deploy `Storage` module:
+Compile using [dove](../move_vm/compiler_&_toolset.md#resource-viewer) and deploy `Storage` module:
 
 // TODO: check code.
 
@@ -50,7 +50,9 @@ cat ./output.json
 
 **Important: replace <address> with your address.**
 
-You will see something like (if store value is `10`):
+To see resource we need to provide address stored resource and path of resources. In our case path is `<address>::Store::U64`, because we deployed `Store` using our address, there is `U64` resource inside the module.
+
+You will see something like (if stored value is `10`):
 
 ```json
 {
