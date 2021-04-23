@@ -16,4 +16,4 @@ So far the tools we have developed using Move include but are not limited to:
 * [Move Book](https://move.pontem.network) - the first book about Move.
 * [DeFi contracts](https://github.com/pontem-network/contracts) framework on Move language.
 
-![Pontem Team](/assets/team.png "Pontem Team")
+![Pontem Team](/assets/illustrations/team.png "Pontem Team")

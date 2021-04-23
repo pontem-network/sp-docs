@@ -35,7 +35,7 @@ This technology is believed to be the **future of development** since it helps u
 
 We believe that DeFi is an excellent field to implement no-code development ideas because they will allow people to use the necessary tools in the blink of an eye and **save a lot of resources**. Moreover, external developers will be able to build their own Defi instruments and then share them as well.
 
-![Pontem Blocks](/assets/pontem_blocks.png "Pontem Blocks")
+![Pontem Blocks](/assets/illustrations/pontem_blocks.png "Pontem Blocks")
 
 Pontem Blocks is a tool that will enable creating smart contracts for different DeFi instruments with no coding skills required.
 
