@@ -40,12 +40,10 @@
 * [Errors Catching](./tutorials/errors.md)
 * [Own Token](./tutorials/token.md)
 
-// TODO: link to faucet.
-
 ## 🔗 06. Resources
 * [Site](https://pontem.network)
 * [Github](https://github.com/pontem-network)
-* [Faucet]()
+* [Faucet](https://t.me/pontem_faucet_bot)
 * [Substrate Documentation](https://substrate.dev/)
 * [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=PontemNetwork.move-language)
 * [IntelliJ IDEA Extension](https://plugins.jetbrains.com/plugin/14721-move-language)

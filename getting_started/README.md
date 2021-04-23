@@ -16,12 +16,10 @@ If you want to test Pontem network locally, see our [local node](./local_node.md
 
 Create new account if needed in UI or CLI:
 
-* [How to create account in UI](./ui.md#Account-creation)
-* [How to create account in CLI](./cli.md#Account-creation)
+* [How to create account in UI](./ui.md#account-creation)
+* [How to create account in CLI](./cli.md#account-creation)
 
-// TODO: link to faucet.
-
-Fund your account using [FAUCET]() if needed.
+Fund your account using [FAUCET](https://t.me/pontem_faucet_bot) if needed.
 
 ## Tools
 

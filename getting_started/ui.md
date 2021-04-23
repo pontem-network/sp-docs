@@ -2,12 +2,11 @@
 
 Easiest way to iterate with Polkadot based blockchain to use Polkadot JS App UI. 
 
-// TODO: remote node address and in the link.
 
 Before start you need to configure UI. 
 
 {% hint style="info" %}
-🧙‍♂️ If you want to use remote node by Pontem team use ip address: `testnet.pontem.network`, if you built node locally use local address `ws://127.0.0.1:9944`.
+🧙‍♂️ If you want to use remote node by Pontem team use next address: `wss://testnet.pontem.network`, if you built node locally use local address `ws://127.0.0.1:9944`.
 {% endhint %}
 
 1. Navigate to [Polkadot JS App UI](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/settings/developer).
@@ -77,9 +76,7 @@ Otherwise you can use [Polkadot JS Extension](https://polkadot.js.org/extension/
 
 You can use the UI to create new accounts, send transactions, and do RPC calls etc. In the current documentation we describe how to send execute script and publish module transactions, also how to deploy Standard Library using a sudo account.
 
-// TODO: link to faucet.
-
-You need an account with balance, in case of local network use default accounts, in case of Pontem demo network, use faucet.
+You need an account with balance, in case of local network use default accounts, in case of Pontem demo network, use [FAUCET](https://t.me/pontem_faucet_bot).
 
 Next steps required to have  [dove](../move_vm/compiler_&_toolset.md) compiler installed, means you already compiled your modules/scripts.
 
