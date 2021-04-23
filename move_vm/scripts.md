@@ -6,6 +6,10 @@ You can read more about scripts in [Diem Scripts](https://developers.diem.com/do
 
 ## Write a script
 
+{% hint style="info" %}
+🧙‍♂️ Install [Dove](./compiler_&_toolset.md) before continue with this tutorial.
+{% endhint %}
+
 Let's write a basic script, accept two arguments, a and b values, and then using module math make a sum from these two numbers and then fire events.
 We are going to use the module we deployed in previous part (`Math.move` and `Storage.move`).
 
