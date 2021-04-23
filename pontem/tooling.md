@@ -31,4 +31,3 @@ Any developer can publish their own Move module and create a No-Code block to be
 Pontem is **one-stop marketplace** for executing No-Code transactions across a number of different use cases. The added benefit is that developers **can choose to charge** for their No-Code blocks per execution.
 
 ![Pontem Blocks](/assets/illustrations/add_block.png "Pontem Blocks")
-
