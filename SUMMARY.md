@@ -10,8 +10,7 @@
 
 ## 🎓02. GETTING STARTED
 * [Getting started](./getting_started/README.md)
-* [Meet Network]()
-* [First Transaction]()
+* [First Transaction](./getting_started/first_transaction.md)
 * [Substrate](./getting_started/substrate.md)
 * [Addresses](./getting_started/addresses.md)
 * [Run Local Node](./getting_started/local_node.md)
@@ -41,9 +40,12 @@
 * [Errors Catching](./tutorials/errors.md)
 * [Own Token](./tutorials/token.md)
 
+// TODO: link to faucet.
+
 ## 🔗 06. Resources
 * [Site](https://pontem.network)
 * [Github](https://github.com/pontem-network)
+* [Faucet]()
 * [Substrate Documentation](https://substrate.dev/)
 * [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=PontemNetwork.move-language)
 * [IntelliJ IDEA Extension](https://plugins.jetbrains.com/plugin/14721-move-language)

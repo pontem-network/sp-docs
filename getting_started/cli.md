@@ -30,10 +30,11 @@ yarn run:api --help
 
 To configurate endpoint use parameter `--ws`, e.g.: `--ws ws://127.0.0.1:9944`.
 
-Let's create account.
+## Account creation
 
+You can create new account using [The Subkey Tool](https://substrate.dev/docs/en/knowledgebase/integrate/subkey).
 
-Let's try to query account:
+Let's try to query account after creation:
 
 ```text
 yarn run:api query.system.account <address>
