@@ -18,6 +18,10 @@ You can read more about modules in the [Diem Modules](https://developers.diem.co
 
 ## Write a module
 
+{% hint style="info" %}
+🧙‍♂️ Install [Dove](./compiler_&_toolset.md) before continue with this tutorial.
+{% endhint %}
+
 Let's see an example of a small module that will just add two numbers \(a and b\).
 
 Create a new project using **dove**:
