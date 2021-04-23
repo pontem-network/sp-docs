@@ -26,6 +26,8 @@ It will also speed up their go-to-market strategy if they are chosen to be onboa
 
 ## Why Pontem?
 
+![Diem Experimental Network](/assets/illustrations/diem_exp.png "Diem Experimental Network")
+
 Today, more than ever, we are standing at a divide between two crypto worlds — the regulated and the unregulated. 
 
 While the unregulated world grew rapidly, often chaotically, the regulated one has always been a kind of a closed garden, available only to the chosen ones. _This has led to segregation in the society that hasn’t yet been addressed, with those who are able to enjoy the benefits of the blockchain world being able to utilize it to the fullest, and those who do not have the means to are locked in the closed garden._
