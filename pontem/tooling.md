@@ -1,6 +1,6 @@
 # Tooling & Functionality
 
-![Toolset](/assets/illustrations/tooling.png.png "Toolset")
+![Toolset](/assets/illustrations/tooling.png "Toolset")
 
 As with any blockchain Pontem will come with standard tooling and functionality that end users are familiar with, _however we aim to augment these tools to better suit the needs of the Pontem blockchain._
 
