@@ -26,7 +26,7 @@ To send coins between accounts just do following steps:
 * Click on **"Make Transfer"** button.
 * Click on **"Sign and Submit"** button on new modal.
 
-![Send Form](/assets/send_form.png "Send Form").
+![Send Form](/assets/send_form_1.png "Send Form").
 
 Done! Once your transaction is confirmed, balances will be updated.
 
