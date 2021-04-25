@@ -18,15 +18,11 @@ Go to `Settings -> Developer` and put there next JSON:
 
 ```json
 {
-  "Address": "AccountId",
-  "LookupSource": "AccountId",
-  "RawAccountAddress": "[u8;32]",
-  "AccountAddress": "[u8;32]",
-  "ModuleId": {
-    "address": "AccountAddress",
+  "MoveModuleId": {
+    "address": "AccountId",
     "name": "Text"
   },
-  "TypeTag": {
+  "MoveTypeTag": {
     "_enum": [
       "Bool",
       "U8",
@@ -43,14 +39,13 @@ Go to `Settings -> Developer` and put there next JSON:
     "U128": null,
     "Address": null,
     "Signer": null,
-    "Vector": "Vec<TypeTag>",
-    "Struct": "StructTag"
+    "Vector": "MoveTypeTag",
+    "Struct": "MoveStructTag"
   },
-  "StructTag": {
-    "address": "AccountAddress",
+  "MoveStructTag": {
+    "address": "AccountId",
     "module": "Text",
-    "name": "Text",
-    "type_params": "Vec<TypeTag>"
+    "name": "Text"
   }
 }
 ```
