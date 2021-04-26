@@ -9,6 +9,7 @@ Let's create a new module with the same logic, we will store. We will use the Si
 // TODO: check code works.
 
 ```rustc
+address {{sender}} {
 module OnlyOwnerStore {
     use 0x01::Signer;
 
@@ -31,6 +32,7 @@ module OnlyOwnerStore {
         OWNER
     }
 }
+}
 ```
 
 As you, only owner address can call `store_u64` method of module, otherwise it sends error:
@@ -46,8 +48,8 @@ script {
     use {{sender}}::OnlyOwnerStore;
     use 0x01::Event;
 
-    fun main(account: &signer, n: u64) {
-        Event::emit(OnlyOwnerStore::owner()); // emit owner address.
+    fun store_owner(account: &signer, n: u64) {
+        Event::emit(account, OnlyOwnerStore::owner()); // emit owner address.
 
         OnlyOwnerStore::store_u64(account, n);
     }
