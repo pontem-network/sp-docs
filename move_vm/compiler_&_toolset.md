@@ -177,7 +177,7 @@ See more in [Dove documentation](https://github.com/pontem-network/move-tools#ar
 
 To learn more commands see help:
 
-```
+```sh
 dove --help
 ```
 
@@ -200,6 +200,10 @@ Resource viewer allows developers to read resources from blockchain storage. In 
 * [Instruction](https://github.com/pontem-network/move-tools/blob/master/resource-viewer/README.md) to install resource viewer.
 * [Tutorial](../tutorials/watch_resources.md) how to use Move resource viewer.
 
-## Dissasembler
+## Disassembler
 
-// TODO: complete dissasembler.
+Allows to dissable compiled `.mv` (modules/scripts) files:
+
+```sh
+disassembler --input <path to compiled module or script>
+```
