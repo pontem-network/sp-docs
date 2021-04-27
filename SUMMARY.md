@@ -4,7 +4,6 @@
 * [How is Pontem different to other blockchains?](./pontem/how_pontem_different.md)
 * [PONT Coin and Tokenomics](./pontem/pont_coin_tokenomics.md)
 * [Tooling & Functionality](./pontem/tooling.md)
-* [Use Cases](./pontem/use_cases.md)
 * [Team](./pontem/team.md)
 * [Technology Roadmap](./pontem/roadmap.md)
 
