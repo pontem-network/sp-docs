@@ -32,8 +32,6 @@ During execution of transaction Move VM estimate gas spends using provided [Gas 
 
 Gas converting to weight using next formula:
 
-// TODO: update values.
-
 ```text
 1. Estimate how much gas VM spends during 1 second.
 2. Estimate how much weight spends for 1 second.
