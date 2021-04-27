@@ -2,7 +2,6 @@
 
 Easiest way to iterate with Polkadot based blockchain to use Polkadot JS App UI. 
 
-
 Before start you need to configure UI. 
 
 {% hint style="info" %}
