@@ -137,6 +137,27 @@ Replace parameters:
 * `<gas>` - amount of gas.
 * `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local node.  
 
+
+### Sudo
+
+You can use `sudo` in Substrate to deploy [Standard Library](../move_vm/stdlib.md) to Move VM pallet. Standard library will be stored under the `0x01` address.
+To deploy a standard library using `sudo` you need access to `sudo` account, in case of local network it's usually `Alice` account.
+
+See how to [build](./local_node.md#standard-library) Standard Library.
+
+Use following command to deploy package:
+
+```text
+yarn run:api tx.mvm.publishPackage @<package.mv> <gas> --seed <seed> --sudo
+```
+
+Replace parameters:
+
+* `<script.mvt>` - compiled package file (`.pac` extension).
+* `<gas>` - amount of gas.
+* `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local node.  
+
+
 ## RPC
 
 So see [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC using CLI.
