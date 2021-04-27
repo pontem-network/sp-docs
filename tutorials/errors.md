@@ -34,6 +34,22 @@ Let's compile one of examples using [dove](../move_vm/compiler_&_toolset.md#dove
 yarn run:api tx.mvm.execute <script> <file> --seed <seed>
 ```
 
-Replace values with your own, run execute transaction and see output.
+Replace values with your own, run execute transaction and see output, generated event:
 
-// TODO: there is no error in assert now :(.
+```json
+"event": {
+    "method": "Event",
+    "section": "mvm",
+    "index": "0x0800",
+    "data": [
+    "5C4hrfjw9DjXZTzV3MwzrrAr9P1MJhSrvWGWqi1eSuyUpnhM",
+    "0x07000000000000000000000000000000000000000000000000000000000000000120564d53746174757320564d53746174757300",
+    "0x02016500000000000000",
+    null
+    ]
+}
+```
+
+Where vakue `0x02016500000000000000` is indeed our error incoded in LCS, see [Events](./events.md) tutorial for details.
+
+**Important: The described way is not the best, but only way to get custom errors from Move VM in Move pallet right now, we are working hard to make it better and more useful.**
