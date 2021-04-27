@@ -26,3 +26,49 @@ make run
 ```
 
 You will see logs once Substrate node built. To iterate with local node using UI see the next page.
+
+## Standard Library
+
+You need to deploy [Standard Library](../move_vm/stdlib.md) after building a local node. Install [dove](../move_vm/compiler_&_toolset.md#dove) and build Standard Library:
+
+```sh
+git clone git@github.com:pontem-network/move-stdlib.git
+cd move-stdlib
+dove build --package
+```
+
+Dove build generates new package (means one binary contains all modules) and write in output where package placed, usually it's `./target/packages`:
+
+```sh
+ls -la ./target/packages
+```
+
+See instruction how to deploy compiled package using `sudo`:
+
+* [Using UI](./ui.md#sudo)
+* [Using CLI](./cli.md#sudo)
+
+## Register PONT coin
+
+We need to register PONT coin information, so create new project using dove and write new script:
+
+```rustc
+script {
+    use 0x1::PONT;
+    use 0x01::Pontem;
+
+    fun register_pont() {
+        // To make sure PONT coin registered and known.
+        Pontem::register_coin<PONT::T>(b"PONT", 2);
+    }
+}
+```
+
+Compile transaction script:
+
+```sh
+dove ct 'register_pont()'
+```
+
+Execute script using [UI](./ui.md) or [CLI](./cli.md).
+
