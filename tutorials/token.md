@@ -26,8 +26,6 @@ You can read more about `Pontem` and `Account` modules in our [Standard Library]
 
 Let's create a new module:
 
-// TODO: check code.
-
 ```rustc
 module MyToken {
     struct T {} // New token type.
