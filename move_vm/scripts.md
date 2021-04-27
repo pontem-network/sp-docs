@@ -58,7 +58,7 @@ Create a new script `store_sum.move` in `./scripts/` folder and put next code in
 
 ```rust
 script {
-    use 0x01::Signer;
+    use 0x1::Signer;
     use {{sender}}::Storage;
 
     fun store_sum(account: &signer, a: u64, b: u64) {
@@ -89,12 +89,14 @@ After transaction executing, your sum resource will be stored in the Substrate s
 
 ```rust
 script {
-    use 0x01::Signer;
-    use <address>::Storage;
+    use 0x1::Signer;
+    use {{sender}}::Storage;
 
     fun store_sum(account: &signer) {
         // Get sum from resource.
         let sum = Storage::get_sum(Signer::address_of(account));
+
+        // Do something with sum.
         ...
     }
 }
