@@ -46,6 +46,20 @@ script {
 }
 ```
 
+Build module and script:
+
+```sh
+dove build
+dove ct 'emit(1000, true)'
+```
+
+After deploy module and execute new script (replace `<seed>` with your seed):
+
+```sh
+yarn run:api tx.mvm.publishModule @./target/modules/0_MyEmitter.mv 100000 --seed <seed>
+yarn run:api tx.mvm.execute @./target/transactions/emit.mvt 1000000 --seed <seed>      
+```
+
 Example event output:
 
 ```json
