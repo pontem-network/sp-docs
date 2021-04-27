@@ -12,8 +12,6 @@ Before start you need to configure UI:
 
 Go to `Settings -> Developer` and put there next JSON:
 
-// TODO: fix json for new version.
-
 ```json
 {
   "MoveModuleId": {

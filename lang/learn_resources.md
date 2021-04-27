@@ -14,8 +14,6 @@ Let's create a swap module, that will allow us to swap coins between users.
 
 We will make it easy, it will support only one swap per coin pair, which means, you can't create multiple swaps using the same pair in the same account. Just two functions - to publish your offer and to allow other users to swap it for specified price.
 
-// TODO: Check code.
-
 ```rust
 module Swap {
     use 0x1::Pontem;
