@@ -6,10 +6,7 @@ For example, in Solidity it's [Ownable](https://github.com/OpenZeppelin/openzepp
 
 Let's create a new module with the same logic, we will store. We will use the Signer module to extract the transaction sender address and compare it with the defined module owner.
 
-// TODO: check code works.
-
 ```rustc
-address {{sender}} {
 module OnlyOwnerStore {
     use 0x01::Signer;
 
@@ -31,7 +28,6 @@ module OnlyOwnerStore {
     public fun owner() : address {
         OWNER
     }
-}
 }
 ```
 
