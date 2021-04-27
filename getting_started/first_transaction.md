@@ -83,7 +83,7 @@ script {
 
     fun transfer(account: &signer, payee: address, amount: u128) {
         // To make sure PONT coin registered and known.
-        Pontem::register_coin<PONT::T>(b"PONT", 2);
+        Pontem::register_coin<PONT::T>(b"PONT", 6);
 
         // Deposit a sender PONT coins from native balance.
         // The function returns PONT balance resource.

@@ -31,8 +31,12 @@ Let's see how to send PONT coin from one account to another:
 script {
     use 0x1::Account;
     use 0x1::PONT;
+    use 0x1::Pontem;
 
-    fun main(account: &signer, payee: address, amount: u128) {
+    fun transfer(account: &signer, payee: address, amount: u128) {
+        // To make sure PONT coin registered and known.
+        Pontem::register_coin<PONT::T>(b"PONT", 6);
+
         // Deposit a sender PONT coins from native balance.
         // The function returns PONT balance resource.
         let pont = Account::deposit_native<PONT::T>(account, amount);
@@ -51,8 +55,12 @@ Let's see how to deposit PONT coins without sending it:
 script {
     use 0x1::Account;
     use 0x1::PONT;
+    use 0x1::Pontem;
 
     fun main(account: &signer, amount: u128) {
+        // To make sure PONT coin registered and known.
+        Pontem::register_coin<PONT::T>(b"PONT", 6);
+
         // Deposit coins from native balance to VM resource.
         let pont = Account::deposit_native<PONT::T>(account, amount);
         Account::deposit_to_sender(account, pont);
@@ -70,8 +78,12 @@ To withdraw PONT coins from VM resource back to native balance use function `wit
 script {
     use 0x1::Account;
     use 0x1::PONT;
+    use 0x1::Pontem;
 
     fun main(account: &signer, amount: u128) {
+        // To make sure PONT coin registered and known.
+        Pontem::register_coin<PONT::T>(b"PONT", 6);
+
         // Acquire PONT coins from resource.
         let pont = Account::withdraw_from_sender<PONT::T>(account, amount);
 
@@ -90,8 +102,12 @@ script {
     use 0x1::Account;
     use 0x1::PONT;
     use 0x1::Event;
+    use 0x1::Pontem;
 
     fun main(account: &signer) {
+        // To make sure PONT coin registered and known.
+        Pontem::register_coin<PONT::T>(b"PONT", 6);
+
         // Get balance of native PONT coin.
         let pont_balance = Account::get_native_balance<PONT::T>(account);
 
