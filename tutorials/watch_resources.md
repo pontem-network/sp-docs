@@ -4,8 +4,6 @@
 
 Compile using [dove](../move_vm/compiler_&_toolset.md#resource-viewer) and deploy `Storage` module:
 
-// TODO: check code.
-
 ```rustc
 module Store {
     resource struct U64 {val: u64}
