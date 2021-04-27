@@ -2,11 +2,10 @@
 
 Easiest way to iterate with Polkadot based blockchain to use Polkadot JS App UI. 
 
-Before start you need to configure UI. 
+Before start you need to configure UI:
 
-{% hint style="info" %}
-🧙‍♂️ If you want to use remote node by Pontem team use next address: `wss://testnet.pontem.network/wss`, if you built node locally use local address `ws://127.0.0.1:9944`.
-{% endhint %}
+* To connect to testnet use next address: `wss://testnet.pontem.network/wss`.
+* To connect to local node use next address: `ws://127.0.0.1:9944`.
 
 1. Navigate to [Polkadot JS App UI](https://polkadot.js.org/apps).
 2. Setup UI to use an **IP address** if needed (to see network settings click on the orange circle in the top right corner and change custom endpoint).
