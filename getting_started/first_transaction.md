@@ -67,8 +67,6 @@ dove new transfer_tokens --dialect polkadot  --address <address>
 
 **Replace address with your sender address.**
 
-// TODO: check code.
-
 Create a new script:
 
 ```sh
@@ -81,8 +79,12 @@ And put next code inside:
 script {
     use 0x1::Account;
     use 0x1::PONT;
+    use 0x01::Pontem;
 
     fun transfer(account: &signer, payee: address, amount: u128) {
+        // To make sure PONT coin registered and known.
+        Pontem::register_coin<PONT::T>(b"PONT", 2);
+
         // Deposit a sender PONT coins from native balance.
         // The function returns PONT balance resource.
         let pont = Account::deposit_native<PONT::T>(account, amount);
