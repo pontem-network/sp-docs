@@ -173,8 +173,6 @@ So `create` function creates a new resource, `swap` function allows to swap \(de
 
 You can try to compile and publish module, and then via script call deposit with hash of your secret value, and then withdraw by passing your secret value.
 
-[Here is repository](https://github.com/pontem-network/examples) to help you. It already contains module and scripts examples.
-
 Before you go to next step - let's create your own token using following [tutorial](../tutorials/token.md).
 
 ## Scripts
@@ -189,11 +187,18 @@ script {
     use {{sender}}::MyToken;
     use 0x1::PONT;
     use 0x1::Account;
+    use 0x1::Pontem;
 
-    fun main(sender: &signer, amount: u128, price: u128) {
-        let pont = Account::withdraw_from_sender(sender, amount);
+    fun create_swap(sender: &signer, amount: u128, price: u128) {
+        // To make sure PONT coin registered and known.
+        Pontem::register_coin<PONT::T>(b"PONT", 6);
 
-        // Deposit PONT coins in exchange to UDST.
+        // Deposit a sender PONT coins from native balance.
+        // The function returns PONT balance resource.
+        let pont = Account::deposit_native<PONT::T>(sender, amount);
+
+        // Deposit PONT coins in exchange to your token.
+        // Price is total for whole PONT amount.
         Swap::create<PONT::T, MyToken::T>(sender, pont, price);
     }
 }
@@ -208,11 +213,11 @@ script {
     use 0x1::PONT;
     use 0x1::Account;
 
-    fun main(sender: &signer, seller: address, price: u128) {
-        let my_token = Account::withdraw_from_sender(sender, price);
+    fun make_swap(sender: &signer, seller: address, price: u128) {
+        let tokens = Account::withdraw_from_sender(sender, price);
 
-        // Deposit USDT to swap coins.
-        Swap::swap<PONT::T, MyToken::T>(sender, seller, usdt);
+        // Deposit PONT coins in exchange to your token.
+        Swap::swap<PONT::T, MyToken::T>(sender, seller, tokens);
     }
 }
 ```
