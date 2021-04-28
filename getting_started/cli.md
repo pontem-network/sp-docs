@@ -2,30 +2,21 @@
 
 If you don't want to use UI to operate with Pontem Network, we offer to use CLI.
  
-Polkadot JS provides tools for Substrate blockchains, including CLI. Pontem team forked [tools](https://github.com/pontem-network/tools) repository to implement custom RPC calls and types.
- 
-{% hint style="info" %}
-🧙‍♂️ Current fork can be installed only from repository and used via call `yarn run:command`. In the near time we are going to release `pontem-cli` that could be installed globally via NPM.
-{% endhint %}
-
+Polkadot JS provides tools for Substrate blockchains, including CLI. Pontem team forked [tools](https://github.com/pontem-network/tools/tree/master/packages/api-cli) repository to implement custom RPC calls and types.
 Required:
 
-* [NodeJS](https://nodejs.org/en/download/) (since v12.x.x)
-* [Yarn](https://yarnpkg.com/)
+* [NodeJS](https://nodejs.org/en/download/) (since v14.x.x)
 
 CLI installation:
 
 ```text
-git clone git@github.com:pontem-network/tools.git pontem-tools
-cd pontem-tools
-yarn install
-yarn build
+npm install -g pontem-cli
 ```
 
-After installation you can use API CLI inside directory `pontem-tools`, e.g.:
+Run help:
 
 ```text
-yarn run:api --help
+pontem-cli --help
 ```
 
 To configurate endpoint use parameter `--ws`, e.g.: `--ws ws://127.0.0.1:9944`.
@@ -37,7 +28,7 @@ You can create new account using [The Subkey Tool](https://substrate.dev/docs/en
 Let's try to query account after creation:
 
 ```text
-yarn run:api query.system.account <address>
+pontem-cli query.system.account <address>
 ```
 
 Replace `<address>` with your account address, e.g. `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`.
@@ -59,7 +50,7 @@ Next steps required to have [dove](../move_vm/compiler_&_toolset.md) compiler in
 To deploy compiled module run the following command:
  
 ```text
-yarn run:api tx.mvm.publishModule @<module.mv> <gas> --seed <seed>
+pontem-cli tx.mvm.publishModule @<module.mv> <gas> --seed <seed>
 ```
  
 Replace parameters:
@@ -128,7 +119,7 @@ You will see result of the transaction execution:
 To deploy compiled script transaction run following command:
 
 ```text
-yarn run:api tx.mvm.execute @<script.mvt> <gas> --seed <seed>
+pontem-cli tx.mvm.execute @<script.mvt> <gas> --seed <seed>
 ```
 
 Replace parameters:
@@ -136,6 +127,27 @@ Replace parameters:
 * `<script.mvt>` - compiled script transaction file (`.mvt` extension).
 * `<gas>` - amount of gas.
 * `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local node.  
+
+
+### Sudo
+
+You can use `sudo` in Substrate to deploy [Standard Library](../move_vm/stdlib.md) to Move VM pallet. Standard library will be stored under the `0x01` address.
+To deploy a standard library using `sudo` you need access to `sudo` account, in case of local network it's usually `Alice` account.
+
+See how to [build](./local_node.md#standard-library) Standard Library.
+
+Use following command to deploy package:
+
+```text
+yarn run:api tx.mvm.publishPackage @<package.mv> <gas> --seed <seed> --sudo
+```
+
+Replace parameters:
+
+* `<script.mvt>` - compiled package file (`.pac` extension).
+* `<gas>` - amount of gas.
+* `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local node.  
+
 
 ## RPC
 
@@ -146,6 +158,6 @@ So see [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC
 See [tools](https://github.com/pontem-network/tools/tree/master/packages/api-cli) documentation and also help:
 
 ```text
-yarn run:api --help
+pontem-cli --help
 ```
 

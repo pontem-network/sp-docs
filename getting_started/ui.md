@@ -114,7 +114,7 @@ To deploy compiled script transaction do following steps:
 You can use `sudo` in Substrate to deploy [Standard Library](../move_vm/stdlib.md) to Move VM pallet. Standard library will be stored under the `0x01` address.
 To deploy a standard library using `sudo` you need access to `sudo` account, in case of local network it's usually `Alice` account.
 
-Current Move VM pallet already contains the Standard Library by default, but if you want to deploy some additional library use next instruction.
+See how to [build](./local_node.md#standard-library) Standard Library.
 
 To deploy standard module do following steps:
 
@@ -123,12 +123,11 @@ To deploy standard module do following steps:
 3. Choose the **sudo** module.
 4. Choose **sudo(call)** transaction.
 5. Choose the **mvm** module in the call: **Call** field.
-6. Choose **publishStd** transaction.
-7. Click **addItem**.
-8. For the new field and enable file upload.
-9. Upload modules step by step by submitting transactions.
-10. Configure the gas limit parameter (usually 1000000 will be enough).
-11. Wait until transactions are confirmed.
+6. Choose **publishPackage** transaction.
+7. Choose **package** field and enable file upload.
+8. Configure the gas limit parameter (usually 1000000 will be enough).  
+9. Submit a new signed transaction!
+10. Wait until the transaction is confirmed.
 
 ## Tips
 
