@@ -367,9 +367,24 @@ script {
 
 Vector module great describe in [Diem Vector](https://developers.diem.com/main/docs/move-primitives-vector) documentation.
 
+## Signature
+
+[Signature](https://github.com/pontem-network/move-stdlib/blob/master/modules/signature.move) module allows to verify ed25519 signature:
+
+```rust
+script {
+    use 0x1::Signature;
+    fun main(signature: vector<u8>, pub_key: vector<u8>, message: vector<u8>) {
+        let is_verified = Signature::ed25519_verify(signature, pub_key, message);
+        assert(is_verified, 101);
+    }
+}
+```
+
 ## More
 
 * [FixedPoint32](https://github.com/pontem-network/move-stdlib/blob/master/modules/fixedpoint32.move) - allows to work with 8 bytes fixed point numbers.
 * [Debug](https://github.com/pontem-network/move-stdlib/blob/master/modules/debug.move) - debug module to print values and stack trace.
+* [BCS](https://github.com/pontem-network/move-stdlib/blob/master/modules/bcs.move) - serialize Move value to [LCS (Libra Canonical Serialization)](https://github.com/librastartup/libra-canonical-serialization/blob/master/DOCUMENTATION.md). 
 * [Math](https://github.com/pontem-network/move-stdlib/blob/master/modules/math.move) - math for using native U256 numbers.
 * [U256](https://github.com/pontem-network/move-stdlib/blob/master/modules/u256.move) - U256 number implementation.
