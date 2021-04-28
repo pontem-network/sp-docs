@@ -12,6 +12,12 @@ Visit repository of [Move Pallet](https://github.com/pontem-network/sp-move) and
 git clone git@github.com:pontem-network/sp-move.git
 ```
 
+Choose [tag](https://github.com/pontem-network/sp-move/tags) if needed, otherwise use `master`:
+
+```sh
+git checkout v0.3.0 # Latest actual tag
+```
+
 Navigate to cloned repository and launch init script:
 
 ```sh
@@ -55,7 +61,7 @@ We need to register PONT coin information, so create new project using dove and 
 ```rustc
 script {
     use 0x1::PONT;
-    use 0x01::Pontem;
+    use 0x1::Pontem;
 
     fun register_pont() {
         // To make sure PONT coin registered and known.
