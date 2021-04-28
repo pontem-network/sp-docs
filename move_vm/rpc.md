@@ -22,7 +22,7 @@ Install Polkadot JS CLI using [instruction](../getting_started/cli.md).
 Estimate gas for execute transaction:
 
 ```text
-yarn run:api rpc.mvm.estimateGasExecute <address> @<mvt file> <gas>
+pontem-cli rpc.mvm.estimateGasExecute <address> @<mvt file> <gas>
 ```
 
 Replace arguments:
@@ -50,7 +50,7 @@ Where:
 Other examples:
 
 ```text
-yarn run:api rpc.mvm.estimateGasPublish <address> @<mvt file> <gas>
-yarn run:api rpc.mvm.gasToWeight <gas>
-yarn run:api rpc.mvm.weightToGas <weight>
+pontem-cli rpc.mvm.estimateGasPublish <address> @<mvt file> <gas>
+pontem-cli rpc.mvm.gasToWeight <gas>
+pontem-cli rpc.mvm.weightToGas <weight>
 ```

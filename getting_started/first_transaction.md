@@ -35,7 +35,7 @@ Done! Once your transaction is confirmed, balances will be updated.
 To send tokens from CLI use next command:
 
 ```text
-yarn run:api tx.balances.transfer <recipient> 1 --seed <seed>
+pontem-cli tx.balances.transfer <recipient> 1 --seed <seed>
 ```
 
 Where:

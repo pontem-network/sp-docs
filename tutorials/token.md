@@ -70,8 +70,8 @@ dove ct 'new_token()'
 Deploy new module and execute transaction script:
 
 ```sh
-yarn run:api tx.mvm.publishModule @./target/modules/0_MyToken.mv 100000 --seed <seed>
-yarn run:api tx.mvm.execute @./target/transactions/new_token.mvt 1000000 --seed <seed>      
+pontem-cli tx.mvm.publishModule @./target/modules/0_MyToken.mv 100000 --seed <seed>
+pontem-cli tx.mvm.execute @./target/transactions/new_token.mvt 1000000 --seed <seed>      
 ```
 
  Your created your first token in Pontem network. Let's move some amount of your tokens to your friend account:

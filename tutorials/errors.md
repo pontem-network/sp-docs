@@ -31,7 +31,7 @@ You can use `abort` and `assert` in your modules also.
 Let's compile one of examples using [dove](../move_vm/compiler_&_toolset.md#dove) and execute using [CLI](../getting_started/cli.md) (easiest way to see returned events):
 
 ```sh
-yarn run:api tx.mvm.execute <script> <file> --seed <seed>
+pontem-cli tx.mvm.execute <script> <file> --seed <seed>
 ```
 
 Replace values with your own, run execute transaction and see output, generated event:
