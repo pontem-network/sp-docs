@@ -139,7 +139,7 @@ See how to [build](./local_node.md#standard-library) Standard Library.
 Use following command to deploy package:
 
 ```text
-yarn run:api tx.mvm.publishPackage @<package.mv> <gas> --seed <seed> --sudo
+pontem-cli tx.mvm.publishPackage @<package.mv> <gas> --seed <seed> --sudo
 ```
 
 Replace parameters:
