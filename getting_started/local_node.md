@@ -59,7 +59,7 @@ script {
 
     fun register_pont() {
         // To make sure PONT coin registered and known.
-        Pontem::register_coin<PONT::T>(b"PONT", 2);
+        Pontem::register_coin<PONT::T>(b"PONT", 6);
     }
 }
 ```
