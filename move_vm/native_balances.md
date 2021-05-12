@@ -3,7 +3,7 @@
 PONT is a native coin in the Pontem Network, as PONT coin is accessible not only on smart contracts level, but also on Substrate level: staking, government, transfers.
 
 {% hint style="info" %}
-🧙‍♂️ It's important to keep units in mind, when you transfer balance please be sure you transfer at least some minimum value, let's say 1 Unit, for each Substrate chain it could be different. For example, if you transfer too small value, human readable balance couldn't be updated, as the amount changed is too small.
+🧙‍♂️ It's important to keep units in mind, when you transfer balance please be sure you transfer at least some minimum value, let's say 1 Unit, for each Substrate chain it could be different. For example, if you transfer too small value, human readable balance representation couldn't be updated (you see it in CLI/UI), as the amount changed is too small.
  
 We recommend to transfer at least 2 Units on each account to cover fees and successful transfer funds. Currently 1 Unit is a `1000000000000` amount of coins.
 {% endhint %}
