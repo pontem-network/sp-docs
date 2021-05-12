@@ -145,7 +145,7 @@ pontem-cli query.system.account <recipient>
 
 {% hint style="info" %}
 🧙‍♂️ Replace `<recipient>` with recipient address.
-{% endhint %
+{% endhint %}
 
 Recipient balance would be updated on 1 Unit deposited by the sender in the previous section.
 
