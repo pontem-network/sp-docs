@@ -189,7 +189,7 @@ script {
 
     fun create_swap(sender: &signer, amount: u128, price: u128) {
         // To make sure PONT coin registered and known.
-        Pontem::register_coin<PONT::T>(b"PONT", 6);
+        Pontem::register_coin<PONT::T>(b"PONT", 12);
 
         // Deposit a sender PONT coins from native balance.
         // The function returns PONT balance resource.
