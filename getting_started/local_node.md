@@ -31,11 +31,11 @@ Run local node:
 make run
 ```
 
-You will see logs once Substrate node built. To iterate with local node using UI see the next page.
+You will see logs once Substrate node built. To interact with local node using UI see the next page.
 
 ## Standard Library
 
-You need to deploy [Standard Library](../move_vm/stdlib.md) after building a local node. Install [dove](../move_vm/compiler_&_toolset.md#dove) and build Standard Library:
+You need to deploy [Standard Library](../move_vm/stdlib.md) after building a local node. Install [dove](../move_vm/compiler_&_toolset.md#installation) and build Standard Library:
 
 ```sh
 git clone git@github.com:pontem-network/move-stdlib.git

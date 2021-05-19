@@ -14,10 +14,10 @@ Let's write a basic script, accept two arguments, a and b values, and then using
 We are going to use the module we deployed in previous part (`Math.move` and `Storage.move`).
 
 {% hint style="info" %}
-🧙‍♂️ A script block must start with all of its use declarations, followed by any constants and (finally) the main function declaration. The main function can have any name (i.e., it need not be called main), is the only function in a script block, can have any number of arguments, and must not return a value. 
+🧙‍♂️ A script block must start with all of its use declarations, followed by any constants and (finally) the main function declaration. The main function can have any name (i.e., it need not be called main), is the only function in a script block, can have any number of arguments, and must not return a value.
 {% endhint %}
 
-Let's create new script calling `sum.move` in `./scripts/` folder and put next code new file:
+Let's create a new script calling `sum.move` in `./scripts/` folder and put the following code there:
 
 ```rust
 script {
@@ -42,7 +42,7 @@ dove ct 'sum(10, 20)'
 After compilation see transaction file:
 
 ```text
-ls -la ./target/transactions 
+ls -la ./target/transactions
 ```
 
 There must be a `sum.mvt` script transaction file you can use to send a new `execute` transaction to the network.
@@ -54,7 +54,7 @@ There must be a `sum.mvt` script transaction file you can use to send a new `exe
 ## Store resource
 
 Let's store new resources using the `Storage` module we've done.
-Create a new script `store_sum.move` in `./scripts/` folder and put next code inside: 
+Create a new script `store_sum.move` in `./scripts/` folder and put the following code inside:
 
 ```rust
 script {
