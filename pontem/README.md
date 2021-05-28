@@ -10,7 +10,7 @@
 🚀 Pontem is a bridge between the regulated and unregulated worlds that will allow exchanging value between the two. It is backed by Wings Foundation, a Swiss-based non-profit foundation established in 2016.
 {% endhint %}
 
-Pontem is what we like to refer to as "**Kusama for Diem**". 
+**Pontem** is an Experimental Network for **Diem**.
 
 We aim to enable an experimentation testnet that will leverage the best aspects of Diem technology and the Move programming language in order to speed up use case development. Pontem will also be the first project of its kind to bring the [Move VM](../move_vm/README.md) and [Move Language](../lang/README.md) to Polkadot via the Pontem Parachain.
 

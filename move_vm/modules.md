@@ -63,25 +63,25 @@ And see compiled module ready for deploy:
 You will see `0_Math.mv`, use this file to deploy your new module.
 
 {% hint style="info" %}
-✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/ui.md) or [CLI](../getting_started/cli.md).
 {% endhint %}
 
-## Module with resource 
+## Module with resource
 
 Resource is the main feature of **Move VM**. Resource is a special type in Move VM, which has strict rules of usage - therefore more safety, and is created to work with digital assets.
 
 Resource type can only be defined and managed in a single module. This module sets rules for accessing, destroying, transferring and checking existence of resources defined in it.
 
 This documentation is not going deep into resources, but still let's make a module containing resources for demo proposes. Read more about resources in Move language [documentation](../lang/resources.md) and in Diem Move [documentation](https://developers.diem.com/docs/move/move-structs-and-resources).
- 
-Module stores the sum of two numbers into a resource. Create new module calling `Storage.move` and put next code inside it: 
+
+Module stores the sum of two numbers into a resource. Create new module calling `Storage.move` and put next code inside it:
 
 ```rust
 module Storage {
     // Include Math module.
     use {{sender}}::Math;
 
-    // Store U65 number into resource.
+    // Store U64 number into resource.
     resource struct Sum {
         val: u64
     }
