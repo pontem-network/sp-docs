@@ -32,14 +32,18 @@
 * [Introduction](./lang/README.md)
 * [Learn Resources](./lang/learn_resources.md)
 
-## 🔧 05. TUTORIALS
+## 05. TOOLSET
+
+* [Dove.toml manifest file format](./toolset/dove_toml_manifest.md)
+
+## 🔧 06. TUTORIALS
 * [Watch Resources](./tutorials/watch_resources.md)
 * [Access Control](./tutorials/access_control.md)
 * [Emit Events](./tutorials/events.md)
 * [Errors Catching](./tutorials/errors.md)
 * [Own Token](./tutorials/token.md)
 
-## 🔗 06. Resources
+## 🔗 07. Resources
 * [Site](https://pontem.network)
 * [Github](https://github.com/pontem-network)
 * [Faucet](https://t.me/pontem_faucet_bot)
