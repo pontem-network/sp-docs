@@ -4,7 +4,7 @@
 
 It consists of the following sections: 
 
-* `[package]` 
+* [`[package]`](#the-package-section) 
     * `name` - The name of the project
       
     * [`account_address`](#the-account_address-field) - The user account address
@@ -13,7 +13,7 @@ It consists of the following sections:
       
     * [`dependencies`](#the-dependencies-field) - Specifies sets of project dependencies
     
-* `[layout]` - Directory layout of the project
+* [`[layout]`](#the-layout-section) - Directory layout of the project
     * `modules_dir`
     * `scripts_dir`
     * `tests_dir`
