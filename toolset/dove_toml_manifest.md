@@ -42,7 +42,7 @@ The address of the user account.
    this address will be a default signer passed to script function.  
 
 3. If you don't wrap your module in the `address {}` block, 
-   this is the address where that module will be compiled at. 
+   this value is used as the address of the module. 
 
 ### The `dialect` field
 
