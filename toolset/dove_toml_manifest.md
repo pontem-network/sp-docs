@@ -41,7 +41,7 @@ The address of the user account.
 2. If you `dove run` the script without `--signers` flag, 
    this address will be the default `signer` passed to the script function.  
 
-3. If you don't wrap your module in the `address {}` block, 
+3. If you don't wrap your module with the `address {}` block, 
    this value is used as the address of the module. 
 
 ### The `dialect` field
