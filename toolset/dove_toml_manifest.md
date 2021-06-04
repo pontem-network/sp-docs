@@ -39,7 +39,7 @@ The address of the user account.
    which will be replaced with the value of `account_address` at compilation time.
     
 2. If you `dove run` the script without `--signers` flag, 
-   this address will be a default signer passed to script function.  
+   this address will be the default `signer` passed to the script function.  
 
 3. If you don't wrap your module in the `address {}` block, 
    this value is used as the address of the module. 
