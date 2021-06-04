@@ -11,7 +11,7 @@ It consists of the following sections:
 
     * [`dialect`](#the-dialect-field) - Address format of the project 
       
-    * [`dependencies`](#the-dependencies-field) - Specifies sets of project dependencies
+    * [`dependencies`](#the-dependencies-field) - Specifies a set of project dependencies
     
 * [`[layout]`](#the-layout-section) - Directory layout of the project
     * `modules_dir`
