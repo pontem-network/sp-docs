@@ -35,7 +35,7 @@ dependencies = [
 
 The address of the user account. 
 
-1. You can add `{{sender}}` clause to your source code, 
+1. You can use `{{sender}}` clause anywhere in your source code, 
    which will be replaced with the value of `account_address` at compilation time.
     
 2. If you `dove run` the script without `--signers` flag, 
