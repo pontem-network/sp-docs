@@ -32,7 +32,7 @@
 * [Introduction](./lang/README.md)
 * [Learn Resources](./lang/learn_resources.md)
 
-## 05. TOOLSET
+## 🧰 05. TOOLSET
 
 * [Dove.toml manifest file format](./toolset/dove_toml_manifest.md)
 
