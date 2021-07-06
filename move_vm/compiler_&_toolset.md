@@ -40,7 +40,7 @@ Dove is Move compiler and package manager. Using Dove you can create your own Mo
 Let's create first project:
 
 ```sh
-dove new first_project --dialect polkadot  --address <address>
+dove new first_project --dialect pont  --address <address>
 ```
 
 **Replace address with your address.**
@@ -63,7 +63,7 @@ Let's see what contains `Dove.toml`:
 [package]
 name = "first_project1"
 account_address = "<your address>"
-dialect = "polkadot"
+dialect = "pont"
 dependencies = [
     { git = "https://github.com/pontem-network/move-stdlib" }
 ]
@@ -71,7 +71,7 @@ dependencies = [
 
 * `name` - name of project.
 * `account_address` - address of your account, used during compilation.
-* `dialect` - can be `Diem`, or `polkadot`.
+* `dialect` - can be `Diem`, or `pont` (SS58 Polkadot addresses).
 * `dependencies` - list of dependencies, git (tag or branch also supported) or local folder (use `path`).
 
 Let's create empty script and build it:

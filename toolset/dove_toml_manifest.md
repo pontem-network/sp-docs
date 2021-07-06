@@ -24,7 +24,7 @@ It consists of the following sections:
 [package]
 name = "my_project"
 account_address = "<your account address>"
-dialect = "polkadot"
+dialect = "pont"
 dependencies = [
     { git = "https://github.com/pontem-network/move-stdlib", branch = "v1.2.0" },
     { path = "./local_modules" }
