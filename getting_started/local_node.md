@@ -43,10 +43,10 @@ cd move-stdlib
 dove build --package
 ```
 
-Dove build generates new package (means one binary contains all modules) and write in output where package placed, usually it's `./target/packages`:
+Dove build generates new package (means one binary contains all modules) and write in output where package placed, usually it's `./artifacts/packages`:
 
 ```sh
-ls -la ./target/packages
+ls -la ./artifacts/packages
 ```
 
 See instruction how to deploy compiled package using `sudo`:
@@ -73,7 +73,7 @@ script {
 Compile transaction script:
 
 ```sh
-dove ct 'register_pont()'
+dove tx 'register_pont()'
 ```
 
 Execute script using [UI](./ui.md) or [CLI](./cli.md).

@@ -57,7 +57,7 @@ dove build
 And see compiled module ready for deploy:
 
 ```text
--la ./target/modules
+-la ./artifacts/modules
 ```
 
 You will see `0_Math.mv`, use this file to deploy your new module.
