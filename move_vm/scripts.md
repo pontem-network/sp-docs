@@ -36,13 +36,13 @@ The script accepts two arguments in function **"sum"**, then calculate the sum w
 Let's compile script using dove to create a new binary contains both script and arguments for script:
 
 ```text
-dove ct 'sum(10, 20)'
+dove tx 'sum(10, 20)'
 ```
 
 After compilation see transaction file:
 
 ```text
-ls -la ./target/transactions
+ls -la ./artifacts/transactions
 ```
 
 There must be a `sum.mvt` script transaction file you can use to send a new `execute` transaction to the network.
@@ -78,7 +78,7 @@ script {
 Compile new script like previous example:
 
 ```text
-dove ct 'store_sum(10, 20)'
+dove tx 'store_sum(10, 20)'
 ```
 
 {% hint style="info" %}

@@ -86,7 +86,7 @@ script {
 Compile script with recipient address and amount:
 
 ```sh
-dove ct 'transfer(<recipient>, 1000000000000)'
+dove tx 'transfer(<recipient>, 1000000000000)'
 ```
 
 {% hint style="info" %}

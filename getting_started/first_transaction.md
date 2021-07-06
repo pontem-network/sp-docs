@@ -100,7 +100,7 @@ This code deposits your native PONT coins into VM space and transfers it to the 
 Let's create script transaction using dove:
 
 ```sh
-dove ct 'transfer(<recipient>, <amount>)'
+dove tx 'transfer(<recipient>, <amount>)'
 ```
 
 **Before run command replace:**
@@ -111,7 +111,7 @@ dove ct 'transfer(<recipient>, <amount>)'
 See builded artifacts:
 
 ```sh
-ls -la ./target/transactions
+ls -la ./artifacts/transactions
 ```
 
 Use `0_transfer.mvt` to send transaction, see how:

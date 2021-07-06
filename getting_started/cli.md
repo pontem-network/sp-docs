@@ -113,7 +113,7 @@ You will see result of the transaction execution:
 ### Script
 
 {% hint style="info" %}
-🧙‍♂️ Compile a script using dove with arguments using `ct` command, use file with `.mvt` extension.
+🧙‍♂️ Compile a script using dove with arguments using `tx` command, use file with `.mvt` extension.
 {% endhint %}
 
 To deploy compiled script transaction run following command:

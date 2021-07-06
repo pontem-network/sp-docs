@@ -64,14 +64,14 @@ Compile both module and script:
 
 ```sh
 dove build
-dove ct 'new_token()'
+dove tx 'new_token()'
 ```
 
 Deploy new module and execute transaction script:
 
 ```sh
-pontem-cli tx.mvm.publishModule @./target/modules/0_MyToken.mv 100000 --seed <seed>
-pontem-cli tx.mvm.execute @./target/transactions/new_token.mvt 1000000 --seed <seed>      
+pontem-cli tx.mvm.publishModule @./artifacts/modules/0_MyToken.mv 100000 --seed <seed>
+pontem-cli tx.mvm.execute @./artifacts/transactions/new_token.mvt 1000000 --seed <seed>      
 ```
 
  Your created your first token in Pontem network. Let's move some amount of your tokens to your friend account:
