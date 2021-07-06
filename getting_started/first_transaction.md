@@ -62,7 +62,7 @@ We recommend to install Idea and extension so you easy work with Move language:
 Let's create new project using Dove:
 
 ```sh
-dove new transfer_tokens --dialect polkadot  --address <address>
+dove new transfer_tokens --dialect pont --address <address>
 ```
 
 **Replace address with your sender address.**

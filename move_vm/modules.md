@@ -27,7 +27,7 @@ Let's see an example of a small module that will just add two numbers \(a and b\
 Create a new project using **dove**:
 
 ```text
-dove new my_modules --dialect polkadot --address <address>
+dove new my_modules --dialect pont --address <address>
 cd my_modules
 ```
 
