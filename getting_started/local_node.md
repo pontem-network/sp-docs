@@ -43,7 +43,7 @@ cd move-stdlib
 dove build --package
 ```
 
-Dove build generates new package (means one binary contains all modules) and write in output where package placed, usually it's `./artifacts/packages`:
+Dove build generates new package (means one binary contains all modules) and write in output where package placed, usually it's `./artifacts/packages` (or `./artifacts/bundles`):
 
 ```sh
 ls -la ./artifacts/packages
