@@ -10,10 +10,10 @@ As with any blockchain Pontem will come with standard tooling and functionality 
 
 Check out the **[LIVE DEMO](https://www.figma.com/proto/Kx0rTu2qMYJVkWiGK9b5iK/Pontem-Blocks-Public-Prototype?node-id=2079%3A13295&viewport=659%2C252%2C0.033419206738471985&scaling=scale-down)**.
 
-With the advent of user-friendly decentralized exchanges and DeFi Dapps such as [1inch Exchange](https://1inch.exchange/) and [Furucombo](https://furucombo.app/) which take complex multi-hop transactions and combine them into one transaction, users have become increasingly accustomed to simple interfaces for executing complex trades.
+With the advent of user-friendly decentralized exchanges and DeFi applications such as DEX aggregator [1inch Exchange](https://1inch.exchange/) and [Furucombo](https://furucombo.app/) which take complex multi-hop transactions and combine them into one transaction, users have become increasingly accustomed to simple interfaces for executing complex trades.
 
 {% hint style="success" %}
-🧙‍♂️ This is the concept that the No-Code tools on Pontem builds on in order to allow people without coding skills to:
+🧙‍♂️ This is the concept that the No-Code tools on Pontem is using to allow people without coding skills to:
 
 * Create smart contracts
 * Add Liquidity to Swap platforms
@@ -25,9 +25,9 @@ With the advent of user-friendly decentralized exchanges and DeFi Dapps such as 
 These tools are limitless. 
 
 {% hint style="info" %}
-Any developer can publish their own Move module and create a No-Code block to be used by others.
+Any developer can publish their own Move module and create a No-Code templates to be used by others.
 {% endhint %}
 
-Pontem is **one-stop marketplace** for executing No-Code transactions across a number of different use cases. The added benefit is that developers **can choose to charge** for their No-Code blocks per execution.
+Pontem is **one-stop place** for executing No-Code transactions across a number of different use cases. Developers **can choose how much to charge in fees** for their No-Code templates.
 
 ![Pontem Blocks](/assets/illustrations/add_block.png "Pontem Blocks")
