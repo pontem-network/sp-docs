@@ -8,7 +8,7 @@ Some of the initial utility features of the token are as follows:
 
 {% hint style="success" %}
 * Payment of gas fees for the Move VM and transaction validation.
-* Collateral or security deposits for Bridge nodes (similar to the Polkadot Parachain auctions and Cosmos IBC auctions).
+* Collateral or security deposits for bridge nodes (similar to the Polkadot Parachain auctions and Cosmos IBC auctions).
 * Staking delegators and delegates (rewarding voters and delegators for participating in governance)
 {% endhint %}
 

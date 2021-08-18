@@ -1,8 +1,8 @@
 # The Team
 
-The Pontem Team has a long and established reputation in the blockchain industry, having previously developed the DPoS DApp Crypti in 2014, founded the Wings DAO platform in 2016 and more recently in the last 2 years built the [Dfinance project](https://dfinance.co), a truly decentralized infrastructure dedicated to various financial and DeFi instruments and products designed for people.
+The Pontem Team has a long and established reputation in the blockchain industry, having previously developed the DPoS DApp Crypti in 2014, founded the Wings DAO platform in 2016 and more recently in the last 2 years built the [Dfinance project](https://dfinance.co), a decentralized infrastructure dedicated to various financial and DeFi instruments and products designed for non technical people.
 
-As part of our work on Dfinance we have been working closely with Diem (as recognized technical adopters) using the Move language and the Move VM in order to run safe and usable smart contracts. 
+As part of our work on Dfinance we have been working closely with Diem (as recognized technical early adopters) using the Move language and the Move VM in order to run safe and flexible smart contracts. 
 
 So far the tools we have developed using Move include but are not limited to:
 

@@ -10,6 +10,7 @@
 
 ## Web 3 Foundation Open Grant
 
-You can see Pontem Network Open Grant Proposal in our [GitHub](https://github.com/pontem-network/Open-Grants-Program/blob/master/applications/pontem.md).
+We have now completed the Web3 foundation grant milestones to [bring Move VM smart contracts to Polkadot.
+](https://blog.pontem.network/pontem-network-is-the-first-to-make-diems-move-language-available-on-polkadot-dc1f3498ffcb).
 
-Currently milestones #1 and #2 completed and delivered.
+You can see the full Pontem Network Grant Proposal in our [GitHub](https://github.com/pontem-network/Open-Grants-Program/blob/master/applications/pontem.md).

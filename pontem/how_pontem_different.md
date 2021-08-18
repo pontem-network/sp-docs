@@ -1,27 +1,23 @@
-# How is Pontem different to other blockchains?
+# How is Pontem Network different from other blockchains?
 
-Pontem Network aims to bring the Move VM and Move language, and ecosystem around it to Polkadot.
+Pontem aims to connect the Move VM, language and community seeded by Facebook’s permissioned Diem Blockchain project to the public blockchain ecosystem through Polkadot. The Move language and the Move Virtual Machine are safe, enterprise ready technologies that enable blockchain functionality like payments and smart contracts. 
 
-The Move language and the Move Virtual Machine, both developed by Facebook Diem, are among the safest technologies out there that enable the creation of smart contracts. This is in stark contrast to other Layer 1 blockchains who are focused on developing using languages such as Solidity and Web Assembly.
-
-Pontem is the first project bringing Facebook's Move technology to the general crypto sphere, enabling anyone to build and launch applications on it. 
+In contrast to other Layer 1 blockchain projects who are focused on developing using languages such as Solidity and Web Assembly, Pontem is the first project to bring Facebook's Move technology to the permissioned crypto metaverse, enabling new and crypto native projects to build, test and deploy applications on Facebook’s Diem Blockchain.
 
 {% hint style="info" %}
-🧙‍♂️ We are the only ones who have successfully ported Move to Cosmos before and now to Polkadot, being recognized by Web3 Foundation and got Web3 Foundation grant.
+🧙‍♂️ Pontem is the first, and so far only, project to have successfully ported Move to Cosmos and Polkadot, winning the prestigious Web3 Foundation grant.
 {% endhint %}
 
 ![W3F Grant](/assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
 
 ![Comparison](/assets/illustrations/comparison.png "Comparison")
 
-Our deep tech capabilities and over 2 years of experience intimately working with and knowing Libra/Diem will enable us to create a truly **permission-less ecosystem**, while still ensuring full compatibility with the Facebook version.
+Our diverse technical knowledge and over 2 years of experience intimately working with Libra/Diem code will enable us to manifest the vision of a public permissionless technology for the Move technology ecosystem while  ensuring full compatibility with Facebook’s Diem Blockchain.
 
-We believe Pontem has the unique potential of attracting hundreds of millions of users who will be exposed to the amazing possibilities of financial alternatives provided by Facebook's Diem for the first time in their life, yet who will remain hungry and on the lookout for free, unrestricted alternatives. _Thus, Pontem will be an attractive direction for the product creators, giving them the freedom to create as they originally had intended, in turn resulting in a massive flow of users into the ecosystem, thus pushing the value of Pontem exponentially._
+We believe Pontem has the unique potential of building infrastructure to support billions of users who will be exposed to the amazing possibilities of crypto through financial services provided by Facebook's Diem ecosystem for the first time in their life, yet will also want to pursue a connection to the permissionless crypto metaverse. Thus, Pontem will be an attractive option for product teams, giving them the tools to build applications for the large flow of users brought into the crypto metaverse by Facebook and the Diem Association which will power the utility of the Pontem Network.
 
 ## Ecosystem Fit
 
-* Developers can be interested to build their DApps on Polkadot using Move technology stack, as it’s a safe and useful language which is getting more and more adoption.
+* Developers interested in building applications on Polkadot using the Move technology stack, as it’s a safe and flexible language which is getting more and more adoption.
 
-* Libra is developing and using Move, so Polkadot will have at least initial compatibility with Libra at least by allowing using the same modules in both networks.
-
-* Flow - Crypto Kitties creators blockchain also going to utilize Move VM and Move language, also by creating new language on top of it - Cadence, which can be adopted to Polkadot later.
+* New users of the Diem Blockchain developing on Move can first build on Polkadot with compatibility with the Diem Blockchain by using the same modules in both networks.
