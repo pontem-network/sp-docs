@@ -7,43 +7,36 @@
 ![Features](/assets/illustrations/introduction.png "Features")
 
 {% hint style="info" %}
-🚀 Pontem is a bridge between the regulated and unregulated worlds that will allow exchanging value between the two. It is backed by Wings Foundation, a Swiss-based non-profit foundation established in 2016.
+🚀 Pontem is an experimentation platform and bridge between permissioned and public blockchain ecosystems that will allow for the exchange of data and value between these two metaverses. Pontem successfully delivered a web3 grant to port the Move VM into the Polkadot ecosystem and is backed by leading venture capital funds such as Mechanism Capital, Kenetic Capital, Animoca Brands, and Delphi Digital.
 {% endhint %}
 
-**Pontem** is an Experimental Network for **Diem**.
+Pontem is building a decentralized application (dapp) framework built on Polkadot that connects public blockchains like Ethereum to Facebook’s permissioned (private) Diem Blockchain project. This allows applications to leverage established public ecosystems like Ethereum for the permissioned Diem Blockchain. Pontem is connecting blockchains through Polkadot and aims to support additional protocols in the future to bridge crypto with Facebook’s 2.8 billion users.
 
-We aim to enable an experimentation testnet that will leverage the best aspects of Diem technology and the Move programming language in order to speed up use case development. Pontem will also be the first project of its kind to bring the [Move VM](../move_vm/README.md) and [Move Language](../lang/README.md) to Polkadot via the Pontem Parachain.
+**Pontem** is an Experimentation Network for **Diem**.
+
+Pontem aims to enable an experimentation network that will leverage the best components of Diem’s technology and the Move programming language in order to speed up use case development. Pontem will also be the first project of its kind to bring the[Move VM](../move_vm/README.md) and [Move Language](../lang/README.md) to Polkadot via the Pontem Network.
 
 We believe that by doing this:
 
-Projects will gain early-alignment to the Diem architecture and technology stack.
-It will also speed up their go-to-market strategy if they are chosen to be onboarded into the Diem ecosystem and granted access to Diem's 2 billion+ userbase.
+Projects can align their apps to the Diem architecture and technology stack even before the official launch. It will also speed up go-to-market by facilitating the onboarding process into the Diem ecosystem to be granted access to Facebook’s 2.8 billion+ users.
 
 {% hint style="success" %}
-* Projects will gain early-alignment to the Diem architecture and technology stack.
-* It will also speed up their go-to-market strategy if they are chosen to be onboarded into the Diem ecosystem and granted access to Diem's 2 billion+ userbase.
+* Projects can build, test, and deploy dapps using decentralized architecture that is compatible with the Diem Blockchain and technology stack 
+* A developer friendly platform enables product market fit testing for apps by connecting to data and liquidity in established public blockchain ecosystems like Ethereum and Polkadot.
 {% endhint %}
 
 ## Why Pontem?
 
-![Diem Experimental Network](/assets/illustrations/diem_exp.png "Diem Experimental Network")
+![Diem Experimental Network](/assets/illustrations/diem_exp.png "The Pontem Network Bridging the Diem Blockchain to Polkadot")
 
-Today, more than ever, we are standing at a divide between two crypto worlds — the regulated and the unregulated. 
+Today many crypto projects have to choose between two crypto metaverses —  permissioned and permissionless blockchains. Pontem will bridge data and liquidity between these two worlds to enable interoperability on web3. 
+While the public permissionless blockchain metaverse rapidly flourished in chaos, the permissioned blockchain world developed in a walled garden of Eden maintained by consortia of large enterprises. This has led to a divide in the crypto metaverse that can now be bridged by Pontem.
 
-While the unregulated world grew rapidly, often chaotically, the regulated one has always been a kind of a closed garden, available only to the chosen ones. _This has led to segregation in the society that hasn’t yet been addressed, with those who are able to enjoy the benefits of the blockchain world being able to utilize it to the fullest, and those who do not have the means to are locked in the closed garden._
+The Pontem Network, a decentralized architecture for the Move VM using Delegated Proof of Stake (DPoS) addresses these concerns as a bridge between permissionsed and public blockchains. Pontem will allow Facebook users to gain access to all the use-cases provided by the public blockchain ecosystem such as decentralized financial instruments (DeFi), Non Fungible Tokens (NFTs), payments and blockchain gaming.
 
-Furthermore, the launch of Diem has been impacted by several factors which limits the initial use cases for Diem, these factors being:
+Pontem will provide a set of tools to solve the development challenges of building on Diem:
 
-* **Regulators' concern** with Facebook's power
-* Diem **threatened** national currencies on launch
-* Governments are now closely **monitoring** and **scrutinizing** Diem from a legal standpoint
-
-We decided to change this once and for all by launching Pontem, **a place where the regulated world meets the unregulated**. Pontem will help Diem users gain access to all the use-cases provided by the unregulated society, such as financial instruments, security tools, and even games.
-
-Pontem Network is a solution that will answer the demand of different markets and individuals:
-
-* Introduce creators to Diem's potential
-* Enable experimentation and value discovery
-* Validate ideas before submission to Diem
-* Provide value exchange with Diem
-* Support user traction loop from Diem.
+* Product teams building apps can experiment and test product fit before launching on the permissioned Diem Blockchain
+* Entrepreneurs validate ideas and technology before approval process with Diem Association
+* Validate compliance framework before submission to Diem Association
+* Enable data and value exchange with Diem Blockchain
