@@ -14,7 +14,7 @@ Pontem is building a decentralized application (dapp) framework built on Polkado
 
 **Pontem** is an Experimentation Network for **Diem**.
 
-Pontem aims to enable an experimentation network that will leverage the best components of Diem’s technology and the Move programming language in order to speed up use case development. Pontem will also be the first project of its kind to bring the[Move VM](../move_vm/README.md) and [Move Language](../lang/README.md) to Polkadot via the Pontem Network.
+Pontem aims to enable an experimentation network that will leverage the best components of Diem’s technology and the Move programming language in order to speed up use case development. Pontem will also be the first project of its kind to bring the [Move VM](../move_vm/README.md) and [Move Language](../lang/README.md) to Polkadot via the Pontem Network.
 
 We believe that by doing this:
 
