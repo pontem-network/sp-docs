@@ -10,7 +10,7 @@
 ## 🎓02. GETTING STARTED
 * [Getting started](./getting_started/README.md)
 * [First Transaction](./getting_started/first_transaction.md)
-* [Substrate](./getting_started/substrate.md)
+* [Parachain](./getting_started/parachain.md)
 * [Addresses](./getting_started/addresses.md)
 * [Run Local Node](./getting_started/local_node.md)
 * [Polkadot JS UI](./getting_started/ui.md)

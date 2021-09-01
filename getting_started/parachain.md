@@ -1,6 +1,6 @@
-# Substrate
+# Parachain
 
-The Pontem network is Polkadot based, so it's built on [Substrate framework](https://github.com/paritytech/substrate) and have connection to Relay Chain via Parathread technology.
+The Pontem network is Polkadot based, so it's built on [Substrate framework](https://github.com/paritytech/substrate) and has connection to Relay Chain via Parachain.
 
 ## What is Substrate?
 
@@ -24,19 +24,22 @@ To utilize the Pontem network the following components must first be implemented
 
 * [Move VM runtime & pallet](../move_vm/README.md)
 * [Compiler & Toolset](../move_vm/compiler_&_toolset.md)
-* Parathread
-* Validators
+* Parachain
+* Collators
 * Economic Model
 * Governance
 
-## Parathread
+## Parachain
 
-To fully implement the Pontem network we need to launch our own [Parathread](https://wiki.polkadot.network/docs/en/learn-parathreads). It is required as we want to have the Move VM pallet working, and No-Code tools working on top of Move language, and at same time having validators secure our Parathread.
+The current Pontem node implementation is a [Parachain](https://wiki.polkadot.network/docs/learn-parachains) that requires connection to the Relay Chain to function normally. It is required as we want to have the Move VM pallet working, and No-Code tools working on top of Move language secured by Polkadot/Kusama validators and at the same time allowing our community to become Collators: earn rewards and produce new proof states for Relay Chain.
 
-## Validators
-
-Validators will be rewarded in tokens for running and securing the Pontem network. 
+## Collators & Staking
+ 
+[Collators](https://wiki.polkadot.network/docs/learn-collator) collecting parachain transactions and producing state proofs for Relay Chain validators.
+Collators rewarded in PONT tokens for running the Pontem network parachain.
+ 
+If you want more details, please, navigate to the [Staking](staking/README.md) section.
 
 ## Governance
 
-We implements official [gov pallet](https://wiki.polkadot.network/docs/en/learn-governance).
+We are currently in progress with implementation integration of the official [Governance Pallet](https://wiki.polkadot.network/docs/en/learn-governance).
