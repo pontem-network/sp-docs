@@ -15,14 +15,14 @@ To send coins between accounts just do following steps:
 * Open UI.
 * Navigate to **"Accounts"** in the header menu.
 
-![Account](/assets/module.png "Account")
+![Account](/assets/accounts.png "Account")
 
 * Click on **"send"** button near account which sends funds.
 
 ![Send](/assets/send.png "Send")
 
-* Choose an account you want to send coins, for example **Bob**.
-* Put the amount you want to send.
+* Choose an account you want to send coins, for example **5CAbdS5gefECWhvYUb12wYZL7vXWXAV1uPTa9N2Yx39cb2wn**.
+* Put the amount you want to send, e.g. 1 PONT.
 * Click on **"Make Transfer"** button.
 * Click on **"Sign and Submit"** button on new modal.
 
@@ -35,12 +35,17 @@ Done! Once your transaction is confirmed, balances will be updated.
 To send tokens from CLI use next command:
 
 ```text
-pontem-cli tx.balances.transfer <recipient> 1000 --seed <seed>
+polkadot-js-api tx.balances.transfer <recipient> 10000000000 --seed "<seed>" --types ./types.json --ws wss://testnet.pontem.network/wss # Send 1 PONT.
 ```
+
+{% hint style="info" %}
+🧙‍♂️ Read more about [types file](./cli.md#account-creation).
+{% endhint %}
 
 Where:
 * `<recipient>` - address of recipient, replace with actual one.
-* `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local nodes. 
+* `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local dev nodes. 
+* The parameter `10000000000` is 1 PONT token, as PONT has 10 decimals.
 
 Replace `<recipient>` with your actual address.
 
@@ -77,25 +82,20 @@ And put next code inside:
 
 ```rustc
 script {
-    use 0x1::Account;
-    use 0x1::PONT;
-    use 0x01::Pontem;
+    use 0x1::PONT::PONT;
+    use 0x01::DiemAccount;
 
-    fun transfer(account: &signer, payee: address, amount: u128) {
-        // To make sure PONT coin registered and known.
-        Pontem::register_coin<PONT::T>(b"PONT", 12);
+    fun transfer(sender: signer, payee: address, amount: u64) {
+        // Withdraw tokens from sender account.
+        let pont_tokens = DiemAccount::pnt_withdraw<PONT>(&sender, amount);
 
-        // Deposit a sender PONT coins from native balance.
-        // The function returns PONT balance resource.
-        let pont = Account::deposit_native<PONT::T>(account, amount);
-
-        // Transfer PONT resource to payee balance resource.
-        Account::deposit<PONT::T>(account, payee, pont);
+        // Transfer PONT tokens to payee balance.
+        DiemAccount::pnt_deposit<PONT>(payee, pont_tokens);
     }
 }
 ```
 
-This code deposits your native PONT coins into VM space and transfers it to the payee account. You can read more about native balances and VM space into [native balances](../move_vm/native_balances.md) documentation.
+This code transfers PONT coins between accounts, from sender account to payee address.
 
 Let's create script transaction using dove:
 
@@ -103,21 +103,25 @@ Let's create script transaction using dove:
 dove tx 'transfer(<recipient>, <amount>)'
 ```
 
+{% hint style="info" %}
+🧙‍♂️ **IT'S IMPORTANT:** your sender account should match `account_address` from Dove.toml, otherwise you will get a bad signer error.
+{% endhint %}
+
 **Before run command replace:**
 
 * `<recipient>` - address of recipient, replace with actual one.
-* `<amount>` - coins amount to send.
+* `<amount>` - coins amount to send, e.g. `10000000000`.
 
-See builded artifacts:
+See built artifacts:
 
 ```sh
 ls -la ./artifacts/transactions
 ```
 
-Use `0_transfer.mvt` to send transaction, see how:
+Use `transfer.mvt` to send transaction, see how:
 
-* [Send script transaction using UI](./ui.md#script)
-* [Send script transaction using CLI](./cli.md#script)
+* [Using UI](./ui.md#script)
+* [Using CLI](./cli.md#script)
 
 After the transaction is confirmed and added to the block, you will see how balances changed.
 Congrats!
