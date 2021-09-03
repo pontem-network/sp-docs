@@ -14,20 +14,31 @@ Let's write a basic script, accept two arguments, a and b values, and then using
 We are going to use the module we deployed in previous part (`Math.move` and `Storage.move`).
 
 {% hint style="info" %}
-🧙‍♂️ A script block must start with all of its use declarations, followed by any constants and (finally) the main function declaration. The main function can have any name (i.e., it need not be called main), is the only function in a script block, can have any number of arguments, and must not return a value.
+🧙‍♂️ A script block must start with all of its use declarations, followed by any constants and (finally) the main function declaration. The main function can have any name (i.e. it could have different names, not only `main)`, is the only function in a script block, can have any number of arguments, and must not return a value.
 {% endhint %}
 
 Let's create a new script calling `sum.move` in `./scripts/` folder and put the following code there:
 
 ```rust
 script {
-   use 0x1::Event;
-   use {{sender}}::Math;
+    use 0x01::Event;
+    use {{sender}}::Math;
 
-   fun sum(account: &signer, a: u64, b: u64) {
-      let sum = Math::add(a, b);
-      Event::emit(account, sum);
-   }
+    fun sum(account: signer, a: u64, b: u64) {
+        let sum = Math::add(a, b);
+        
+        // Create event emitter.
+        let event_handle = Event::new_event_handle(&account);
+
+        // Emit event.
+        Event::emit_event(
+           &mut event_handle,
+           sum
+        );
+
+        // Destroy event emitter.
+        Event::destroy_handle(event_handle);
+    }
 }
 ```
 
@@ -48,7 +59,7 @@ ls -la ./artifacts/transactions
 There must be a `sum.mvt` script transaction file you can use to send a new `execute` transaction to the network.
 
 {% hint style="info" %}
-✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+✈️ See our instruction how to send transaction (execute/publish module) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
 {% endhint %}
 
 ## Store resource
@@ -59,14 +70,14 @@ Create a new script `store_sum.move` in `./scripts/` folder and put the followin
 ```rust
 script {
     use 0x1::Signer;
-    use {{sender}}::Storage;
+    use {{sender}}::StorageSum;
 
-    fun store_sum(account: &signer, a: u64, b: u64) {
+    fun store_sum(account: signer, a: u64, b: u64) {
         // Store sum.
-        Storage::store_sum(account, a, b);
+        StorageSum::store_sum(&account, a, b);
 
         // Get sum from resource.
-        let sum = Storage::get_sum(Signer::address_of(account));
+        let sum = StorageSum::get_sum(Signer::address_of(&account));
 
         // Throw error if sums don't match.
         // Error code is 101.
@@ -82,7 +93,7 @@ dove tx 'store_sum(10, 20)'
 ```
 
 {% hint style="info" %}
-✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+✈️ See our instruction how to send transaction (execute/publish module) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
 {% endhint %}
 
 After transaction executing, your sum resource will be stored in the Substrate storage, and you can query it any time using script:
@@ -90,11 +101,11 @@ After transaction executing, your sum resource will be stored in the Substrate s
 ```rust
 script {
     use 0x1::Signer;
-    use {{sender}}::Storage;
+    use {{sender}}::StorageSum;
 
-    fun store_sum(account: &signer) {
+    fun get_sum(account: signer) {
         // Get sum from resource.
-        let sum = Storage::get_sum(Signer::address_of(account));
+        let sum = StorageSum::get_sum(Signer::address_of(&account));
 
         // Do something with sum.
         ...
@@ -102,4 +113,4 @@ script {
 }
 ```
 
-Read more about resources in our [Move](../lang/resources.md) and in [Diem Move](https://developers.diem.com/docs/move/move-structs-and-resources) documentation.
+Read more about resources in our [Move](../lang/resources.md) and in [Move Book](https://move-book.com/advanced-topics/types-with-abilities.html) documentation.
