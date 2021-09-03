@@ -6,7 +6,7 @@ In case of error VM will generate error and add error code to the transaction ou
 
 For example, let's start with `assert`:
 
-```rustc
+```rust
 script {
     fun error(a: u128, b: u128) {
         assert(a > b, 101); // Throw error with code 101 if ‘a’ is less than ‘b’.
@@ -16,7 +16,7 @@ script {
 
 And same could be done with `abort`:
 
-```rustc
+```rust
 script {
     fun error(a: u128, b: u128) {
         if (a < b) {

@@ -4,7 +4,7 @@
 
 Compile using [dove](../move_vm/compiler_&_toolset.md#resource-viewer) and deploy `Storage` module:
 
-```rustc
+```rust
 module Store {
     resource struct U64 {val: u64}
     resource struct Address {val: address}
@@ -29,7 +29,7 @@ module Store {
 
 Once the module published, let's store a number using a script:
 
-```rustc
+```rust
 script {
     use {{sender}}::Store;
     

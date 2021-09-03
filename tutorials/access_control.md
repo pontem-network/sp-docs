@@ -6,7 +6,7 @@ For example, in Solidity it's [Ownable](https://github.com/OpenZeppelin/openzepp
 
 Let's create a new module with the same logic, we will store. We will use the Signer module to extract the transaction sender address and compare it with the defined module owner.
 
-```rustc
+```rust
 module OnlyOwnerStore {
     use 0x01::Signer;
 
@@ -33,13 +33,13 @@ module OnlyOwnerStore {
 
 As you, only owner address can call `store_u64` method of module, otherwise it sends error:
 
-```rustc
+```rust
 assert(Signer::address_of(account) == OWNER, 101); // Throw error if function called not from owner.
 ```
 
 Deploy module under your address and use next script for experiment:
 
-```rustc
+```rust
 script {
     use {{sender}}::OnlyOwnerStore;
     use 0x01::Event;

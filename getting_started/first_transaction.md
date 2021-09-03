@@ -80,7 +80,7 @@ touch ./scripts/transfer.move
 
 And put next code inside:
 
-```rustc
+```rust
 script {
     use 0x1::PONT::PONT;
     use 0x01::DiemAccount;

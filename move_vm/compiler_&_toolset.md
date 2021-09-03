@@ -85,7 +85,7 @@ touch ./scripts/test.move
 
 Put there Move code:
 
-```rustc
+```rust
 script {
     fun test() {
 
@@ -189,7 +189,7 @@ dove run --help
 
 Put next code inside `modules/Store.move`:
 
-```rustc
+```rust
 address {{sender}} {
     module Store {
         struct Store<T: store> has key {
@@ -212,7 +212,7 @@ address {{sender}} {
 
 After put next code inside `scripts/store.move`: 
 
-```rustc
+```rust
 script {
     use {{sender}}::Store;
     use 0x1::Signer;
@@ -226,7 +226,7 @@ script {
 
 Run following command to put number into storage with `run` command:
 
-```rustc
+```rust
 dove run 'store_u64(<account>, 100)' # Store number 100 in storage.
 ```
 
@@ -249,7 +249,7 @@ touch ./tests/store_test.move
 
 Put the following code inside:
 
-```rustc
+```rust
 address {{sender}} {    
     module StoreTest {
         use 0x1::Signer;
