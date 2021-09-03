@@ -76,7 +76,7 @@ Resource is the main feature of **Move VM**. Resource is a special type in Move 
 
 Resource type can only be defined and managed in a single module. This module sets rules for accessing, destroying, transferring and checking the existence of resources defined in it.
 
-This documentation is not going deep into resources, but still let's make a module containing resources for demo proposes. Read more about resources in Move language [documentation](../lang/resources.md) and in Move Book [documentation](https://move-book.com/advanced-topics/types-with-abilities.html).
+This documentation is not going deep into resources, but still let's make a module containing resources for demo proposes. Read more about resources in Move language [documentation](../lang/resources.md) and in [Move Book](https://move-book.com/advanced-topics/types-with-abilities.html) documentation.
 
 Module stores the sum of two numbers into a resource. Create new module calling `Storage.move` and put next code inside it:
 
