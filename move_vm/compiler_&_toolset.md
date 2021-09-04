@@ -294,6 +294,22 @@ dove test --help
 
 See more examples in [Bridge repository](https://github.com/pontem-network/bridge/blob/master/tests/test_1.move).
 
+### Signers
+
+Usually you have scripts that contain one signer. Signer is an account where a signed transaction contains a script. When Diem builds such a transaction using the `tx` command it adds information about signers to the transaction, so you shouldn't care about such arguments.
+ 
+### Root and Treasury signers
+
+As Diem is a very regulated network, often some functions of Diem Standard Library require Diem Treasury Signatures and Diem Root Signature.
+ 
+If we compare Pontem to Diem, Pontem is not a very regulated network, so Pontem disabled part of functions that required Treasury and Root signatures, and at the same time provided a way to get Treasury and Root signatures immediately.
+ 
+So, using Dove you can build a transaction using Treasury and Root signature by using `tr` and `dr` literals as arguments:
+
+```sh
+dove tx 'my_script(dr, tr, ...the rest of arguments)'
+```
+
 ### More
 
 To learn more commands see help:
