@@ -2,7 +2,7 @@
 
 Resource is the main feature of **Move VM**. Resource is a special type in Move VM, which has strict rules of usage - therefore more safety, and is created to work with digital assets.
 
-Resource type can only be defined and managed in a single module. This module sets rules for accessing, destroying, transfering and checking existence of resources defined in it.
+Resource type can only be defined and managed in a single module, it's a structure containing a list of abilities. This module sets rules for accessing, destroying, transferring and checking the existence of resources defined in it.
 
 ## Develop a resource
 
@@ -15,72 +15,74 @@ Let's create a swap module, that will allow us to swap coins between users.
 We will make it easy, it will support only one swap per coin pair, which means, you can't create multiple swaps using the same pair in the same account. Just two functions - to publish your offer and to allow other users to swap it for specified price.
 
 ```rust
-module Swap {
-    use 0x1::Pontem;
-    use 0x1::Account;
-    use 0x1::Signer;
+address {{sender}} {
+    module Swap {
+        use 0x1::Diem::{Self, Diem};
+        use 0x1::DiemAccount;
+        use 0x1::Signer;
 
-    // The resource of module which contains swap parameters.
-    resource struct T<Offered, Expected>{
-        offered: Pontem::T<Offered>,
-        price: u128,
-    }
+        // The resource of module which contains swap parameters.
+        struct Swap<Offered: store + key, Expected: store + key> has key, store {
+            offered: Diem<Offered>,
+            price: u64,
+        }
 
-    // Create a swap deal with two coin pairs: Offered and Expected.
-    public fun create<Offered, Expected>(sender: &signer, offered: Pontem::T<Offered>, price: u128) {
-        let sender_addr = Signer::address_of(sender);
+        // Create a swap deal with two coin pairs: Offered and Expected.
+        public fun create<Offered: store + key, Expected: store + key>(sender: &signer, offered: Diem<Offered>, price: u64) {
+            let sender_addr = Signer::address_of(sender);
 
-        assert(!exists_at<Offered, Expected>(sender_addr), 101);
+            assert(!exists_at<Offered, Expected>(sender_addr), 101);
 
-        move_to<T<Offered, Expected>>(
-            sender,
-            T<Offered, Expected> {
-                offered: offered,
-                price
-            }
-        );
-    }
+            move_to<Swap<Offered, Expected>>(
+                sender,
+                Swap<Offered, Expected> {
+                    offered: offered,
+                    price
+                }
+            );
+        }
 
-    // Get the price of the swap deal.
-    public fun get_price<Offered, Expected>(seller: address): u128 acquires T {
-        let offer = borrow_global<T<Offered, Expected>>(seller);
-        offer.price
-    }
+        // Get the price of the swap deal.
+        public fun get_price<Offered: store + key, Expected: store + key>(seller: address): u64 acquires Swap {
+            let offer = borrow_global<Swap<Offered, Expected>>(seller);
+            offer.price
+        }
 
-    // Change price before swap happens.
-    public fun change_price<Offered, Expected>(sender: &signer, new_price: u128) acquires T {
-        let offer = borrow_global_mut<T<Offered, Expected>>(Signer::address_of(sender));
-        offer.price = new_price;
-    }
+        // Change price before swap happens.
+        public fun change_price<Offered: store + key, Expected: store + key>(sender: &signer, new_price: u64) acquires Swap {
+            let offer = borrow_global_mut<Swap<Offered, Expected>>(Signer::address_of(sender));
+            offer.price = new_price;
+        }
 
-    // Swap coins and deposit them to accounts: both creator and buyer.
-    public fun swap<Offered, Expected>(sender: &signer, seller: address, exp: Pontem::T<Expected>) acquires T {
-       let T<Offered, Expected> { offered, price } = move_from<T<Offered, Expected>>(seller);
-       let exp_value = Pontem::value<Expected>(&exp);
+        // Swap coins and deposit them to accounts: both creator and buyer.
+        public fun swap<Offered: store + key, Expected: store + key>(sender: &signer, seller: address, exp: Diem<Expected>) acquires Swap {
+            let Swap<Offered, Expected> { offered, price } = move_from<Swap<Offered, Expected>>(seller);
+            let exp_value = Diem::value<Expected>(&exp);
 
-       assert(exp_value == price, 102);
-       Account::deposit(sender, seller, exp);
-       Account::deposit_to_sender(sender, offered);
-    }
+            assert(exp_value == price, 102);
+            DiemAccount::pnt_deposit(seller, exp);
+            DiemAccount::pnt_deposit(Signer::address_of(sender), offered);
+        }
 
-    // Check if the swap pair already exists for the account.
-    public fun exists_at<Offered, Expected>(addr: address): bool {
-        exists<T<Offered, Expected>>(addr)
+        // Check if the swap pair already exists for the account.
+        public fun exists_at<Offered: store + key, Expected: store + key>(addr: address): bool {
+            exists<Swap<Offered, Expected>>(addr)
+        }
     }
 }
 ```
 
-Provided code creates new module **"Swap"** and resource named **"T"** \(default name for default resource in modules\), which holds information about the deal.
+Provided code creates new module **"Swap"** and resource named **"Swap"** \(default name for default resource in modules\), which holds information about the deal.
 
 To create a swap use **"create"** function, to make an exchange use **"swap"** function. Other methods in this module provide ability to get/set price, check if swap option already exists at specific address. All methods use generics Offered and Expected, which allow them to make unique resources for each swap.
 
-The resource `Pontem::T` represents account balance of `Offered` type.
+The resource `Diem::Diem` represents account balance of `Offered` type.
 
 ```rust
 // The resource of module which contains swap parameters.
-resource struct T<Offered, Expected>{
-    offered: Pontem::T<Offered>,
-    price: u128,
+struct Swap<Offered: store + key, Expected: store + key> has key, store {
+    offered: Diem<Offered>,
+    price: u64,
 }
 ```
 
@@ -94,14 +96,14 @@ To move resource to sender `move_to<T>(&signer, T)` method is used - as obvious 
 
 ```rust
 // Create a swap deal with two coin pairs: Offered and Expected.
-public fun create<Offered, Expected>(sender: &signer, offered: Pontem::T<Offered>, price: u128) {
+public fun create<Offered: store + key, Expected: store + key>(sender: &signer, offered: Diem<Offered>, price: u64) {
     let sender_addr = Signer::address_of(sender);
 
-    assert(!exists<Offered, Expected>(sender_addr), 101);
+    assert(!exists_at<Offered, Expected>(sender_addr), 101);
 
-    move_to<T<Offered, Expected>>(
+    move_to<Swap<Offered, Expected>>(
         sender,
-        T<Offered, Expected> {
+        Swap<Offered, Expected> {
             offered: offered,
             price
         }
@@ -117,8 +119,8 @@ Allow us to check if the resource already exists on the specific address or not:
 
 ```rust
 // Check if swap pair already exists for account.
-public fun exists_at<Offered, Expected>(addr: address): bool {
-    exists<T<Offered, Expected>>(addr)
+public fun exists_at<Offered: store + key, Expected: store + key>(addr: address): bool {
+    exists<Swap<Offered, Expected>>(addr)
 }
 ```
 
@@ -126,8 +128,8 @@ public fun exists_at<Offered, Expected>(addr: address): bool {
 
 ```rust
 // Change price before swap happens.
-public fun change_price<Offered, Expected>(sender: &signer, new_price: u128) acquires T {
-    let offer = borrow_global_mut<T<Offered, Expected>>(Signer::address_of(sender));
+public fun change_price<Offered: store + key, Expected: store + key>(sender: &signer, new_price: u64) acquires Swap {
+    let offer = borrow_global_mut<Swap<Offered, Expected>>(Signer::address_of(sender));
     offer.price = new_price;
 }
 ```
@@ -136,8 +138,8 @@ Allows getting a mutable reference to a resource, that could be changed then. Th
 
 ```rust
 // Get the price of the swap deal.
-public fun get_price<Offered, Expected>(seller: address): u128 acquires T {
-    let offer = borrow_global<T<Offered, Expected>>(seller);
+public fun get_price<Offered: store + key, Expected: store + key>(seller: address): u64 acquires Swap {
+    let offer = borrow_global<Swap<Offered, Expected>>(seller);
     offer.price
 }
 ```
@@ -146,18 +148,19 @@ public fun get_price<Offered, Expected>(seller: address): u128 acquires T {
 
 ### acquires
 
-Every function which accesses already created resource must have `acquires` keyword in it signature after which acquired resources are listed. Look at the usage of `borrow_global` and `borrow_global_mut` again. Resource `T` is acquired by both methods `get_price` and `change_price`.
+Every function which accesses already created resource must have `acquires` keyword in it signature after which acquired resources are listed. Look at the usage of `borrow_global` and `borrow_global_mut` again. Resource `Swap` is acquired by both methods `get_price` and `change_price`.
 
 ### move\_from&lt;T&gt;\(address\)
 
 ```rust
-public fun swap<Offered, Expected>(sender: &signer, seller: address, exp: Pontem::T<Expected>) acquires T {
-    let T<Offered, Expected> { offered, price } = move_from<T<Offered, Expected>>(seller);
-    let exp_value = Pontem::value<Expected>(&exp);
+// Swap coins and deposit them to accounts: both creator and buyer.
+public fun swap<Offered: store + key, Expected: store + key>(sender: &signer, seller: address, exp: Diem<Expected>) acquires Swap {
+    let Swap<Offered, Expected> { offered, price } = move_from<Swap<Offered, Expected>>(seller);
+    let exp_value = Diem::value<Expected>(&exp);
 
     assert(exp_value == price, 102);
-    Account::deposit(sender, seller, exp);
-    Account::deposit_to_sender(sender, offered);
+    DiemAccount::pnt_deposit(seller, exp);
+    DiemAccount::pnt_deposit(Signer::address_of(sender), offered);
 }
 ```
 
@@ -167,64 +170,10 @@ public fun swap<Offered, Expected>(sender: &signer, seller: address, exp: Pontem
 
 So `create` function creates a new resource, `swap` function allows to swap \(deposit coins to both accounts and _destroy_ resource T\); we've also added methods to get price of the deal and to change it.
 
-## Publish
-
-You can try to compile and publish module, and then via script call deposit with hash of your secret value, and then withdraw by passing your secret value.
-
-Before you go to next step - let's create your own token using following [tutorial](../tutorials/token.md).
-
-## Scripts
-
-Here are a few scripts examples, of how you can work with Swap module \(don't forget to replace `{{sender}}` with your address\):
-
-**Create**
-
-```rust
-script {
-    use {{sender}}::Swap;
-    use {{sender}}::MyToken;
-    use 0x1::PONT;
-    use 0x1::Account;
-    use 0x1::Pontem;
-
-    fun create_swap(sender: &signer, amount: u128, price: u128) {
-        // To make sure PONT coin registered and known.
-        Pontem::register_coin<PONT::T>(b"PONT", 12);
-
-        // Deposit a sender PONT coins from native balance.
-        // The function returns PONT balance resource.
-        let pont = Account::deposit_native<PONT::T>(sender, amount);
-
-        // Deposit PONT coins in exchange to your token.
-        // Price is total for whole PONT amount.
-        Swap::create<PONT::T, MyToken::T>(sender, pont, price);
-    }
-}
-```
-
-**Swap**
-
-```rust
-script {
-    use {{sender}}::Swap;
-    use {{sender}}::MyToken;
-    use 0x1::PONT;
-    use 0x1::Account;
-
-    fun make_swap(sender: &signer, seller: address, price: u128) {
-        let tokens = Account::withdraw_from_sender(sender, price);
-
-        // Deposit PONT coins in exchange to your token.
-        Swap::swap<PONT::T, MyToken::T>(sender, seller, tokens);
-    }
-}
-```
-
 ## More about resources
 
 Resources are the most interesting and the most complex topic in Move language. But once you've gotten the idea, the rest is easy.
 
 To know Move better and to learn about resources specifically:
 
-* [Diem Resources Documentation](https://developers.diem.com/main/docs/move-basics-structs-and-resources)
-* [Move Book Resources](https://move-book.com/resources/index.html)
+* [Move Book](https://move-book.com/advanced-topics/types-with-abilities.html)

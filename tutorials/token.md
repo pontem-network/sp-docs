@@ -1,5 +1,7 @@
 # Own Token
 
+**WE NEED TO CHANGE STANDARD LIBRARY A LITTLE FIRST, SO CURRENTLY I HIDE IT**
+
 Easiest way to make a token in Pontem network it's to deploy a new module containing your token type. Token type is a structure that will be used in [generic](https://developers.diem.com/main/docs/move-basics-generics) functions or structs, or in any other places.
 
 As you can see, our Standard Library [Account.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/account.move) is managing balances resources for accounts by utilizing generic functions:

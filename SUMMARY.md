@@ -40,7 +40,6 @@
 * [Addresses & Access Control](./tutorials/addresses_access_control.md)
 * [Emit Events](./tutorials/events.md)
 * [Errors Catching](./tutorials/errors.md)
-* [Own Token](./tutorials/token.md)
 * [Watch Resources](./tutorials/watch_resources.md)
 
 ## 🔗 07. Resources
