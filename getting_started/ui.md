@@ -2,55 +2,27 @@
 
 Easiest way to iterate with Polkadot based blockchain to use Polkadot JS App UI. 
 
-Before start you need to configure UI:
+You can use the UI to create new accounts, send transactions, do RPC calls, and much more. 
 
-* To connect to testnet use next address: `wss://testnet.pontem.network/wss`.
-* To connect to local node use next address: `ws://127.0.0.1:9944`.
+## Deployed Polkadot App.
 
-1. Navigate to [Polkadot JS App UI](https://polkadot.js.org/apps).
-2. Setup UI to use an **IP address** if needed (to see network settings click on the orange circle in the top right corner and change custom endpoint).
+Use following link to connect to Pontem node using UI - [PONTEM UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/accounts).
 
-Go to `Settings -> Developer` and put there next JSON:
+Otherwise you can configure UI manually:
 
-```json
-{
-  "MoveModuleId": {
-    "address": "AccountId",
-    "name": "Text"
-  },
-  "MoveTypeTag": {
-    "_enum": [
-      "Bool",
-      "U8",
-      "U64",
-      "U128",
-      "Address",
-      "Signer",
-      "Vector",
-      "Struct"
-    ],
-    "Bool": null,
-    "U8": null,
-    "U64": null,
-    "U128": null,
-    "Address": null,
-    "Signer": null,
-    "Vector": "MoveTypeTag",
-    "Struct": "MoveStructTag"
-  },
-  "MoveStructTag": {
-    "address": "AccountId",
-    "module": "Text",
-    "name": "Text"
-  }
-}
-```
-
-Save configuration.
+* Navigate to [Polkadot App](https://polkadot.js.org/apps).
+* Choose network (to see network settings click on the orange circle in the top right corner and change custom endpoint).
+* Click on `TEST NETWORKS`.
+* Click on `Pontem`.
+* Click on the `Switch` button. 
 
 ## Account creation
 
-![Account](/assets/module.png "Account")
+{% hint style="info" %}
+🧙‍♂️ We recommend to use [Polkadot Extension](https://polkadot.js.org/extension/) to create account, it supports hardware wallets and has integration with Polkadot App UI, otherwise use current documentation. 
+{% endhint %}
+
+![Account](/assets/account.png "Account")
 
 * Navigate to **"Accounts"** in the header menu.
 * Click on **"Add account"**.
@@ -61,15 +33,15 @@ Otherwise you can use [Polkadot JS Extension](https://polkadot.js.org/extension/
 
 ## Transactions
 
+In the current documentation we describe how to send execute scripts and publish module transactions.
+
 {% hint style="info" %}
 🧙‍♂️ Read [Move VM](../move_vm/README.md) pallet documentation to build first modules and scripts.
 {% endhint %}
 
-You can use the UI to create new accounts, send transactions, and do RPC calls etc. In the current documentation we describe how to send execute script and publish module transactions, also how to deploy Standard Library using a sudo account.
+You need an account with balance (in case of local network use default accounts), in case of Pontem testnet network create a new account and fund it using [FAUCET](https://t.me/pontem_faucet_bot).
 
-You need an account with balance, in case of local network use default accounts, in case of Pontem demo network, use [FAUCET](https://t.me/pontem_faucet_bot).
-
-Next steps required to have  [dove](../move_vm/compiler_&_toolset.md) compiler installed, means you already compiled your modules/scripts.
+Next steps required to have the [dove](../move_vm/compiler_&_toolset.md) tool installed, means you already compiled your modules/scripts.
 
 ### Module
 
@@ -107,28 +79,6 @@ To deploy compiled script transaction do following steps:
 8. Submit a new signed transaction!
 9. Wait until the transaction is confirmed.
 
-### Sudo
-
-![Sudo](/assets/sudo.png "Sudo")
-
-You can use `sudo` in Substrate to deploy [Standard Library](../move_vm/stdlib.md) to Move VM pallet. Standard library will be stored under the `0x01` address.
-To deploy a standard library using `sudo` you need access to `sudo` account, in case of local network it's usually `Alice` account.
-
-See how to [build](./local_node.md#standard-library) Standard Library.
-
-To deploy standard module do following steps:
-
-1. Navigate to **Developer -> Extrinsics**.
-2. Choose the origin account (usually it's Alice in case of local network).
-3. Choose the **sudo** module.
-4. Choose **sudo(call)** transaction.
-5. Choose the **mvm** module in the call: **Call** field.
-6. Choose **publishPackage** transaction.
-7. Choose **package** field and enable file upload.
-8. Configure the gas limit parameter (usually 1000000 will be enough).  
-9. Submit a new signed transaction!
-10. Wait until the transaction is confirmed.
-
 ## Tips
 
 To speed up transaction you can provide additional tips to the transaction, when you click on **Submit Transaction** button it show modal where you can configure tip:
@@ -139,6 +89,14 @@ See [gas, weight and tips](../move_vm/gas.md) documentation to learn more.
 
 ## RPC
 
-Currently, you can't call Move pallet RPC from the UI, but we are going to fix it soon. 
+You can execute RPC calls using UI:
 
-So see [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC using other methods.
+* Navigate to **Developer -> RPC calls**.
+* Choose **mvm** module.
+* Choose method you want to execute:
+  * **gasToWeight(gas)** - converts gas to weight.
+  * **weightToGas(weight)** - converts weight to gas.
+  * **estimateGasExecute(account, tx_bc, gas_limit)** - estimate gas for `execute` transaction (accepts account, transaction, and gas limit as arguments).
+  * **estimateGasPublish(account, module_bc, gas_limit)** - estimate gas for `publishModule` transaction (accepts account, module, and gas limit as arguments).
+
+See [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC using other methods like curl or CLI.

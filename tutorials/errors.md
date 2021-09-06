@@ -6,21 +6,21 @@ In case of error VM will generate error and add error code to the transaction ou
 
 For example, let's start with `assert`:
 
-```rustc
+```rust
 script {
     fun error(a: u128, b: u128) {
-        assert(a > b, 101); // Throw error with code 101 if ‘a’ is less than ‘b’.
+        assert(a > b, 101); // Throw error with code 101 if a is less than b.
     }
 }
 ```
 
 And same could be done with `abort`:
 
-```rustc
+```rust
 script {
-    fun error(a: u128, b: u128) {
+    fun error_1(a: u128, b: u128) {
         if (a < b) {
-            abort 101; // Throw error with code 101 if ‘a’ is less than ‘b’.
+            abort 101 // Throw error with code 101 if a is less than b.
         }
     }
 }
@@ -31,7 +31,7 @@ You can use `abort` and `assert` in your modules also.
 Let's compile one of examples using [dove](../move_vm/compiler_&_toolset.md#dove) and execute using [CLI](../getting_started/cli.md) (easiest way to see returned events):
 
 ```sh
-pontem-cli tx.mvm.execute <script> <file> --seed <seed>
+polkadot-js-api tx.mvm.execute @<script> <file> --seed <seed> --ws <ws-endpoint>
 ```
 
 Replace values with your own, run execute transaction and see output, generated event:
@@ -50,6 +50,6 @@ Replace values with your own, run execute transaction and see output, generated 
 }
 ```
 
-Where vakue `0x02016500000000000000` is indeed our error incoded in LCS, see [Events](./events.md) tutorial for details.
+Where value `0x02016500000000000000` is indeed our error included in BCS, see [Events](./events.md) tutorial for details.
 
 **Important: The described way is not the best, but only way to get custom errors from Move VM in Move pallet right now, we are working hard to make it better and more useful.**

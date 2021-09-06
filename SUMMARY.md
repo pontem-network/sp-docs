@@ -10,7 +10,7 @@
 ## 🎓02. GETTING STARTED
 * [Getting started](./getting_started/README.md)
 * [First Transaction](./getting_started/first_transaction.md)
-* [Substrate](./getting_started/substrate.md)
+* [Parachain](./getting_started/parachain.md)
 * [Addresses](./getting_started/addresses.md)
 * [Run Local Node](./getting_started/local_node.md)
 * [Polkadot JS UI](./getting_started/ui.md)
@@ -25,7 +25,6 @@
 * [Arguments](./move_vm/arguments.md)
 * [Gas](./move_vm/gas.md)
 * [Standard Library](./move_vm/stdlib.md)
-* [Native Balances](./move_vm/native_balances.md)
 * [RPC](./move_vm/rpc.md)
 
 ## 📘 04. MOVE LANGUAGE
@@ -37,11 +36,11 @@
 * [Dove.toml manifest file format](./toolset/dove_toml_manifest.md)
 
 ## 🔧 06. TUTORIALS
-* [Watch Resources](./tutorials/watch_resources.md)
-* [Access Control](./tutorials/access_control.md)
+* [Create account](./tutorials/create_account.md)
+* [Addresses & Access Control](./tutorials/addresses_access_control.md)
 * [Emit Events](./tutorials/events.md)
 * [Errors Catching](./tutorials/errors.md)
-* [Own Token](./tutorials/token.md)
+* [Watch Resources](./tutorials/watch_resources.md)
 
 ## 🔗 07. Resources
 * [Site](https://pontem.network)

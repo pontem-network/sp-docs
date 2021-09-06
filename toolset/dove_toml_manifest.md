@@ -26,7 +26,7 @@ name = "my_project"
 account_address = "<your account address>"
 dialect = "pont"
 dependencies = [
-    { git = "https://github.com/pontem-network/move-stdlib", branch = "v1.2.0" },
+    { git = "https://github.com/pontem-network/move-stdlib", branch = "v0.3.0" },
     { path = "./local_modules" }
 ]
 ```
@@ -37,12 +37,12 @@ The address of the user account.
 
 1. You can use `{{sender}}` clause anywhere in your source code, 
    which will be replaced with the value of `account_address` at compilation time.
-    
-2. If you `dove run` the script without `--signers` flag, 
-   this address will be the default `signer` passed to the script function.  
 
-3. If you don't wrap your module with the `address {}` block, 
-   this value is used as the address of the module. 
+2. You can `dove run` the script and replace signers' arguments with addresses of  signers.
+ 
+3. You should wrap your module with `address {}` block, you have the option use `{{sender}}` instead of real address.
+ 
+
 
 ### The `dialect` field
 

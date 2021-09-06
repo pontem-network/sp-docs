@@ -8,12 +8,11 @@ So far the tools we have developed using Move include but are not limited to:
 
 * [Move Pallet](https://github.com/pontem-network/sp-move) for Substrate framework.
 * [Move VM](https://github.com/pontem-network/sp-move-vm) adopted for Substrate WASM Runtime.
-* [Cosmos SDK Move VM module](https://github.com/dfinance/dnode/tree/master/x/vm), brings Move VM to Cosmos SDK.
+* [Cosmos SDK Move VM module](https://github.com/dfinance/dstation/tree/master/x/vm), brings Move VM to Cosmos SDK.
 * [VS Code Plugin](https://marketplace.visualstudio.com/items?itemName=PontemNetwork.move-language) to write modules and scripts for both Diem and Dfinance, Pontem network.
-* [IntelliJ Plugin](https://github.com/dfinance/intellij-move) for Move language.
+* [IntelliJ Plugin](https://plugins.jetbrains.com/plugin/14721-move-language) for Move language.
 * [Move VM](https://github.com/dfinance/dvm) as a server.
 * [Toolset](https://github.com/pontem-network/move-tools) for Move language: dissembler, resources viewer, language server, executor.
-* [Move Book](https://move.pontem.network) - the first book about Move.
-* [DeFi contracts](https://github.com/pontem-network/contracts) framework on Move language.
+* [Pontem ↔ Diem Bridge](https://github.com/pontem-network/bridge) alpha version.
 
 ![Pontem Team](/assets/illustrations/team.png "Pontem Team")

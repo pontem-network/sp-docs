@@ -1,10 +1,12 @@
 # Own Token
 
+**WE NEED TO CHANGE STANDARD LIBRARY A LITTLE FIRST, SO CURRENTLY I HIDE IT**
+
 Easiest way to make a token in Pontem network it's to deploy a new module containing your token type. Token type is a structure that will be used in [generic](https://developers.diem.com/main/docs/move-basics-generics) functions or structs, or in any other places.
 
 As you can see, our Standard Library [Account.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/account.move) is managing balances resources for accounts by utilizing generic functions:
 
-```rustc
+```rust
 resource struct Balance<Token> {
     coin: Pontem::T<Token>
 }
@@ -14,7 +16,7 @@ Balance is a resource generic structure that allows you to store balance for any
 
 `Pontem::T` is the resource generic struct in [Pontem.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/pontem.move):
 
-```rustc
+```rust
 resource struct T<Coin> {
     value: u128
 }
@@ -26,7 +28,7 @@ You can read more about `Pontem` and `Account` modules in our [Standard Library]
 
 Let's create a new module:
 
-```rustc
+```rust
 module MyToken {
     struct T {} // New token type.
 }
@@ -34,7 +36,7 @@ module MyToken {
 
 Now let's register token in Pontem network [Standard Library](../move_vm/stdlib.md), create new script:
 
-```rustc
+```rust
 script {
     use 0x01::Pontem;
     use 0x01::Account;
@@ -76,7 +78,7 @@ pontem-cli tx.mvm.execute @./artifacts/transactions/new_token.mvt 1000000 --seed
 
  Your created your first token in Pontem network. Let's move some amount of your tokens to your friend account:
 
-```rustc
+```rust
 script {
     use 0x01::Account;
     use {{sender}}::MyToken;
