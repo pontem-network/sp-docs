@@ -1,5 +1,7 @@
 # Watch resources
 
+**THIS TUTORIAL IS OUT OF DATE, WE WILL PUBLISH NEW VERSION ONCE MERGING OF RESOURCE VIEWER INTO DOVE HAPPENS**.
+
 `move-resource-viewer` allows you to watch resources stored inside a blockchain node. First of all, install [move-resource-viewer](../move_vm/compiler_&_toolset.md) using our documentation.
 
 Compile using [dove](../move_vm/compiler_&_toolset.md#resource-viewer) and deploy `Storage` module:
