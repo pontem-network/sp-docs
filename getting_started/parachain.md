@@ -33,12 +33,10 @@ To utilize the Pontem network the following components must first be implemented
 
 The current Pontem node implementation is a [Parachain](https://wiki.polkadot.network/docs/learn-parachains) that requires connection to the Relay Chain to function normally. It is required as we want to have the Move VM pallet working, and No-Code tools working on top of Move language secured by Polkadot/Kusama validators and at the same time allowing our community to become Collators: earn rewards and produce new proof states for Relay Chain.
 
-## Collators & Staking
+## Collators
  
 [Collators](https://wiki.polkadot.network/docs/learn-collator) collecting parachain transactions and producing state proofs for Relay Chain validators.
 Collators rewarded in PONT tokens for running the Pontem network parachain.
- 
-If you want more details, please, navigate to the [Staking](staking/README.md) section.
 
 ## Governance
 
