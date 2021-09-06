@@ -35,7 +35,7 @@ Done! Once your transaction is confirmed, balances will be updated.
 To send tokens from CLI use next command:
 
 ```text
-polkadot-js-api tx.balances.transfer <recipient> 10000000000 --seed "<seed>" --types ./types.json --ws wss://testnet.pontem.network/wss # Send 1 PONT.
+polkadot-js-api tx.balances.transfer <recipient> 10000000000 --seed "<seed>" --types ./types.json --ws wss://testnet.pontem.network/ws # Send 1 PONT.
 ```
 
 {% hint style="info" %}

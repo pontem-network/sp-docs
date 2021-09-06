@@ -8,7 +8,7 @@ To connect to the network you can use UI or CLI.
 
 Our testnet node deployed at the following IP address:
 
-* `wss://testnet.pontem.network/wss`
+* `wss://testnet.pontem.network/ws`
   
 Use provided address to configure UI and CLI:
 
