@@ -7,26 +7,28 @@ For example, in Solidity it's [Ownable](https://github.com/OpenZeppelin/openzepp
 Let's create a new module with the same logic, we will store. We will use the Signer module to extract the transaction sender address and compare it with the defined module owner.
 
 ```rust
-module OnlyOwnerStore {
-    use 0x01::Signer;
+address {{sender}} {
+    module OnlyOwnerStore {
+        use 0x01::Signer;
 
-    // Just a simple number storage.
-    resource struct U64 {
-        val: u64
-    }
+        // Just a simple number storage.
+        struct U64 has store, key {
+            val: u64
+        }
 
-    // Owner address.
-    const OWNER : address = {{sender}};
+        // Owner address.
+        const OWNER : address = @{{sender}};
 
-    public fun store_u64(account: &signer, val: u64) {
-        assert(Signer::address_of(account) == OWNER, 101); // Throw error if function called not from owner.
-        let foo = U64 { val: val };
-        move_to<U64>(account, foo);
-    }
+        public fun store_u64(account: &signer, val: u64) {
+            assert(Signer::address_of(account) == OWNER, 101); // Throw error if function called not from owner.
+            let foo = U64 { val: val };
+            move_to<U64>(account, foo);
+        }
 
-    // The function returns owner address.
-    public fun owner() : address {
-        OWNER
+        // The function returns owner address.
+        public fun owner() : address {
+            OWNER
+        }
     }
 }
 ```
@@ -42,12 +44,9 @@ Deploy module under your address and use next script for experiment:
 ```rust
 script {
     use {{sender}}::OnlyOwnerStore;
-    use 0x01::Event;
 
-    fun store_owner(account: &signer, n: u64) {
-        Event::emit(account, OnlyOwnerStore::owner()); // emit owner address.
-
-        OnlyOwnerStore::store_u64(account, n);
+    fun owner_store(account: signer, n: u64) {
+        OnlyOwnerStore::store_u64(&account, n); // Will throw error if account doesn't match owner.
     }
 }
 ```
