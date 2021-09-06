@@ -36,11 +36,12 @@
 * [Dove.toml manifest file format](./toolset/dove_toml_manifest.md)
 
 ## 🔧 06. TUTORIALS
-* [Watch Resources](./tutorials/watch_resources.md)
+* [Create account](./tutorials/create_account.md)
 * [Addresses & Access Control](./tutorials/addresses_access_control.md)
 * [Emit Events](./tutorials/events.md)
 * [Errors Catching](./tutorials/errors.md)
 * [Own Token](./tutorials/token.md)
+* [Watch Resources](./tutorials/watch_resources.md)
 
 ## 🔗 07. Resources
 * [Site](https://pontem.network)
