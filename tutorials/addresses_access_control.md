@@ -1,4 +1,4 @@
-# Access Control
+# Addresses & Access Control
 
 When you develop smart contracts there could be situations when you want to develop a module containing functions only your account can call.
 

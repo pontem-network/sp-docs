@@ -37,7 +37,7 @@
 
 ## 🔧 06. TUTORIALS
 * [Watch Resources](./tutorials/watch_resources.md)
-* [Access Control](./tutorials/access_control.md)
+* [Addresses & Access Control](./tutorials/addresses_access_control.md)
 * [Emit Events](./tutorials/events.md)
 * [Errors Catching](./tutorials/errors.md)
 * [Own Token](./tutorials/token.md)
