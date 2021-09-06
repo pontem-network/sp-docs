@@ -33,6 +33,8 @@ address {{sender}} {
 }
 ```
 
+If you put the address inside a variable, or as literal, you should use `@` prefix (like in our example).
+
 As you, only owner address can call `store_u64` method of module, otherwise it sends error:
 
 ```rust
