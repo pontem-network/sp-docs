@@ -10,7 +10,7 @@
 🚀 Pontem is an experimentation platform and bridge between permissioned and public blockchain ecosystems that will allow for the exchange of data and value between these two metaverses. Pontem successfully delivered a web3 grant to port the Move VM into the Polkadot ecosystem and is backed by leading venture capital funds such as Mechanism Capital, Kenetic Capital, Animoca Brands, and Delphi Digital.
 {% endhint %}
 
-Pontem is building a decentralized application (dapp) framework built on Polkadot that connects public blockchains like Ethereum to Facebook’s permissioned (private) Diem Blockchain project. This allows applications to leverage established public ecosystems like Ethereum for the permissioned Diem Blockchain. Pontem is connecting blockchains through Polkadot and aims to support additional protocols in the future to bridge crypto with Facebook’s 2.8 billion users.
+Pontem is building a decentralized application (dapp) framework built on Polkadot that connects public blockchains like Ethereum to Facebook’s permissioned (private) Diem Blockchain project. This allows applications to leverage established public ecosystems like Ethereum for the permissioned Diem Blockchain. Pontem is connecting blockchains through Polkadot and aims to support additional protocols in the future to bridge crypto with Facebook’s 3.5 billion users.
 
 **Pontem** is an Experimentation Network for **Diem**.
 
