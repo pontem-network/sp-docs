@@ -5,7 +5,7 @@ The address format used in Substrate-based chains is SS58. SS58 is a modificatio
 For example:
 
 * Polkadot addresses always start with the number 1.
-* Kusama addresses always start with a capital letter like C, D, F, G, H, J...
+* Kusama addresses always start with a capital letter like C, D, E, F, etc...
 * Generic Substrate addresses start with 5.
 
 {% hint style="info" %}
