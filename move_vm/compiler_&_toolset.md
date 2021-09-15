@@ -1,23 +1,23 @@
 # Compiler & Toolset
 
-We've developed a toolset for the Move VM and language which allows for:
+We've developed a toolchain for the Move VM and language which allows for:
 
 * **Compiling** Move code into bytecode.
-* **Testing** Move code with tests and formal verification.
+* **Testing** Move code with tests and formal verifications.
 * **Viewing** Move resources (stored data) from remote blockchain nodes.
-* **Disassembling** Move binary and even read human readable result.
+* **Disassembling** Move binary and even read human readable results.
 
-The toolset is implemented by Dove tool and several separate binaries, which you can install following the current tutorial.
+The toolchain is implemented by the Dove tool and several separate binaries, which you can install following this tutorial.
 
 ## Installation
 
 All tools stored in our [Move-Tools](https://github.com/pontem-network/move-tools) Github repository.
 
-You can download all tools from [releases page](https://github.com/pontem-network/move-tools/releases).
+You can download all tools for your operating system from [releases page](https://github.com/pontem-network/move-tools/releases).
 
-After downloading rename tool(s) removing version and os and moving binary to `/usr/local/bin/`.
+After downloading, rename tool(s) by removing version and os and moving binary to `/usr/local/bin/`.
 
-For example, for dove:
+For example, for dove on linux:
 
 ```sh
 mv ./dove-1.3.2-linux-x86_64 ./dove
@@ -37,9 +37,9 @@ To build tools from sources see [README](https://github.com/pontem-network/move-
 
 ## Dove
 
-Dove is Move compiler and package manager. Using Dove you can create your own Move smart contract projects.
+Dove is a Move compiler and package manager. Using Dove you can create your own Move smart contract application.
 
-Let's create first project:
+Let's create your first project:
 
 ```sh
 dove new first_project --dialect pont  --address <address>
@@ -47,7 +47,7 @@ dove new first_project --dialect pont  --address <address>
 
 * Replace `<address>` with your address.
 
-Navigate to `first_project` folder and see what's automatically generated inside:
+Navigate to `first_project` folder and examine what's automatically generated inside:
 
 ```sh
 cd ./first_project
@@ -59,7 +59,7 @@ ls -la
 * `scripts` - place scripts here.
 * `tests` - place tests here.
 
-Let's see what contains `Dove.toml`:
+Let's examine what is contained in `Dove.toml`:
 
 ```toml
 [package]
@@ -77,13 +77,13 @@ dependencies = [
 * `dialect` - can be `diem`, or `pont` (SS58 Polkadot addresses).
 * `dependencies` - list of dependencies, git (tag or branch also supported) or local folder (use `path`).
 
-Let's create empty script and build it:
+Let's create an empty script and build it:
 
 ```sh
 touch ./scripts/test.move
 ```
 
-Put there Move code:
+Insert Move code:
 
 ```rust
 script {
@@ -93,22 +93,37 @@ script {
 }
 ```
 
-Build your empty project:
+Build your empty project in one of two ways:
+
+1. Without arguments:
 
 ```sh
-dove build # Build script without providing arguments, so can't use in pallet.
+dove build # Build script without providing arguments which can't be used in Substrate Pallet.
+```
+
+2. With arguments:
+
+```sh
 dove tx 'test()' # Build script with arguments.
 ```
 
-There is a difference between `build` and `tx` commands, if you want just to `build` your scripts use `build`, if you want to send transactions to the Pontem node use `tx` and provide arguments. 
+Difference between the `build` and `tx` commands: 
 
-Use `tx` only for scripts, build modules with `build` command.
+- If you want to just `build` your scripts, use `build`. However, this command is mainly used for building modules (modules are similar to smart contracts in Move).
+ 
+- if you want to simply send transactions to the Pontem node use `tx` and provide arguments. 
+
+{% hint style="info" %}
+Use the `tx` command only for scripts and use `build` for modules (similar concept to smart contracts in Move) 
+{% endhint %}
+
+For more information use the help function:
 
 ```sh
 dove tx --help
 ```
 
-See your builded artifacts in `./artifacts` folder:
+See your built artifacts in `./artifacts` folder:
 
 ```sh
 ls -la ./artifacts/scripts # Just built script
@@ -117,9 +132,9 @@ ls -la ./artifacts/transactions # Script with arguments for pallet.
 
 ### Script Transaction
 
-Command `tx` allows you to create transactions for an Polkadot based chain with Move Pallet.
+Command `tx` allows you to create transactions for Polkadot or Kusama based chains with the Move Pallet.
 
-`tx` takes script identifier, type parameters, and arguments and creates a transaction file as an artifact of work:
+`tx` takes a script identifier, type parameters, and arguments to create a transaction file as an artifact of work:
 
 Example:
 
