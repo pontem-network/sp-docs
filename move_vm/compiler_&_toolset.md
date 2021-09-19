@@ -1,23 +1,23 @@
 # Compiler & Toolset
 
-We've developed a toolset for the Move VM and language which allows for:
+We've developed a toolchain for the Move VM and language which allows for:
 
 * **Compiling** Move code into bytecode.
-* **Testing** Move code with tests and formal verification.
+* **Testing** Move code with tests and formal verifications.
 * **Viewing** Move resources (stored data) from remote blockchain nodes.
-* **Disassembling** Move binary and even read human readable result.
+* **Disassembling** Move binary and even read human readable results.
 
-The toolset is implemented by Dove tool and several separate binaries, which you can install following the current tutorial.
+The toolchain is implemented by the Dove tool and several separate binaries, which you can install following this tutorial.
 
 ## Installation
 
 All tools stored in our [Move-Tools](https://github.com/pontem-network/move-tools) Github repository.
 
-You can download all tools from [releases page](https://github.com/pontem-network/move-tools/releases).
+You can download all tools for your operating system from [releases page](https://github.com/pontem-network/move-tools/releases).
 
-After downloading rename tool(s) removing version and os and moving binary to `/usr/local/bin/`.
+After downloading, rename tool(s) by removing version and os and moving binary to `/usr/local/bin/`.
 
-For example, for dove:
+For example, for dove on linux:
 
 ```sh
 mv ./dove-1.3.2-linux-x86_64 ./dove
@@ -37,9 +37,9 @@ To build tools from sources see [README](https://github.com/pontem-network/move-
 
 ## Dove
 
-Dove is Move compiler and package manager. Using Dove you can create your own Move smart contract projects.
+Dove is a Move compiler and package manager. Using Dove you can create your own Move smart contract application.
 
-Let's create first project:
+Let's create your first project:
 
 ```sh
 dove new first_project --dialect pont  --address <address>
@@ -47,7 +47,7 @@ dove new first_project --dialect pont  --address <address>
 
 * Replace `<address>` with your address.
 
-Navigate to `first_project` folder and see what's automatically generated inside:
+Navigate to `first_project` folder and examine what's automatically generated inside:
 
 ```sh
 cd ./first_project
@@ -59,7 +59,7 @@ ls -la
 * `scripts` - place scripts here.
 * `tests` - place tests here.
 
-Let's see what contains `Dove.toml`:
+Let's examine what is contained in `Dove.toml`:
 
 ```toml
 [package]
@@ -77,13 +77,13 @@ dependencies = [
 * `dialect` - can be `diem`, or `pont` (SS58 Polkadot addresses).
 * `dependencies` - list of dependencies, git (tag or branch also supported) or local folder (use `path`).
 
-Let's create empty script and build it:
+Let's create an empty script and build it:
 
 ```sh
 touch ./scripts/test.move
 ```
 
-Put there Move code:
+Insert Move code:
 
 ```rust
 script {
@@ -93,22 +93,37 @@ script {
 }
 ```
 
-Build your empty project:
+Build your empty project in one of two ways:
+
+1. Without arguments:
 
 ```sh
-dove build # Build script without providing arguments, so can't use in pallet.
+dove build # Build script without providing arguments which can't be used in Substrate Pallet.
+```
+
+2. With arguments:
+
+```sh
 dove tx 'test()' # Build script with arguments.
 ```
 
-There is a difference between `build` and `tx` commands, if you want just to `build` your scripts use `build`, if you want to send transactions to the Pontem node use `tx` and provide arguments. 
+Difference between the `build` and `tx` commands: 
 
-Use `tx` only for scripts, build modules with `build` command.
+- If you want to just `build` your scripts, use `build`. However, this command is mainly used for building modules (modules are similar to smart contracts in Move).
+ 
+- if you want to simply send transactions to the Pontem node use `tx` and provide arguments. 
+
+{% hint style="info" %}
+Use the `tx` command only for scripts and use `build` for modules (similar concept to smart contracts in Move) 
+{% endhint %}
+
+For more information use the help function:
 
 ```sh
 dove tx --help
 ```
 
-See your builded artifacts in `./artifacts` folder:
+See your built artifacts in `./artifacts` folder:
 
 ```sh
 ls -la ./artifacts/scripts # Just built script
@@ -117,9 +132,9 @@ ls -la ./artifacts/transactions # Script with arguments for pallet.
 
 ### Script Transaction
 
-Command `tx` allows you to create transactions for an Polkadot based chain with Move Pallet.
+Command `tx` allows you to create transactions for Polkadot or Kusama based chains with the Move Pallet.
 
-`tx` takes script identifier, type parameters, and arguments and creates a transaction file as an artifact of work:
+`tx` takes a script identifier, type parameters, and arguments to create a transaction file as an artifact of work:
 
 Example:
 
@@ -131,7 +146,7 @@ This command searches for the script by name 'store_u64' in the script directory
 
 This command will fail if:
 
-* There is no script with the name given name 'store_u64'.
+* There is no script with the name 'store_u64'.
 * There is more than one script with the name 'store_64'.
 * The passed parameters or type parameters do not match the script parameters.
 * There are syntax errors in the script.
@@ -143,7 +158,7 @@ Example:
 dove tx 'create_account<0x01::PONT::PONT>()'
 ```
 
-You allowed to use SS58 address format and other types:
+You're allowed to use SS58 address format and other types:
 
 ```sh
 dove tx 'create_account<5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY::MyToken::Token>()'
@@ -187,7 +202,7 @@ See help:
 dove run --help
 ```
 
-Put next code inside `modules/Store.move`:
+1. Insert the following code inside `modules/Store.move`:
 
 ```rust
 address {{sender}} {
@@ -210,7 +225,7 @@ address {{sender}} {
 }
 ```
 
-After put next code inside `scripts/store.move`: 
+2. Insert the following code inside `scripts/store.move`: 
 
 ```rust
 script {
@@ -239,15 +254,15 @@ The data generated by script will be stored into `./artifacts/storage/` folder.
 
 You can run tests on your smart contracts using dove.
 
-Use same module and script from [executor](#executor) section.
+Let's demo this using the same module and script from the [executor](#executor) section.
 
-Create a new test:
+1. Create a new test file:
 
 ```sh
 touch ./tests/store_test.move
 ```
 
-Put the following code inside:
+2. Put the following code inside:
 
 ```rust
 address {{sender}} {    
@@ -269,9 +284,9 @@ address {{sender}} {
 }
 ```
 
-Provided code implements a test for module `Store`, and looks similar to the script we already implemented, yet it allows us to test your code.
+Provided code implements a test for module `Store`, and looks very similar to the script we already implemented, yet it allows us to test your code.
 
-See macro `test`, it allows you to provide a list of transaction [signers](https://developers.diem.com/main/docs/move-primitives-signer) that will be passed to the test function during execution.
+See macro `test`, which allows you to provide a list of transaction [signers](https://developers.diem.com/docs/move/move-primitive-types/move-primitives-signer) that will be passed to the test function during execution.
 
 Run tests:
 
@@ -296,13 +311,13 @@ See more examples in [Bridge repository](https://github.com/pontem-network/bridg
 
 ### Signers
 
-Usually you have scripts that contain one signer. Signer is an account where a signed transaction contains a script. When Diem builds such a transaction using the `tx` command it adds information about signers to the transaction, so you shouldn't care about such arguments.
+Usually you have scripts that contains only one signer. A signer is an account where a signed transaction contains a script. When Diem builds such a transaction using the `tx` command it adds information about signers to the transaction, so you shouldn't worry about such arguments.
  
 ### Root and Treasury signers
 
-As Diem is a very regulated network, often some functions of Diem Standard Library require Diem Treasury Signatures and Diem Root Signature.
+As Diem is a regulated permissioned network, often some functions of the Diem Standard Library require signatures from the Diem Treasury and Diem Root accounts.
  
-If we compare Pontem to Diem, Pontem is not a very regulated network, so Pontem disabled part of functions that required Treasury and Root signatures, and at the same time provided a way to get Treasury and Root signatures immediately.
+If we compare Pontem to Diem, Pontem is a permissionless network, so Pontem disables parts of functions that required Treasury and Root signatures, and at the same time provides a way to get Treasury and Root signatures immediately.
  
 So, using Dove you can build a transaction using Treasury and Root signature by using `tr` and `dr` literals as arguments:
 
@@ -312,7 +327,7 @@ dove tx 'my_script(dr, tr, ...the rest of arguments)'
 
 ### More
 
-To learn more commands see help:
+To learn more about these commands see help:
 
 ```sh
 dove --help
@@ -330,7 +345,7 @@ To continue with Dove and create your first scripts and modules read our [Move V
 
 ## Disassembler
 
-Allows to disassemble compiled `.mv` (modules/scripts) files.
+Allows you to disassemble compiled `.mv` (modules/scripts) files.
 
 See help:
 

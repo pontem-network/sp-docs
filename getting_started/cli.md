@@ -1,6 +1,6 @@
 # Polkadot JS CLI
 
-If you don't want to use UI to operate with Pontem Network, we offer to use CLI.
+If you don't want to use the UI to operate with Pontem Network, we offer to use CLI.
  
 [Polkadot JS](https://polkadot.js.org/) provides tools for Substrate blockchains, including [CLI](https://github.com/polkadot-js/tools/tree/master/packages/api-cli).
 
