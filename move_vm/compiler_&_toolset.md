@@ -35,6 +35,7 @@ For Windows:
 ```sh
 setx path "%path%;%ProgramFiles%\dove"
 ```
+
 5. Restart **"cmd"**.
 
 Now dove is available from **"cmd"**.
