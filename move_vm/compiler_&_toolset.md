@@ -30,6 +30,13 @@ For Windows:
 1. Go to **"Program Files"** directory.
 2. Create there **"dove"** directory.
 3. Rename the downloaded file to **"dove"** and put it into **"dove"** directory.
+4. Open **"cmd"** and run next command:
+
+```sh
+setx path "%path%;%ProgramFiles%\dove"
+```
+
+5. Restart **"cmd"**.
 
 Now dove is available from **"cmd"**.
 
