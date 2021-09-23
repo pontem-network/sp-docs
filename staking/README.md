@@ -2,7 +2,7 @@
 
 Pontem is running as [Parachain](https://wiki.polkadot.network/docs/learn-parachains) and based on Proof of Stake staking mechanism.
 
-Pontem collator's staking based on Nimbus consensus and Parachain staking built by [Moonbeam team](https://moonbeam.network).
+Pontem collator's staking based on Nimbus consensus and Parachain staking built by [Moonbeam team](https://docs.moonbeam.network/learn/features/staking/).
 
 Most important topics you should know:
 
@@ -37,8 +37,14 @@ We prepared small reference contains general definitions and actual values:
 * **Minimum Collator Stake** - minimum amount of PONT coins staked for the collator to become active (active collator can produce if collator on top of collators). Value: 1000 PONT.
 * **Minimum Nominator Stake** - minimum amount of PONT coins to be staked for collator. Value: 1 PONT.
 
-## Rewards
-
 ## Inflation
 
-Current configured inflation is just created for test purposes and will be changed in future, so we will describe inflation later.
+**IMPORTANT**: Current configured inflation is just created for test purposes and will be changed in future.
+
+
+
+## Rewards
+
+Collators are rewarded at the end of every round for their work from 2 rounds ago.
+
+
