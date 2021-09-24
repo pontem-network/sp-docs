@@ -16,6 +16,11 @@
 * [Polkadot JS UI](./getting_started/ui.md)
 * [Polkadot JS CLI](./getting_started/cli.md)
 
+## ⛏️03. STAKING
+* [Introduction](./staking/README.md)
+* [Become Nominator (Stake PONT)](./staking/nominator.md)
+* [Become Collator](./staking/collator.md)
+
 ## ⚙️ 03. MOVE VM
 * [Move VM](./move_vm/README.md)
 * [Pallet](./move_vm/pallet.md)
