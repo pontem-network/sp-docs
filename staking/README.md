@@ -79,3 +79,7 @@ reward = collator_reward - commission # How much reward is going to be distribut
 pay_to_collator = commission + (reward * stake_fraction) # How much PONT to pay to collator.
 pay_to_nominator = (reward * stake_fraction) # How much PONT to pay to collator nominator.
 ```
+
+## Useful links
+
+Staking that Pontem network uses initially implemented by [Moonbeam team](https://moonbeam.network/), we also refer to their [documentation](https://docs.moonbeam.network/learn/features/staking/) that very useful.

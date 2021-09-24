@@ -20,7 +20,6 @@
 * [Introduction](./staking/README.md)
 * [Stake as Nominator](./staking/nominator.md)
 * [Running Collator](./staking/collator.md)
-* [Useful Links](./staking/)
 
 ## ⚙️ 03. MOVE VM
 * [Move VM](./move_vm/README.md)
