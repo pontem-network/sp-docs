@@ -56,7 +56,7 @@ After the transaction is executed you will lose 1 PONT coin as a reserved amount
 
 Let's check that author mapped correctly:
 
-1. Navigate to [storage](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
+1. Navigate to [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
 2. Choose `authorMapping` pallet.
 3. Choose `mappingWithDeposit(AuthorId)`
 4. Put your public key in `AuthorId` field.
@@ -90,7 +90,7 @@ Create your collator candidate:
 5. For `candidate_count` use value you copied in the previous step.
 6. Send transaction from your account.
 
-![Join Candidatess](/assets/candidate_pool.png "Join Candidates")
+![Join Candidatess](/assets/join_candidates.png "Join Candidates")
 
 It's all, once your collator reaches top you will become active and start generating blocks. 
 

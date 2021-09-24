@@ -18,8 +18,8 @@
 
 ## ⛏️03. STAKING
 * [Introduction](./staking/README.md)
-* [Stake as Nominator](./staking/nominator.md)
-* [Running Collator](./staking/collator.md)
+* [Become Nominator (Stake PONT)](./staking/nominator.md)
+* [Become Collator](./staking/collator.md)
 
 ## ⚙️ 03. MOVE VM
 * [Move VM](./move_vm/README.md)

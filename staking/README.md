@@ -2,7 +2,7 @@
 
 Pontem is running as [Parachain](https://wiki.polkadot.network/docs/learn-parachains) and based on Proof of Stake staking mechanism.
 
-Pontem collator's staking based on Nimbus consensus and Parachain staking built by [Moonbeam team](https://docs.moonbeam.network/learn/features/staking/).
+Staking that Pontem network uses initially implemented by [Moonbeam team](https://moonbeam.network/), we also refer to their [documentation](https://docs.moonbeam.network/learn/features/staking/) that's very useful.
 
 **IMPORTANT:** all values configured only for testnet purposes currently, so it can be changed any time.
 
