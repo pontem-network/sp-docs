@@ -123,8 +123,8 @@ ls -la ./artifacts/transactions
 * [Using UI](./ui.md#script)
 * [Using CLI](./cli.md#script)
 
-After the transaction is confirmed and added to the block, you will see how balances changed.
-Congrats!
+After the transaction is confirmed and added to the block, you will see how the balances changed.
+Congratulations! You just performed your first transaction.
 
 In the next sections we explain our Polkadot Parachain architecture, addresses, how to launch local nodes, and iterate with UI/CLI.
 

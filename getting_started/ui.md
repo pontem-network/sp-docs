@@ -1,25 +1,25 @@
 # UI
 
-Easiest way to iterate with Polkadot based blockchain to use Polkadot JS App UI. 
+The easiest way to iterate with Polkadot based blockchains is to use the Polkadot JS App UI. 
 
 You can use the UI to create new accounts, send transactions, do RPC calls, and much more. 
 
 ## Deployed Polkadot App.
 
-Use following link to connect to Pontem node using UI - [PONTEM UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/accounts).
+Use following link to connect to the Pontem hosted node using our UI - [PONTEM UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/accounts).
 
-Otherwise you can configure UI manually:
+Otherwise you can configure the UI manually:
 
-* Navigate to [Polkadot App](https://polkadot.js.org/apps).
-* Choose network (to see network settings click on the orange circle in the top right corner and change custom endpoint).
+* Navigate to the [Polkadot JS App](https://polkadot.js.org/apps).
+* Click on top left Polkadot logo to see available network custom endpoints
 * Click on `TEST NETWORKS`.
 * Click on `Pontem`.
-* Click on the `Switch` button. 
+* Click on the `Switch` button back on the top of the list. 
 
 ## Account creation
 
 {% hint style="info" %}
-🧙‍♂️ We recommend to use [Polkadot Extension](https://polkadot.js.org/extension/) to create account, it supports hardware wallets and has integration with Polkadot App UI, otherwise use current documentation. 
+🧙‍♂️ We recommend you use the [Polkadot JS browser extension](https://polkadot.js.org/extension/) to create an account, as it supports hardware wallets and has an integration with Polkadot App UI, otherwise use the documentation below to create an account. 
 {% endhint %}
 
 ![Account](/assets/account.png "Account")
@@ -27,19 +27,17 @@ Otherwise you can configure UI manually:
 * Navigate to **"Accounts"** in the header menu.
 * Click on **"Add account"**.
 * **Write down your seed and store it safely!**
-* Put name and password.
-
-Otherwise you can use [Polkadot JS Extension](https://polkadot.js.org/extension/), just follow instructions.
+* Put in a name and password.
 
 ## Transactions
 
-In the current documentation we describe how to send execute scripts and publish module transactions.
+In the current documentation we describe how to send and execute scripts and publish module transactions.
 
 {% hint style="info" %}
 🧙‍♂️ Read [Move VM](../move_vm/README.md) pallet documentation to build first modules and scripts.
 {% endhint %}
 
-You need an account with balance (in case of local network use default accounts), in case of Pontem testnet network create a new account and fund it using [FAUCET](https://t.me/pontem_faucet_bot).
+You need an account with a balance (in the case of using a local network, use the default accounts), in case of using the Pontem hosted testnet network, create a new account and fund it using the [FAUCET](https://t.me/pontem_faucet_bot).
 
 Next steps required to have the [dove](../move_vm/compiler_&_toolset.md) tool installed, means you already compiled your modules/scripts.
 
