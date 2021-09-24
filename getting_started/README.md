@@ -1,35 +1,43 @@
 # Getting Started
 
-Here is a guide on how to connect to the Pontem network and execute your first transaction. We will move PONT coins from account to another account using Move language.
+Welcome to the guide on how to connect to the Pontem Network and execute your first transaction. In this guide, we will move PONT coins from one account to another account using the Move language.
 
 ## Connection to network
 
-To connect to the network you can use UI or CLI.
+1. To connect to the network you can use the Polkadot JS web user interface (UI) or command-line interface (CLI) to connect to our node. If you want to run a node locally skip to step 2. 
 
-Our testnet node deployed at the following IP address:
+    {% hint style="info" %}
+    🏝️ The easiest way to connect to our network is by connecting directly to our node on the [Pontem Polkadot JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/accounts).
 
-* `wss://testnet.pontem.network/ws`
-  
-Use provided address to configure UI and CLI:
+    You will also need to request test tokens from our[faucet](https://t.me/pontem_faucet_bot)
+    {% endhint %}
 
-* [How to configure UI](./ui.md)
-* [How to configure CLI](./cli.md)
+    Our testnet node is deployed on this IP address:
 
-If you want to test Pontem network locally, see our [local node](./local_node.md) build guide. 
+    * `wss://testnet.pontem.network/ws`
+    
+    Use this IP address to configure the Polkadot JS UI or CLI: 
 
-Create new account if needed in UI or CLI:
+    * [How to configure Polkadot JS UI](./ui.md)
+    * [How to configure Polkadot JS CLI](./cli.md)
 
-* [How to create account in UI](./ui.md#account-creation)
-* [How to create account in CLI](./cli.md#account-creation)
+2. Alternatively, if you want to test the Pontem Network locally on your machine, see our [local node](./local_node.md) build guide.
 
-Fund your account using [FAUCET](https://t.me/pontem_faucet_bot) if needed.
+3. You might need to first create a private key account if needed:
+
+    * [How to create account in UI](./ui.md#account-creation)
+    * [How to create account in CLI](./cli.md#account-creation)
+
+4. You will also need to fund your account with testnet tokens using the [Pontem Faucet](https://t.me/pontem_faucet_bot).
 
 ## Tools
 
-Also, to continue with the current guide you need to install a compiler & package manager calling `Dove`.
+5. In order to continue with this guide you will need to install our Dove toolchain which includes a package manager & compiler to not only install dependencies but also compile, test and deploy smart contracts from your IDE. 
+    See [Dove installation guide](./../move_vm/compiler_&_toolset.md#Dove)
+    
+    {% hint style="success" %}
+    Once installed, you can call the `Dove` function.
+    {% endhint %}
 
-See Dove installation guide:
-
-* [How to install Dove](./../move_vm/compiler_&_toolset.md#Dove)
 
 After you installed Dove and configured UI/CLI let's move to the next step.
