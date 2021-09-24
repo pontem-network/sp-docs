@@ -39,7 +39,15 @@ We prepared small reference contains general definitions and actual values:
 
 ## Inflation
 
+**IMPORTANT:** all inflation vaalues configured only for testnet purposes currently, so it can be changed any time.
 
+| Expected Staked (PONT)        | Annual Inflation |
+| ----------------------------- | ---------------- |
+| Min:   10 000 000 PONT        |  10%             |
+| Ideal: 25 000 000 PONT        |  15%             |
+| Max:   50 000 000 PONT        |  20%             |
+
+Pontem inflation is based on the amount of staked PONT coins, if staked amount is between Min and Max we would have ideal inflation, otherwise it would be minimum inflation or maximum.
 
 ## Rewards
 
