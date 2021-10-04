@@ -12,14 +12,14 @@
 * [First Transaction](./getting_started/first_transaction.md)
 * [Parachain](./getting_started/parachain.md)
 * [Addresses](./getting_started/addresses.md)
-* [Run Local Node](./getting_started/local_node.md)
+* [Run a Local Node](./getting_started/local_node.md)
 * [Polkadot JS UI](./getting_started/ui.md)
 * [Polkadot JS CLI](./getting_started/cli.md)
 
 ## ⛏️03. STAKING
 * [Introduction](./staking/README.md)
-* [Become Nominator (Stake PONT)](./staking/nominator.md)
-* [Become Collator](./staking/collator.md)
+* [Become a Nominator (Stake PONT)](./staking/nominator.md)
+* [Become a Collator](./staking/collator.md)
 
 ## ⚙️ 03. MOVE VM
 * [Move VM](./move_vm/README.md)

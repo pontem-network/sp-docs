@@ -1,45 +1,45 @@
 # Staking
 
-Pontem is running as [Parachain](https://wiki.polkadot.network/docs/learn-parachains) and based on Proof of Stake staking mechanism.
+Pontem is running as a [Parachain](https://wiki.polkadot.network/docs/learn-parachains) based on Proof of Stake staking.
 
-Staking that Pontem network uses initially implemented by [Moonbeam team](https://moonbeam.network/), we also refer to their [documentation](https://docs.moonbeam.network/learn/features/staking/) that's very useful.
+The staking that the Pontem Network is using was initially implemented by the [Moonbeam Foundation team](https://moonbeam.network/), so we also refer to their [documentation](https://docs.moonbeam.network/learn/features/staking/) which is very useful.
 
-**IMPORTANT:** all values configured only for testnet purposes currently, so it can be changed any time.
+**IMPORTANT:** all values are configured only for testnet purposes currently, so they could change in the future.
 
-Most important topics you should know:
+Key points to know:
 
-* Pontem parachain secured by Relay Chain validators, means new blocks produced after approval from Relay Chain validators, e.g. Polkadot or Kusama.
-* Yet Pontem has its own [collators](https://wiki.polkadot.network/docs/learn-collator): users who maintain nodes and collect transactions, produce state transitions for Relay Chain, and produce new blocks.
-* Any network participant in the network who has the required amount of PONT coins can be registered as a collator.
-* Only top collators at the current stage would be active and earn rewards.
-* Collators can self-stake PONT coins.
-* Other users who don't want to run their own node can nominate (delegate) their PONT coins for max 10 collators. Such user calling nominator, and earn part of rewards earned by collator.
-* The top is sorted by amount of self-staked collator’s PONT coins and nominated coins.
-* Collators list updating each round.
-* Each collator has a maximum of nominators.
-* As technology is very experimental, there's no slashing yet.
-* Earned rewards for each block split between collators and nominators, and Parachain Bond Fund.
-* Parachain Bond Fund needs to fund future parachain slots.
-* Collators can be at the same time nominator, and nominator can't be a collator.
+* The Pontem parachain is secured by Relay Chain validators. This means new blocks are produced after approval from Relay Chain validators, e.g. Polkadot or Kusama.
+* Pontem has its own [collators](https://wiki.polkadot.network/docs/learn-collator) which are user maintained nodes that collect transactions, produce state transitions for the Relay Chain, and produce new blocks.
+* Any network participant in the network who has the minimum required amount of PONT tokens can be registered as a collator.
+* Only the top collators at the current stage would be active and earn rewards.
+* Collators can self-stake PONT tokens.
+* Other users who don't want to run their own node can nominate (delegate) their PONT tokens to a maximum of 10 collators. These users are called nominators, and earn part of the rewards earned by the collator.
+* The top collators are sorted by amount of self-staked collator’s PONT tokens plus the nominated tokens.
+* The list of collators updates each round.
+* Each collator has a maximum number of nominators.
+* Because this technology is very experimental, there's no slashing yet.
+* The earned rewards for each block is split between collators, nominators, and the Parachain Bond Fund.
+* The Parachain Bond Fund is used to fund future Parachain slots or subsidize Parathread usage.
+* Collators can't be nominators, and nominators can't be a collators.
 
-### Small reference
+### Reference sheet:
 
-We prepared small reference contains general definitions and actual values:
+We prepared a short reference sheet containing general definitions and actual parameter values:
 
-* **Blocks In Round** - amount of blocks per one round. Value: 300.
-* **Top amount** - amount of collators top contains. Value: 8.
-* **Maximum Nominators Per Collator** - amount of nominators each collator can have at the same time. Value: 10.
-* **Maximum Collators Per Nominator** - amount of collators each nominator can vote for. Value: 25.
-* **Default Collator Commission** - default commission that collator earns. Value: 20%. Can be changed only by root account currently.
-* **Default Parachain Bond Reserve Percent** - which percent from inflation goes to Parachain Bond Fund. Value: 30%.
+* **Blocks In Round** - number of blocks per one round. Value: 300.
+* **Top amount** - number of top collators able to participate in staking. Value: 8.
+* **Maximum Nominators Per Collator** - number of nominators each collator can have at a given time. Value: 10.
+* **Maximum Collators Per Nominator** - number of collators each nominator can vote for. Value: 25.
+* **Default Collator Commission** - default commission that a collator earns. Value: 20%. This value can only be changed by the root account currently.
+* **Default Parachain Bond Reserve Percentage** - the percent from the staking inflation that goes to the Parachain Bond Fund. Value: 30%.
 * **Reward Payment Delay** - delay in rounds before rewards will be distributed between collators, nominators. Value: 600 (2 rounds).
-* **Minimum Collator Candidate Stake** - amount of PONT coins required to create and register a collator. Value: 100 PONT.
-* **Minimum Collator Stake** - minimum amount of PONT coins staked for the collator to become active (active collator can produce if collator on top of collators). Value: 1000 PONT.
-* **Minimum Nominator Stake** - minimum amount of PONT coins to be staked for collator. Value: 1 PONT.
+* **Minimum Collator Candidate Stake** - amount of PONT tokens required to create and register a collator. Value: 100 PONT.
+* **Minimum Collator Stake** - minimum amount of PONT tokens required to be staked for the collator to become active (an active collator can contribute to producing blocks if the collator is one of the top collators). Value: 1000 PONT.
+* **Minimum Nominator Stake** - minimum amount of PONT tokens to be staked by a nominator for a collator. Value: 1 PONT.
 
 ## Inflation
 
-**IMPORTANT:** all inflation vaalues configured only for testnet purposes currently, so it can be changed any time.
+**IMPORTANT:** all inflation vaalues configured only for testnet purposes. These values can be changed in the future for the mainnet.
 
 | Expected Staked (PONT)        | Annual Inflation |
 | ----------------------------- | ---------------- |
@@ -47,39 +47,39 @@ We prepared small reference contains general definitions and actual values:
 | Ideal: 25 000 000 PONT        |  15%             |
 | Max:   50 000 000 PONT        |  20%             |
 
-Pontem inflation is based on the amount of staked PONT coins, if staked amount is between Min and Max we would have ideal inflation, otherwise it would be minimum inflation or maximum.
+Pontem inflation is based on the amount of staked PONT tokens, if staked amount is between 'Min' and 'Max' we would have ideal inflation, otherwise it will default to be either minimum inflation if below the 'Min' threshold or maximum inflation if above the 'Max' threshold.
 
 ## Rewards
 
 Collators and their nominators are rewarded at the end of every round for their work from 2 rounds ago.
 
-Rewards distributed in following manner:
+Rewards are distributed in following manner:
 
-* Each two blocks the network producing new rewards: X PONT coins (based on inflation).
-* 30% from X PONT coins going to Parachain Bond Reserve.
-* The rest is splitted between collators and nominators:
-  * Only collators which generated blocks are receiving reward.
-  * Collator gets part of the reward, but it depends on how many blocks the collator generated during the round (if more - reward is more).
-  * If there are no nominators staked for the collator, the collator earns all his reward (including commission and the rest allocated for that collator).
-  * If there are nominators, the collator earns his commission (20%) and getting part of the rest rewards proportional his self-stake.
-  * The rest of rewards go to nominators and splits between them proportional to their stake for collator.
+* Each two blocks the network produces new rewards in the form of variable X PONT tokens based on inflation parameters.
+* 30% the PONT rewards go to the Parachain Bond Reserve for securing future parachain slots.
+* The rest is split between collators and nominators:
+  * Only collators which generated blocks receive a reward.
+  * Collators get part of the reward, but is variable based on how many blocks the collator generated during the round (more blocks = more rewards).
+  * If there are nominators contributing, the collator earns a commission (20%) and gets part of the rewards proportional to how much it is self-staking.
+  * If there are no nominators staking for a collator, the collator earns all of the rewards which includes the commission and the remaining allocated for that collator.
+  * The rest of rewards go to the nominators and is split between them proportionally to their stake for collator.
 
-The math looks so:
+The logic & math for this is below:
 
 ```text
 parachain_bond_fund = total_reward * 0.3 # Amount of PONT that goes to Parachain Bond Fund.
 
 collators_reward = (total_reward) - parachain_bond_fund # Amount of rewards that would be shared between collators.  
 
-collator_reward = collators_reward * generated_blocks_fraction # How much reward goes to the collator based on the amount of blocks generated by the collator per total blocks generated in round. Do such calculations for each collator.
+collator_reward = collators_reward * generated_blocks_fraction # How much reward goes to the collator based on the amount of blocks generated by the collator per total blocks generated in that round. This calculation is done for each collator.
 
 commission = collator_reward * 0.2 # How much commission collator earned.
 reward = collator_reward - commission # How much reward is going to be distributed between collator and nominators.
 
-pay_to_collator = commission + (reward * stake_fraction) # How much PONT to pay to collator.
-pay_to_nominator = (reward * stake_fraction) # How much PONT to pay to collator nominator.
+pay_to_collator = commission + (reward * stake_fraction) # How much PONT to pay to the collator.
+pay_to_nominator = (reward * stake_fraction) # How much PONT to pay to each collator nominator.
 ```
 
 ## Useful links
 
-Staking that Pontem network uses initially implemented by [Moonbeam team](https://moonbeam.network/), we also refer to their [documentation](https://docs.moonbeam.network/learn/features/staking/) that very useful.
+The staking mechanism that the Pontem Network uses was initially implemented by the [Moonbeam team](https://moonbeam.network/), so we also recommend reviewing their [documentation](https://docs.moonbeam.network/learn/features/staking/) that is very useful.
