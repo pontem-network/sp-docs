@@ -15,4 +15,4 @@ So far the tools we have developed using Move include but are not limited to:
 * [Toolset](https://github.com/pontem-network/move-tools) for Move language: dissembler, resources viewer, language server, executor.
 * [Pontem ↔ Diem Bridge](https://github.com/pontem-network/bridge) alpha version.
 
-![Pontem Team](/assets/illustrations/team.png "Pontem Team")
+![Pontem Team](/assets/illustrations/leadership_team.png "Pontem Team")

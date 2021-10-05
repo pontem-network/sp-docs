@@ -1,9 +1,9 @@
 # Standard Library
 
 
-Standard **Move VM** library is default modules that already developed and developers can use it in their modules, scripts.
+The Diem standard **Move VM** library contains default modules that are already developed and developers can use in their modules and scripts. This is one of the core mechanisms that the Pontem Network uses to maintain compatibility with the Diem Blockchain.
 
-They all placed on the address **0x1**. So when you import something from **0x1**, you import standard modules, like:
+Modules are all in the address **0x1**. So when you import something from **0x1**, you can import standard modules, in the following way:
 
 ```rust
 use 0x1::DiemAccount;
@@ -13,7 +13,7 @@ use 0x1::Diem::{Self, Diem};
 ...
 ```
 
-You can look for actual standard modules in [move-stdlib](https://github.com/pontem-network/move-stdlib) repository.
+You can see all the standard modules in the [move-stdlib](https://github.com/pontem-network/move-stdlib) repository. Below are some explanations and examples of the ones you will most commonly use.
 
 ## DiemTimestamp
 
@@ -35,7 +35,7 @@ The method will return u64 value as UNIX timestamp of the latest block.
 
 ## DiemBlock
 
-[DiemBlock](https://github.com/pontem-network/move-stdlib/blob/master/modules/DiemBlock.move) module allows getting current blockchain height.
+[DiemBlock](https://github.com/pontem-network/move-stdlib/blob/master/modules/DiemBlock.move) module allows getting the current blockchain height.
 
 Example:
 
@@ -49,7 +49,7 @@ script {
 }
 ```
 
-The method will return u64 value as the height of the latest block.
+The method will return a u64 value as the height of the latest block.
 
 ## PONT 
 
@@ -74,7 +74,7 @@ script {
 
 [Event](https://github.com/pontem-network/move-stdlib/blob/master/modules/Event.move) module allows us to emit events.
 
-Example with emitting event contains provided number:
+Example with emitting events containing a provided number:
 
 ```rust
 script {
@@ -99,7 +99,7 @@ script {
 }
 ```
 
-Or you can emit event from your module by creating event handler one time:
+Or you can emit events from your module by creating a one time event handler:
 
 ```rust
 address {{sender}} {
@@ -134,7 +134,7 @@ address {{sender}} {
 
 ## Signer
 
-[Signer](https://github.com/pontem-network/move-stdlib/blob/master/modules/Signer.move) module allows to work with the `signer` type. To get address of signer:
+[Signer](https://github.com/pontem-network/move-stdlib/blob/master/modules/Signer.move) module allows you to work with the `signer` type. A signer allows the holder to act on behalf of an address. Similar to a Unix UID, it represents a user authenticated outside of Move (i.e by checking a cryptographic signature or password). To get the address of the signer:
 
 ```rust
 script {
@@ -146,22 +146,22 @@ script {
 }
 ```
 
-Signer type is required for functions which work with resources, address of signer could be useful in case of resource related functions: `borrow_global`, `borrow_global_mut`, `exists`, `move_from`, `move_to`, `freeze`.
+the signer type is required for functions which work with resources, address of signer could be useful in case of resource related functions: `borrow_global`, `borrow_global_mut`, `exists`, `move_from`, `move_to`, `freeze`.
 
-Read more about the signer type in [Diem's Signer](https://developers.diem.com/main/docs/move-primitives-signer) documentation.
+Read more about the signer type in [Diem's Signer](https://developers.diem.com/docs/move/move-primitive-types/move-primitives-signer) documentation.
 
 ## DiemAccount
 
-[DiemAccount](https://github.com/pontem-network/move-stdlib/blob/master/modules/DiemAccount.move) module allows to work with user balances: get balances, deposit coins/tokens to balances, withdraw them to deposit in another module, etc.
+[DiemAccount](https://github.com/pontem-network/move-stdlib/blob/master/modules/DiemAccount.move) module allows you to work with user balances: get balances, deposit coins/tokens to balances, withdraw them to deposit in another module, etc.
 
-Also, it creates a VASP account, if the account doesn't exist yet, and related data, like event handlers for sending/receiving payments. 
+Also, it creates a VASP account -if the account doesn't exist yet- and also allows you to create related data, like event handlers for sending/receiving payments. 
 
 A lot of different methods can be used to send tokens from account A to account B.
 
-Let's say you don't want to create VASP account, so you functions introduced by Pontem network:
+In case you you don't want to a create VASP account, you can still use functions introduced by Pontem:
 
 {% hint style="info" %}
-🧙‍♂️ Functions with `pnt_` prefix is not compatible with Diem, so you code wouldn't be migrated to Diem, yet there's no other way to work with Diem balances directly (store it in modules, etc).
+🧙‍♂️ Functions with `pnt_` prefix are not compatible with Diem, so your code won't be fully compatible with Diem if you use these functions since there's no other way to work with Diem balances directly (store it in modules, etc). Once Diem allows us to work with balances we will migrate and release migration documentation. A list of Pontem functions can be found [here](https://github.com/pontem-network/move-stdlib#pontem-only-functions).
 {% endhint %}
 
 ```rust
@@ -179,7 +179,7 @@ script {
 }
 ```
 
-Let's say you are ready to create VASP account and use Diem functions:
+If you are ready to create a VASP account and use Diem functions:
 
 ```rust
 script {
@@ -254,13 +254,13 @@ script {
 }
 ```
 
-For the rest of the features of DiemAccount module look at [account.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/DiemAccount.move).
+To see all of the features of the DiemAccount module look at [account.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/DiemAccount.move).
 
 ## Diem
 
-[Diem](https://github.com/pontem-network/move-stdlib/blob/master/modules/Diem.move) module allows you to work with coins balances, get coins info, also register new tokens, etc.
+The [Diem](https://github.com/pontem-network/move-stdlib/blob/master/modules/Diem.move) module allows you to work with coin balances, get coin info, and also register new tokens among other capabilities.
 
-First of all, Pontem module presents type for all balances in the system, it's `Diem::Diem`:
+The Pontem module presents type for all balances in the system, it's `Diem::Diem`:
 
 ```rust
 /// The `Diem` resource defines the Diem coin for each currency in
@@ -296,7 +296,7 @@ script {
 }
 ```
 
-Also, you can create an empty coin:
+You can create an empty coin:
 
 ```rust
 address {{sender}} {
@@ -342,7 +342,7 @@ script {
 }
 ```
 
-And check if it's user token or system coin:
+And check if it's a user token or system coin:
 
 ```rust
 script {
@@ -357,11 +357,11 @@ script {
 }
 ```
 
-More documentation about the feature provided by Dfinance module see in [Diem.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/Diem.move).
+For more documentation about the features provided by Pontem module see in [Diem.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/Diem.move).
 
 ## Vector
 
-[Vector](https://github.com/pontem-network/move-stdlib/blob/master/modules/Vector.move) module contains functions to work with `vector` type.
+The [Vector](https://github.com/pontem-network/move-stdlib/blob/master/modules/Vector.move) module contains functions to work with `vector` type.
 
 For example:
 
@@ -385,11 +385,11 @@ script {
 }
 ```
 
-Vector module great describe in [Diem Vector](https://developers.diem.com/main/docs/move-primitives-vector) documentation.
+For more information on this primitive type see the [Diem Vector](https://developers.diem.com/docs/move/move-primitive-types/move-primitives-vector) documentation.
 
 ## Signature
 
-[Signature](https://github.com/pontem-network/move-stdlib/blob/master/modules/Signature.move) module allows to verify ed25519 signature:
+The [signature](https://github.com/pontem-network/move-stdlib/blob/master/modules/Signature.move) module allows you to verify the ed25519 signature:
 
 ```rust
 script {
@@ -401,6 +401,10 @@ script {
 }
 ```
 
-## More
+## Notice
 
-Diem Standard Library contains a lot of other modules, some of its functions [restricted](https://github.com/pontem-network/move-stdlib#restricted) by Pontem. The rest of modules you can review in Pontem [Standard Library repository](https://github.com/pontem-network/move-stdlib/tree/master/modules).
+The latest release of the Diem Standard Library contains a lot of changes related to permissioned blockchain functionality. A lot of functions can only be called/executed together with signatures from the Diem Root Account or Diem Treasury Account. To maintain compatibility, we had to slightly change the logic of the Standard Library. We restricted some functions that wouldn't be useful for developers working on a permissionless blockchain, but could be useful only for the Diem treasury or root account such as ‘AccountFreezing.move’. In this way we don't lose compatibility. A list of Restricted functions can be found [here](https://github.com/pontem-network/move-stdlib#restricted).
+
+For tests of functions that require treasury or root signatures (e.g. create_account or register_currency) we created a way for developers to get access to those signatures. They just need to use dove during compilation of their script and put `dr` or `tr` literal as argument for the script. Documentation about `dr` and `tr` literals can be found [here](https://docs.pontem.network/03.-move-vm/compiler_and_toolset#root-and-treasury-signers).
+
+We also created Pontem-only related functions, as initially Diem blocked any operations with account balances, so developers couldn't even withdraw coins from the account and put it inside smart contracts, so we had to add our own functions with a ‘pnt_’ prefix. It breaks compatibility for now but, later once Diem allows us to work with balances we will migrate and release migration documentation. A list of Pontem functions can be found [here](https://github.com/pontem-network/move-stdlib#pontem-only-functions).

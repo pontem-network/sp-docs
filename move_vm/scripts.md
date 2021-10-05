@@ -1,23 +1,23 @@
 # Scripts
 
-As already mentioned, **Pontem** supports transaction scripting. It means users can compile and execute scripts. The Difference between modules here is that you can't publish a script and use it again in the future, each script executing by a new transaction every time. Scripts are programmable transactions, one script can use several modules.
+**Pontem** supports transaction scripting. This means users can compile and execute scripts. The Difference between a modules and a script is that you can't publish a script and use it again in the future. Each script is executed by a new transaction every time. Scripts are programmable transactions, one script can use several modules.
 
-You can read more about scripts in [Diem Scripts](https://developers.diem.com/docs/move/move-modules-and-scripts/) documentation.
+You can read more about scripts in the [Diem script documentation](https://developers.diem.com/docs/move/move-modules-and-scripts/).
 
 ## Write a script
 
 {% hint style="info" %}
-🧙‍♂️ Install [Dove](./compiler_&_toolset.md) before continue with this tutorial.
+🧙‍♂️ Install [Dove](./compiler_&_toolset.md) before continuing with this tutorial.
 {% endhint %}
 
-Let's write a basic script, accept two arguments, a and b values, and then using module math make a sum from these two numbers and then fire events.
-We are going to use the module we deployed in previous part (`Math.move` and `Storage.move`).
+Let's write a basic script that accept two arguments: values a and b, and then using math from a module, makes a sum from these two numbers and then fires events.
+For this example, we are going to use the module we deployed in the previous [modules section](../move_vm/modules.md) (`Math.move` and `Storage.move`).
 
 {% hint style="info" %}
-🧙‍♂️ A script block must start with all of its use declarations, followed by any constants and (finally) the main function declaration. The main function can have any name (i.e. it could have different names, not only `main)`, is the only function in a script block, can have any number of arguments, and must not return a value.
+🧙‍♂️ A script code block must start with all of its use declarations followed by any constants and in the end, the main function declaration. The main function can have any name (i.e. it could have different names, not only `main`), is the only function in a script block, can have any number of arguments, and must not return a value.
 {% endhint %}
 
-Let's create a new script calling `sum.move` in `./scripts/` folder and put the following code there:
+1. Create a new script file called `sum.move` in the `./scripts/` folder and put the following code in there:
 
 ```rust
 script {
@@ -42,30 +42,33 @@ script {
 }
 ```
 
-The script accepts two arguments in function **"sum"**, then calculate the sum with provided arguments, and fire the event with this sum. Both arguments are **u64** integers.
+The script accepts two arguments in the function **"sum"** then calculates the sum with the provided arguments and fires the event with this sum. Both arguments are **u64** integers.
 
-Let's compile script using dove to create a new binary contains both script and arguments for script:
+2. Compile the script using Dove to create a new binary containing both the script and arguments for the script:
 
 ```text
 dove tx 'sum(10, 20)'
 ```
 
-After compilation see transaction file:
+After compilation, inspect the transaction file:
 
 ```text
 ls -la ./artifacts/transactions
 ```
 
-There must be a `sum.mvt` script transaction file you can use to send a new `execute` transaction to the network.
+There is now a `sum.mvt` script transaction file you can use to send a new `execute` transaction to the network.
+
+3. Execute transactions using Polkadot JS
 
 {% hint style="info" %}
-✈️ See our instruction how to send transaction (execute/publish module) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+✈️ See our instructions on how to send transactions (execute/publish module) using the Polkadot JS [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
 {% endhint %}
 
 ## Store resource
 
-Let's store new resources using the `Storage` module we've done.
-Create a new script `store_sum.move` in `./scripts/` folder and put the following code inside:
+Now let's store new resources using the `Storage` module we built in the [modules section](../move_vm/modules.md).
+
+1. Create a new script file `store_sum.move` in the `./scripts/` folder and put the following code inside:
 
 ```rust
 script {
@@ -86,17 +89,19 @@ script {
 }
 ```
 
-Compile new script like previous example:
+2. Compile the script like in the previous example:
 
 ```text
 dove tx 'store_sum(10, 20)'
 ```
 
+3. Execute transactions using Polkadot JS
+
 {% hint style="info" %}
-✈️ See our instruction how to send transaction (execute/publish module) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
+✈️ See our instructions on how to send transactions (execute/publish module) using the Polkadot JS [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
 {% endhint %}
 
-After transaction executing, your sum resource will be stored in the Substrate storage, and you can query it any time using script:
+After the transaction executes, your sum resource will be stored in Substrate storage, and you can query it any time using the following script:
 
 ```rust
 script {
@@ -113,4 +118,4 @@ script {
 }
 ```
 
-Read more about resources in our [Move](../lang/resources.md) and in [Move Book](https://move-book.com/advanced-topics/types-with-abilities.html) documentation.
+Read more about resources in our [Move](../lang/resources.md) and in the [Move Book](https://move-book.com/advanced-topics/types-with-abilities.html) documentation.

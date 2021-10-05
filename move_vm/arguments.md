@@ -1,22 +1,24 @@
 # Arguments
 
-The main function of the script can have arguments and will be executed when you send a transaction with your script.
+The main function of a script can have arguments and will be executed when you send a transaction with your script.
 
-With `dove tx` command you can pass arguments to script function and build it, see help:
+With the `dove tx` command you can pass arguments to script functions and build it. 
+
+For more information see help:
 
 ```text
 dove tx --help
 ```
 
-Calling the main function, developers can pass arguments, example: 
+Calling the main function, developers can pass arguments to the scrip. For example: 
 
 ```text
 dove tx 'my_script<0x1::PONT::PONT>(1, [1, 2, 3], 1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, false)'
 ```
 
-The command compiles both script file and adds arguments into one file with `*.mvt` extension. The file could be used to send `execute` (script one) transaction to the network.
+The command both compiles the script file and adds arguments into one file with a `*.mvt` extension. The file can be used to send an `execute` (script) transaction to the network.
 
-From example you can see that dove **"tx"** command supports different kind of arguments, as:
+From this example you can see that Dove's **"tx"** command supports different kind of arguments such as:
 
 * Numbers (u8, u64, u128)
 * Boolean

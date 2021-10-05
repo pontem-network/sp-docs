@@ -1,5 +1,10 @@
 # Collator
 
+**System Requirements:**
+* 4 core CPU
+* 8GB RAM
+* 100GB Storage
+
 Before continuing, please check that you completed all these steps before creating your own collator.
 
 * Read the introduction to [Pontem staking](./README.md).

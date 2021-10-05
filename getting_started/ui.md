@@ -37,9 +37,9 @@ In the current documentation we describe how to send and execute scripts and pub
 🧙‍♂️ Read [Move VM](../move_vm/README.md) pallet documentation to build first modules and scripts.
 {% endhint %}
 
-You need an account with a balance (in the case of using a local network, use the default accounts), in case of using the Pontem hosted testnet network, create a new account and fund it using the [FAUCET](https://t.me/pontem_faucet_bot).
+You need an account with a balance (in the case of using a local network, use the default accounts), in case of using the Pontem hosted network, create a new account and fund it using the [FAUCET](https://t.me/pontem_faucet_bot).
 
-Next steps required to have the [dove](../move_vm/compiler_&_toolset.md) tool installed, means you already compiled your modules/scripts.
+These next steps require having the [Dove](../move_vm/compiler_&_toolset.md) tool installed. Therefore, these next steps assume you already compiled your modules/scripts
 
 ### Module
 
@@ -54,7 +54,7 @@ To deploy compiled module do following steps:
 5. Choose **module_bc** field and enable file upload.
 6. Upload compiled module file (with `.mv` extension).
 7. Configure the gas limit parameter (usually 100000 will be enough).
-8. Submit a new signed transaction!
+8. Submit a new signed transaction.
 9. Wait until the transaction is confirmed.
 
 ### Script
@@ -62,24 +62,24 @@ To deploy compiled module do following steps:
 ![Execute script](/assets/script.png "Execute script")
 
 {% hint style="info" %}
-🧙‍♂️ Compile a script using dove with arguments using `tx` command, use file with `.mvt` extension.
+🧙‍♂️ Use Dove to compile a script with arguments using the `tx` command. Use this on files with `.mvt` extension.
 {% endhint %}
 
-To deploy compiled script transaction do following steps:
+To deploy a compiled script transaction perform the following steps:
 
 1. Navigate to **Developer -> Extrinsics**.
 2. Choose **mvm** module.
 3. Choose the correct account.
 4. Choose **execute** transaction.
 5. Choose **script_bc** field and enable file upload.
-6. Upload complied transaction file (with `.mvt` extension). 
+6. Upload compiled transaction file (with `.mvt` extension). 
 7. Configure the gas limit parameter (usually 100000 will be enough).
-8. Submit a new signed transaction!
+8. Submit a new signed transaction.
 9. Wait until the transaction is confirmed.
 
 ## Tips
 
-To speed up transaction you can provide additional tips to the transaction, when you click on **Submit Transaction** button it show modal where you can configure tip:
+To speed up transactions you can provide an additional tip in PONT to the transaction. When you click on the **Submit Transaction** button it will show a modal where you can configure tips:
 
 ![Tips](/assets/tips.png "Tips")
 
@@ -87,14 +87,14 @@ See [gas, weight and tips](../move_vm/gas.md) documentation to learn more.
 
 ## RPC
 
-You can execute RPC calls using UI:
+You can execute RPC calls using the UI:
 
 * Navigate to **Developer -> RPC calls**.
-* Choose **mvm** module.
-* Choose method you want to execute:
+* Choose the **mvm** module.
+* Choose the method you want to execute:
   * **gasToWeight(gas)** - converts gas to weight.
   * **weightToGas(weight)** - converts weight to gas.
-  * **estimateGasExecute(account, tx_bc, gas_limit)** - estimate gas for `execute` transaction (accepts account, transaction, and gas limit as arguments).
-  * **estimateGasPublish(account, module_bc, gas_limit)** - estimate gas for `publishModule` transaction (accepts account, module, and gas limit as arguments).
+  * **estimateGasExecute(account, tx_bc, gas_limit)** - estimates gas for an `execute` transaction (accepts account, transaction, and gas limit as arguments).
+  * **estimateGasPublish(account, module_bc, gas_limit)** - estimates gas for a `publishModule` transaction (accepts account, module, and gas limit as arguments).
 
-See [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC using other methods like curl or CLI.
+Please reference the [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC using other methods like cURL or CLI.

@@ -7,7 +7,7 @@ It consists of the following sections:
 * [`[package]`](#the-package-section) 
     * `name` - The name of the project
       
-    * [`account_address`](#the-account_address-field) - The user account address
+    * [`account_address`](#the-account_address-field) - The user's account address
 
     * [`dialect`](#the-dialect-field) - Address format of the project 
       
@@ -38,11 +38,9 @@ The address of the user account.
 1. You can use `{{sender}}` clause anywhere in your source code, 
    which will be replaced with the value of `account_address` at compilation time.
 
-2. You can `dove run` the script and replace signers' arguments with addresses of  signers.
+2. You can `dove run` the script and replace the signers' arguments with addresses of the signers.
  
-3. You should wrap your module with `address {}` block, you have the option use `{{sender}}` instead of real address.
- 
-
+3. You should wrap your module with `address {}` block. You have the option to use `{{sender}}` instead of a real address.
 
 ### The `dialect` field
 
@@ -59,7 +57,7 @@ Possible values are:
   
 ### The `dependencies` field
 
-It's a TOML list, each entry specifies a set of modules to use as dependencies. 
+This field is a TOML list where each entry specifies a set of modules to use as dependencies.
 
 1. Git dependencies
 
@@ -81,7 +79,7 @@ dependencies = [
 
 ## The `[layout]` section
 
-Allows customization of the layout of the project - directories where you store your Move source code.
+This allows customization of the layout of the project i.e. the directories where you store your Move source code.
 
 ```toml
 [layout]

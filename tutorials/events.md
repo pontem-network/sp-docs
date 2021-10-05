@@ -1,16 +1,16 @@
 # Events
 
-Each transaction processed by **Pontem** network can have events.
+Each transaction processed by the **Pontem Network** can have events.
 
-You can see events in [UI](../getting_started/cli.md) when transaction processed or in block explorer: choose `Network` in the top header menu, and then click on `Explorer` in dropdown, find block contains events.
+You can see events in the Polkadot JS [UI](../getting_started/cli.md) when a transaction is processed or in the block explorer. To examine the block explorer, choose `Network` in the top header menu, and then click on `Explorer` in the dropdown and choose the block that contains the events.
 
-Also you can see events using [CLI](../getting_started/cli.md), when your transaction is processed.
+You can also see events using the [CLI](../getting_started/cli.md) when your transaction is processed.
 
-To emit new event use [Event](../move_vm/stdlib.md#events) module.
+To emit a new event use the [Event](../move_vm/stdlib.md#events) module.
 
-To emit events you have to create an event handle object that will be used one time and destroyed or can be used multiplay time and stored under account resource for example.
+To emit events you have to create an event handle object that will be used one time and destroyed or can be used multiple times and stored under account resources for example.
  
-Let's write new script firing event with temporary event handle:
+Let's write a new script firing events with a temporary event handle:
 
 ```rust
 script {
@@ -20,7 +20,7 @@ script {
     fun emit_event(account: signer) {
         let addr = Signer::address_of(&account);
 
-        // Create new event handle.
+        // Create a new event handle.
         let event_handle = Event::new_event_handle<address>(&account);
 
         // Emit event.
@@ -35,11 +35,11 @@ script {
 }
 ```
 
-Provided example using temporary event handle, that just created inside script to fire event and destroy later.
+The provided example is using a temporary event handle, that is created inside the script to fire the event and be destroyed later.
 
-Created event handles can fire only events containing account's addresses as data, because during creation of event handle you provide a type that will be used for created event handle, but you can use any other types, even complex one (e.g. structs).
+Created event handles can fire only events containing an account's addresses as data because during the creation of event handles, you provide a type that will be used for the created event handle. You can use any other types, even complex ones like structs.
 
-Usually, you will create a event handle for each type of your events and store it inside your account resource, e.g., like in provided example:
+Usually, you will create an event handle for each type of event and store it inside your account resource like in the following example:
 
 ```rust
 address {{sender}} {
@@ -70,14 +70,14 @@ address {{sender}} {
 }
 ```
 
-Write script for new module:
+Write a script for a new module:
 
 ```rust
 script {
     use {{sender}}::MyEventEmitter;
 
     fun emit_via_emitter(account: signer, x: u64) {
-        // You call initialize ONLY ONE TIME, in the future smart contract you don't need to call it again for current signer.
+        // You call initialize ONLY ONE TIME. In the future smart contract you don't need to call it again for current signer.
         MyEventEmitter::initialize<u64>(&account);
 
         // Emit event with existing event handle.
@@ -93,7 +93,7 @@ dove build
 dove tx 'emit_via_emitter(1000)'
 ```
 
-After deploy module and execute new script (replace `<seed>` with your seed):
+Afterwards, deploy module and execute new script (replace `<seed>` with your seed):
 
 ```sh
 polkadot-js-api tx.mvm.publishModule @./artifacts/modules/0_MyEmitter.mv 100000 --seed <seed> --types ./types.json --ws <ws-endpoint>
@@ -119,9 +119,9 @@ See `data` array and parameters by indexes:
 
 * `0x040000000000000014ca430662463ce9a1a27dd6bb463595f3e3526d118e25541421b954893eca7d` - account emitted event in hex and counter of created event handle.
 * `U64` - is `TypeTag` value, describing the `U64` number.
-* `0xe803000000000000` - event data, it's indeed our `u64` 1000 value encoded in BCS.
+* `0xe803000000000000` - event data is our `u64` 1000 value encoded in BCS.
 * 
-The **data** placed in the events encoded in \(Binary Canonical Serialization\). There is a Diem [description](https://github.com/diem/bcs) of how it works. 
+The **data** placed in the events encoded in \(Binary Canonical Serialization\). You can reference this [description](https://github.com/diem/bcs) from Diem on how it works. 
 
 You can use several libraries to parse events results:
 
