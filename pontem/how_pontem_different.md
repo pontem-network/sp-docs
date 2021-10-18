@@ -8,7 +8,7 @@ In contrast to other Layer 1 blockchain projects who are focused on developing u
 🧙‍♂️ Pontem is the first, and so far only, project to have successfully ported Move to Cosmos and Polkadot, winning the prestigious Web3 Foundation grant and participate in [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/).
 {% endhint %}
 
-![Substrate Builders Program](/assets/sbp.png "Project Is Participant Of Substrate Builders Program")
+![Substrate Builders Program](/assets/sbp_black.png "Project Is Participant Of Substrate Builders Program")
 
 ![W3F Grant](/assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
 
