@@ -5,9 +5,10 @@ Pontem aims to connect the Move VM, language and community seeded by Facebook’
 In contrast to other Layer 1 blockchain projects who are focused on developing using languages such as Solidity and Web Assembly, Pontem is the first project to bring Facebook's Move technology to the permissioned crypto metaverse, enabling new and crypto native projects to build, test and deploy applications on Facebook’s Diem Blockchain.
 
 {% hint style="info" %}
-🧙‍♂️ Pontem is the first, and so far only, project to have successfully ported Move to Cosmos and Polkadot, winning the prestigious Web3 Foundation grant.
+🧙‍♂️ Pontem is the first, and so far only, project to have successfully ported Move to Cosmos and Polkadot, winning the prestigious Web3 Foundation grant and participate in [Substrate Builders Program](https://substrate.io/ecosystem/substrate-builders-program/).
 {% endhint %}
 
+![Substrate Builders Program](/assets/sbp.png "Project Is Participant Of Substrate Builders Program")
 ![W3F Grant](/assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
 
 ![Comparison](/assets/illustrations/comparison.png "Comparison")
