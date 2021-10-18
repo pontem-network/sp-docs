@@ -9,6 +9,7 @@ In contrast to other Layer 1 blockchain projects who are focused on developing u
 {% endhint %}
 
 ![Substrate Builders Program](/assets/sbp.png "Project Is Participant Of Substrate Builders Program")
+
 ![W3F Grant](/assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
 
 ![Comparison](/assets/illustrations/comparison.png "Comparison")
