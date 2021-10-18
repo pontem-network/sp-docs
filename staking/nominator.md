@@ -87,7 +87,9 @@ Congratulations on staking your PONT! We hope to improve the process with our ow
 
 ## Stake More or Less.
 
-In [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics) use `nominatorBondLess` and `nominatorBondMore` functions in the `parachainStaking` pallet.
+1. In [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics) use `nominatorBondLess` and `nominatorBondMore` functions in the `parachainStaking` pallet.
+2. Ensure collator address is in 'candidate: AccountId'
+3. Add balance of PONT you want to add or subtract 
 
 ## Revoke Nomination
 

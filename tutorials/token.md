@@ -2,9 +2,9 @@
 
 **WE NEED TO CHANGE STANDARD LIBRARY A LITTLE FIRST, SO CURRENTLY I HIDE IT**
 
-Easiest way to make a token in Pontem network it's to deploy a new module containing your token type. Token type is a structure that will be used in [generic](https://developers.diem.com/main/docs/move-basics-generics) functions or structs, or in any other places.
+The easiest way to make a token in the Pontem Network is to deploy a new module containing your token type. the token type is a structure that will be used in [generic](https://developers.diem.com/docs/move/move-basic-concepts/move-basics-generics) functions or structs, or in any other places.
 
-As you can see, our Standard Library [Account.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/account.move) is managing balances resources for accounts by utilizing generic functions:
+As you can see, our Standard Library [Account.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/account.move) is managing balance resources for accounts by utilizing generic functions:
 
 ```rust
 resource struct Balance<Token> {
@@ -12,9 +12,9 @@ resource struct Balance<Token> {
 }
 ```
 
-Balance is a resource generic structure that allows you to store balance for any type. 
+Balance is a generic resource structure that allows you to store balances for any type. 
 
-`Pontem::T` is the resource generic struct in [Pontem.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/pontem.move):
+`Pontem::T` is the generic resource struct in [Pontem.move](https://github.com/pontem-network/move-stdlib/blob/master/modules/pontem.move):
 
 ```rust
 resource struct T<Coin> {
@@ -22,7 +22,7 @@ resource struct T<Coin> {
 }
 ```
 
-That contains the amount of your coins placed on your balance, also it implements all balances math.
+This contains the amount of coins in your balance. It also implements all the math for balances.
 
 You can read more about `Pontem` and `Account` modules in our [Standard Library](../move_vm/stdlib.md) documentation.
 
@@ -34,7 +34,9 @@ module MyToken {
 }
 ```
 
-Now let's register token in Pontem network [Standard Library](../move_vm/stdlib.md), create new script:
+Now let's register the token in the Pontem network [Standard Library](../move_vm/stdlib.md).
+
+1. Create a new script:
 
 ```rust
 script {
@@ -50,7 +52,7 @@ script {
         let supply = 1000000000000;
         let my_tokens = Pontem::create_token<MyToken::T>(account, supply, 6, b"585858");
 
-        // Let's deposit new token on your account.
+        // Let's deposit new token into your account.
         Account::deposit_to_sender(account, my_tokens);
 
         // Let's check if new tokens minted.
@@ -59,24 +61,25 @@ script {
 }
 ```
 
-As you see we use function `create_token` of Pontem module to mint new token, register information about it in global storage.
-After current step you can use `MyToken::T` as type of your token and work with it in same way you work with `0x01::PONT::T` type, see [Account.move](../move_vm/stdlib.md#account) for example.
+As you can see we use the function `create_token` of the Pontem module to mint a new token and register information about it in global storage.
 
-Compile both module and script:
+After this step, you can use `MyToken::T` as a type for your token and work with it in the same way you work with `0x01::PONT::T` type, see [Account.move](../move_vm/stdlib.md#account) for an example.
+
+2. Compile both the module and script:
 
 ```sh
 dove build
 dove tx 'new_token()'
 ```
 
-Deploy new module and execute transaction script:
+3. Deploy the new module and execute a transaction script:
 
 ```sh
 pontem-cli tx.mvm.publishModule @./artifacts/modules/0_MyToken.mv 100000 --seed <seed>
 pontem-cli tx.mvm.execute @./artifacts/transactions/new_token.mvt 1000000 --seed <seed>      
 ```
 
- Your created your first token in Pontem network. Let's move some amount of your tokens to your friend account:
+You now created your first token on the Pontem Network... Let's move an amount to your friend's account:
 
 ```rust
 script {
@@ -89,4 +92,4 @@ script {
 }
 ```
 
-Congrats!
+Congratz! 

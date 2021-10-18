@@ -1,36 +1,38 @@
 # Polkadot JS CLI
 
-If you don't want to use the UI to operate with Pontem Network, we offer to use CLI.
+If you don't want to use the Polkadot JS UI to interact with the Pontem Network, you can use the Polkadot JS Command Line Interface (CLI).
  
-[Polkadot JS](https://polkadot.js.org/) provides tools for Substrate blockchains, including [CLI](https://github.com/polkadot-js/tools/tree/master/packages/api-cli).
+[Polkadot JS](https://polkadot.js.org/) provides tools for Substrate based blockchains, including a [CLI](https://github.com/polkadot-js/tools/tree/master/packages/api-cli).
 
-Required:
+1. Make sure you have Node.js installed to use the npm package manager.
 
 * [NodeJS](https://nodejs.org/en/download/) (since v14.x.x)
 
-CLI installation:
+2. use npm to install the Polkadot JS CLI:
 
 ```text
 npm install -g polkadot-js-api
 ```
 
-Run help:
+Run help to learn more about the CLI:
 
 ```text
 polkadot-js-api --help
 ```
 
-To configure endpoint use parameter `--ws`, e.g.: `--ws ws://127.0.0.1:9944`, for testnet use `--ws wss://testnet.pontem.network/ws`.
+To configure endpoint use parameter `--ws`, e.g.: `--ws ws://127.0.0.1:9944`, for the Pontem Network testnet use `--ws wss://testnet.pontem.network/ws`.
 
 ## Metadata
 
-As Polkadot CLI works with different parachains, you have to provide metadata required by Pontem parachain node:
+Because Polkadot CLI works with different Parachains, you have to provide metadata required by the Pontem Parachain node:
+
+1. Create a JSON file titled 'types' where you will put the metadata
 
 ```sh
 touch ./types.json
 ```
 
-And put next JSON inside created types file:
+2. Put the JSON code below inside the 'types.json' file:
 
 ```json
 { 
@@ -155,31 +157,46 @@ And put next JSON inside created types file:
 
 ## Account creation
 
-You can create new account using [The Subkey Tool](https://substrate.dev/docs/en/knowledgebase/integrate/subkey).
+You can create a new account using [The Subkey tool](https://substrate.dev/docs/en/knowledgebase/integrate/subkey).
 
-Let's try to query account after creation:
+To use the Subkey, you'll first need to make sure you have Substrate build dependencies. Use the following commands to install both the dependencies and Subkey:
+
+```text
+# Use `--fast' to get the dependencies without having to install the Substrate and Subkey binary
+curl https://getsubstrate.io -sSf | bash -s -- --fast 
+# Install `subkey`, at a specific version
+cargo install --force subkey --git https://github.com/paritytech/substrate --version 2.0.1 --locked
+```
+
+To generate a key use the following command:
+
+```text
+subkey generate
+```
+
+Next, let's query the new account after you create it,:
 
 ```text
 polkadot-js-api query.system.account <address> --ws wss://testnet.pontem.network/ws --types ./types.json
 ```
 
-Replace `<address>` with your account address, e.g. `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`.
+Replace `<address>` with your generated account address ('SS58 Address' in the output from the previous command), e.g. `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`.
 
 ### Transactions
 
-In the current documentation we describe how to send `execute` script and `publishModule` module transactions using CLI.
+In this documentation we describe how to send the `execute` script and the `publishModule` module transactions using CLI.
 
 {% hint style="info" %}
-🧙‍♂️ Read [Move VM](../move_vm/README.md) pallet documentation to build first modules and scripts.
+🧙‍♂️ Read [Move VM](../move_vm/README.md) pallet documentation to learn how to build your first modules and scripts.
 {% endhint %}
  
-You need an account with balance (in case of local network use default accounts), in case of Pontem testnet network create a new account and fund it using [FAUCET](https://t.me/pontem_faucet_bot).
+For this, you'll need an account with a balance (if you're using a local network use the default accounts), if you're using the Pontem testnet network, create a new account and fund it using our [FAUCET](https://t.me/pontem_faucet_bot).
  
-Next steps required to have the [dove](../move_vm/compiler_&_toolset.md) tool installed, means you already compiled your modules/scripts.
+These next steps require having the [Dove](../move_vm/compiler_&_toolset.md) tool installed. Therefore, these next steps assume you already compiled your modules/scripts
  
 ## Module
  
-To deploy compiled module run the following command:
+To deploy a compiled module run the following command:
  
 ```text
 polkadot-js-api tx.mvm.publishModule @<module.mv> <gas> --seed <seed> --types ./types.json --ws <ws-address>
@@ -192,7 +209,7 @@ Replace parameters:
 * `<seed>` - account seed. Can be replaced with `"//Bob"` or `"//Alice"` in case of local nodes. 
 * `<ws-address>` - node websocket endpoint.
  
-You will see result of the transaction execution, like:
+After deploying, you'll see the result of the transaction execution with a JSON output similar to this:
 
 ```json
 {
@@ -246,10 +263,10 @@ You will see result of the transaction execution, like:
 ### Script
 
 {% hint style="info" %}
-🧙‍♂️ Compile a script using dove with arguments using `tx` command, use file with `.mvt` extension.
+🧙‍♂️ Use Dove to compile a script with arguments using the `tx` command. Use this on files with `.mvt` extension.
 {% endhint %}
 
-To deploy compiled script transaction run following command:
+To deploy a compiled script transaction, run the following command:
 
 ```text
 polkadot-js-api tx.mvm.execute @<script.mvt> <gas> --seed <seed> --types ./types.json --ws <ws-address>
@@ -264,7 +281,7 @@ Replace parameters:
 
 ## RPC
 
-So see [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC.
+See [RPC](../move_vm/rpc.md) documentation to see how to send requests to RPC.
 
 ## More
 

@@ -1,6 +1,6 @@
 # How is Pontem Network different from other blockchains?
 
-Pontem aims to connect the Move VM, language and community seeded by Facebook’s permissioned Diem Blockchain project to the public blockchain ecosystem through Polkadot. The Move language and the Move Virtual Machine are safe, enterprise ready technologies that enable blockchain functionality like payments and smart contracts. 
+Pontem aims to connect the Move VM, language and community seeded by Facebook’s permissioned Diem Blockchain project to the permissionless blockchain ecosystem through Polkadot. The Move language and the Move Virtual Machine are safe, enterprise ready technologies that enable blockchain functionality like payments and smart contracts. 
 
 In contrast to other Layer 1 blockchain projects who are focused on developing using languages such as Solidity and Web Assembly, Pontem is the first project to bring Facebook's Move technology to the permissioned crypto metaverse, enabling new and crypto native projects to build, test and deploy applications on Facebook’s Diem Blockchain.
 

@@ -1,8 +1,8 @@
 # Create account
 
-Before you continue with the rest of our tutorials, create a Diem account to be compatible with the Diem ecosystem.
+Before you continue with the rest of our tutorials, you should create a Diem account to be compatible with the Diem ecosystem.
 
-In this example we will create VASP account, that could just another account that holds balances and fires events:
+In this example we will create a VASP (Virtual Asset Service Provider) account which is a certified or registered account in the system that is permissioned to hold balances and fire events:
 
 ```rust
 script {
@@ -21,13 +21,13 @@ script {
 }
 ```
 
-Compile provided script:
+Compile the provided script:
 
 ```sh
 dove tx 'create_account(tr, <address>)
 ```
 
-Replace `<address>` with your account and execute transaction using UI or CLI.
+Replace `<address>` with your account and execute the transaction using the Polkadot JS [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).
 
 {% hint style="info" %}
 ✈️ See our instruction how to send transaction (execute/publish) using [UI](../getting_started/substrate.md) or [CLI](../getting_started/cli.md).

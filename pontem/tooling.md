@@ -2,7 +2,7 @@
 
 ![Toolset](/assets/illustrations/tooling.png "Toolset")
 
-As with any blockchain Pontem will come with standard tooling and functionality that end users are familiar with, _however we aim to augment these tools to better suit the needs of the Pontem blockchain._
+As with any blockchain, Pontem will come with standard tooling and functionality that end users are familiar with. However we aim to augment these tools to better suit the needs of the Pontem blockchain.
 
 # No-code Tools
 
@@ -16,16 +16,16 @@ With the advent of user-friendly decentralized exchanges and DeFi applications s
 🧙‍♂️ This is the concept that the No-Code tools on Pontem is using to allow people without coding skills to:
 
 * Create smart contracts
-* Add Liquidity to Swap platforms
-* Deploy Staking Contracts
+* Add liquidity to swap platforms
+* Deploy staking contracts
 * Create new DeFi farming strategies
-* Execute Loan/Borrow operations
+* Execute loan/borrow operations
 {% endhint %}
 
 These tools are limitless. 
 
 {% hint style="info" %}
-Any developer can publish their own Move module and create a No-Code templates to be used by others.
+Any developer can publish their own Move module and create a no-code template to be used by others.
 {% endhint %}
 
 Pontem is **one-stop place** for executing No-Code transactions across a number of different use cases. Developers **can choose how much to charge in fees** for their No-Code templates.

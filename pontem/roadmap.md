@@ -1,12 +1,8 @@
 # Technology Roadmap
 
-## Roadmap Q1 2021
+## Roadmap to Launch
 
-![Roadmap Q1 2021](/assets/illustrations/roadmap_q1.png "Roadmap Q1 2021")
-
-## Roadmap Q2 - Q3 2021
-
-![Roadmap Q2 - Q3 2021](/assets/illustrations/roadmap_q1.png "Roadmap Q2 - Q3 2021")
+![Roadmap Q4 2021 - Q4 2022](/assets/illustrations/roadmap.png "Subject to change given Diem roadmap")
 
 ## Web 3 Foundation Open Grant
 
