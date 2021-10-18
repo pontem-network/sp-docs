@@ -1,5 +1,7 @@
 # Table of contents
 
+* [Introduction](./README.md)
+
 ## 📌 01. WHAT'S PONTEM
 * [How is Pontem different to other blockchains?](./pontem/how_pontem_different.md)
 * [PONT Coin and Tokenomics](./pontem/pont_coin_tokenomics.md)
