@@ -35,89 +35,14 @@ touch ./types.json
 2. Put the JSON code below inside the 'types.json' file:
 
 ```json
-{ 
-  "Balance":"u64",
-  "RoundIndex":"u32",
-  "AuthorId":"[u8;32]",
-  "RegistrationInfo":{
-      "account":"AccountId",
-      "deposit":"Balance"
-  },
-  "Candidate":{
-      "id":"AccountId",
-      "fee":"Perbill",
-      "bond":"Balance",
-      "nominators":"Vec<Bond>",
-      "total":"Balance",
-      "state":"ValidatorStatus"
-  },
-  "Nominator":{
-      "nominations":"Vec<Bond>",
-      "total":"Balance"
-  },
-  "Bond":{
+{
+   "AuthorId":"[u8;32]",
+   "Balance":"u64",
+   "Bond":{
       "owner":"AccountId",
       "amount":"Balance"
-  },
-  "ValidatorStatus":{
-      "_enum":{
-        "Active":"Null",
-        "Idle":"Null",
-        "Leaving":"RoundIndex"
-      }
-  },
-  "Range":"RangeBalance",
-  "RangeBalance":{
-      "min":"Balance",
-      "ideal":"Balance",
-      "max":"Balance"
-  },
-  "RangePerbill":{
-      "min":"Perbill",
-      "ideal":"Perbill",
-      "max":"Perbill"
-  },
-  "InflationInfo":{
-      "expect":"RangeBalance",
-      "annual":"RangePerbill",
-      "round":"RangePerbill"
-  },
-  "RoundInfo":{
-      "current":"RoundIndex",
-      "first":"BlockNumber",
-      "length":"u32"
-  },
-  "OrderedSet": "Vec<Bond>",
-  "NominatorAdded":{
-      "_enum":{
-        "AddedToBottom":"Null",
-        "AddedToTop":"Balance"
-      }
-  },
-  "ParachainBondConfig":{
-      "account":"AccountId",
-      "percent":"Percent"
-  },
-  "ExitQ":{
-      "candidates":"Vec<AccountId>",
-      "nominators_leaving":"Vec<AccountId>",
-      "candidate_schedule":"Vec<(AccountId, RoundIndex)>",
-      "nominator_schedule":"Vec<(AccountId, Option<AccountId>, RoundIndex)>"
-  },
-  "Nominator2":{
-      "nominations":"Vec<Bond>",
-      "revocations":"Vec<AccountId>",
-      "total":"Balance",
-      "scheduled_revocations_count":"u32",
-      "scheduled_revocations_total":"Balance",
-      "status":"NominatorStatus"
-  },
-  "CollatorSnapshot":{
-      "bond":"Balance",
-      "nominators":"Vec<Bond>",
-      "total":"Balance"
-  },
-  "Collator2":{
+   },
+   "Collator2":{
       "id":"AccountId",
       "bond":"Balance",
       "nominators":"Vec<AccountId>",
@@ -126,32 +51,124 @@ touch ./types.json
       "total_counted":"Balance",
       "total_backing":"Balance",
       "state":"CollatorStatus"
-  },
-  "MoveTypeTag":{
-      "_enum":[
-        "Bool",
-        "U8",
-        "U64",
-        "U128",
-        "Address",
-        "Signer",
-        "Vector",
-        "Struct"
-      ],
-      "Bool":"",
-      "U8":"",
-      "U64":"",
-      "U128":"",
-      "Address":"",
-      "Signer":"",
-      "Vector":"MoveTypeTag",
-      "Struct":"MoveStructTag"
-  },
-  "MoveStructTag":{
+   },
+   "Candidate":{
+      "bond":"Balance",
+      "fee":"Perbill",
+      "id":"AccountId",
+      "nominators":"Vec<Bond>",
+      "state":"ValidatorStatus",
+      "total":"Balance"
+   },
+   "CollatorSnapshot":{
+      "bond":"Balance",
+      "nominators":"Vec<Bond>",
+      "total":"Balance"
+   },
+   "Estimation":{
+      "gas_used":"u64",
+      "status_code":"u64"
+   },
+   "ExitQ":{
+      "candidate_schedule":"Vec<(AccountId, RoundIndex)>",
+      "candidates":"Vec<AccountId>",
+      "nominator_schedule":"Vec<(AccountId, Option<AccountId>, RoundIndex)>",
+      "nominators_leaving":"Vec<AccountId>"
+   },
+   "InflationInfo":{
+      "annual":"RangePerbill",
+      "expect":"RangeBalance",
+      "round":"RangePerbill"
+   },
+   "MoveStructTag":{
       "address":"AccountId",
       "module":"Text",
       "name":"Text"
-  }
+   },
+   "MoveTypeTag":{
+      "Address":"",
+      "Bool":"",
+      "Signer":"",
+      "Struct":"MoveStructTag",
+      "U128":"",
+      "U64":"",
+      "U8":"",
+      "Vector":"MoveTypeTag",
+      "_enum":[
+         "Bool",
+         "U8",
+         "U64",
+         "U128",
+         "Address",
+         "Signer",
+         "Vector",
+         "Struct"
+      ]
+   },
+   "Nominator":{
+      "nominations":"Vec<Bond>",
+      "total":"Balance"
+   },
+   "Nominator2":{
+      "nominations":"Vec<Bond>",
+      "revocations":"Vec<AccountId>",
+      "scheduled_revocations_count":"u32",
+      "scheduled_revocations_total":"Balance",
+      "status":"NominatorStatus",
+      "total":"Balance"
+   },
+   "NominatorAdded":{
+      "_enum":{
+         "AddedToBottom":"Null",
+         "AddedToTop":"Balance"
+      }
+   },
+   "OrderedSet":"Vec<Bond>",
+   "ParachainBondConfig":{
+      "account":"AccountId",
+      "percent":"Percent"
+   },
+   "Range":"RangeBalance",
+   "RangeBalance":{
+      "ideal":"Balance",
+      "max":"Balance",
+      "min":"Balance"
+   },
+   "RangePerbill":{
+      "ideal":"Perbill",
+      "max":"Perbill",
+      "min":"Perbill"
+   },
+   "RegistrationInfo":{
+      "account":"AccountId",
+      "deposit":"Balance"
+   },
+   "RoundIndex":"u32",
+   "RoundInfo":{
+      "current":"RoundIndex",
+      "first":"BlockNumber",
+      "length":"u32"
+   },
+   "ValidatorStatus":{
+      "_enum":{
+         "Active":"Null",
+         "Idle":"Null",
+         "Leaving":"RoundIndex"
+      }
+   },
+   "CollatorStatus":{
+      "_enum":{
+         "Active":"Null",
+         "Idle":"Null",
+         "Leaving":"RoundIndex"
+      }
+   },
+   "NominatorStatus":{
+      "_enum":{
+         "Active":"Null",
+         "Leaving":"RoundIndex"
+      }
+   }
 }
 ```
 
