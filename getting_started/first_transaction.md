@@ -12,11 +12,10 @@ Use [FAUCET](https://t.me/pontem_faucet_bot) to fund one of your accounts.
 
 To send coins between accounts just perform following steps:
 
+![Account](/assets/accounts.png "Account")
+
 1. Open the Pontem Polkadot JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/accounts).
 2. Navigate to **"Accounts"** in the header menu.
-
- ![Account](/assets/accounts.png "Account")
-
 3. Click on **"send"** button near account which sends funds.
 
 ![Send](/assets/send.png "Send")
