@@ -8,7 +8,7 @@
 
 ![W3F Grant](/assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
 
-We have now completed the Web3 foundation grant milestones to [bring Move VM smart contracts to Polkadot.
+We have now completed the Web3 foundation grant milestones to [bring Move VM smart contracts to Polkadot
 ](https://blog.pontem.network/pontem-network-is-the-first-to-make-diems-move-language-available-on-polkadot-dc1f3498ffcb).
 
 You can see the full Pontem Network Grant Proposal in our [GitHub](https://github.com/pontem-network/Open-Grants-Program/blob/master/applications/pontem.md).
