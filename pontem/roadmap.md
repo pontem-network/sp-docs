@@ -20,5 +20,5 @@ Pontem Network is a participant of [Substrate Builders Program](https://substrat
 Milestones completion:
 
 * ✅ [Milestone #1](https://www.parity.io/blog/substrate-builders-program-milestone-update-october-2021).
-* 🚧 Milestone #2
-* 🚧 Milestone #3
+* 🚧 Milestone #2 - In progress.
+* 🚧 Milestone #3 - In progress.
