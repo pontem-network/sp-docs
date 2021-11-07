@@ -11,7 +11,7 @@ If you don't want to use the Polkadot JS UI to interact with the Pontem Network,
 2. use npm to install the Polkadot JS CLI:
 
 ```text
-npm install -g polkadot-js-api
+yarn global add @polkadot/api-cli
 ```
 
 Run help to learn more about the CLI:
