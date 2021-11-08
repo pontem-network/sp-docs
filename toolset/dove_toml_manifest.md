@@ -48,7 +48,7 @@ This field controls which address format to use in your project.
 
 Possible values are:
 * `"pont"`(default) - Polkadot addresses,
-  i.e. `5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty`
+  i.e. `gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih`
 
 * `"diem"` - Diem addresses, i.e. `0x1232414212412`
 

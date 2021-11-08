@@ -197,7 +197,7 @@ Next, let's query the new account after you create it,:
 polkadot-js-api query.system.account <address> --ws wss://testnet.pontem.network/ws --types ./types.json
 ```
 
-Replace `<address>` with your generated account address ('SS58 Address' in the output from the previous command), e.g. `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`.
+Replace `<address>` with your generated account address ('SS58 Address' in the output from the previous command), e.g. `gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih`.
 
 ### Transactions
 
@@ -246,7 +246,7 @@ After deploying, you'll see the result of the transaction execution with a JSON 
           "section": "mvm",
           "index": "0x0801",
           "data": [
-            "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty"
+            "gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih"
           ]
         },
         "topics": []
