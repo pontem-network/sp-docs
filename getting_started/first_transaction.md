@@ -130,4 +130,4 @@ In the next sections we explain our Polkadot Parachain architecture, addresses, 
 If you are interested in first learning more about the Move language or Pallet skip to these sections:
 
 * [Move Pallet](../move_vm/README.md)
-* [Tutorials](../tutorials/access_control.md)
+* [Tutorials](../tutorials/create_account.md)
