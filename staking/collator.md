@@ -94,6 +94,8 @@ Create your collator candidate:
 4. Put amount to bond in PONT tokens (at least 100 PONT, but we recommend to put at least 1000 PONT).
 5. For `candidate_count` use value you copied in the previous step.
 6. Send transaction from your account.
+ 
+**IMPORTANT:** To become a collator needs at least 100 PONT coins, yet to become an active collator (produce blocks), you need at least 1000 PONT staked for your collator. You can stake it yourself or ask nominators to stake for you.
 
 ![Join Candidatess](/assets/join_candidates.png "Join Candidates")
 
