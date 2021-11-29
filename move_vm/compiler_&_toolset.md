@@ -168,8 +168,8 @@ dove tx 'create_account<0x01::PONT::PONT>()'
 You're allowed to use SS58 address format and other types:
 
 ```sh
-dove tx 'create_account<5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY::MyToken::Token>()'
-dove tx 'create_account(5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY, 10, true, [10, 20, 30, 40])'
+dove tx 'create_account<gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih::MyToken::Token>()'
+dove tx 'create_account(gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih, 10, true, [10, 20, 30, 40])'
 ```
 
 Supported types:
