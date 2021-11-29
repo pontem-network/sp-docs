@@ -10,7 +10,7 @@ Before continuing, please check that you completed all these steps before creati
 * Read the introduction to [Pontem staking](./README.md).
 * You have an account on Pontem network that contains at least +101 PONT tokens to create collator and pay network fees:
   * Create an account using [UI](../getting_started/ui.md#account-creation) or use [CLI](../getting_started/cli.md#account-creation).
-  * Use [FAUCET](https://t.me/pontem_faucet_bot) to get free testnet tokens.
+  * Use [FAUCET](https://t.me/pontem_faucet_bot) to get free testnet tokens (you can use it once every 24 hours).
 * Synchronized [bootstrap](https://github.com/pontem-network/bootstrap) node. Read [docs](https://github.com/pontem-network/bootstrap) in the repository to update your own node.
 * Collator Nimbus mnemonic phrase key (you create this when initializing your bootstrap node).
 
@@ -63,9 +63,11 @@ Let's check that the author mapped correctly:
 
 1. Navigate to [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
 2. Choose `authorMapping` pallet under 'selected state query'.
-3. Choose `mappingWithDeposit(AuthorId)`
+3. Choose `mappingWithDeposit(NimbusPrimitivesNimbusCryptoPublic):Option<PalletAuthorMappingRegistrationInfo>`
 4. Put your public key in `AuthorId` field.
 5. Make call.
+
+***NOTE:*** You will see a deposit amount of 10,000,000,000. This is normal and still just 1 PONT
 
 ![Check Mapping](/assets/check_author_mapping.png "Check Mapping")
 
@@ -91,11 +93,14 @@ Create your collator candidate:
 1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
 2. Choose `parachainStaking` pallet.
 3. Choose `joinCandidates(bond, candidate_count)` function.
-4. Put amount to bond in PONT tokens (at least 100 PONT, but we recommend to put at least 1000 PONT).
+4. Put amount to bond in the `bond` field. For example 11000000000000 is 1100 PONT (we recommend to put at least 1100 PONT).
+
+**NOTE:** Do not forget about 10 decimals! You need to add ten zeros to the amount. For example, to put `1100 PONT` - enter `110000000000000000`
+
 5. For `candidate_count` use value you copied in the previous step.
 6. Send transaction from your account.
  
-**IMPORTANT:** To become a collator needs at least 100 PONT coins, yet to become an active collator (produce blocks), you need at least 1000 PONT staked for your collator. You can stake it yourself or ask nominators to stake for you.
+**IMPORTANT:** To become an active collator (produce blocks), you need at least 1000 PONT staked for your collator. You can stake it yourself or ask nominators to stake for you.
 
 ![Join Candidatess](/assets/join_candidates.png "Join Candidates")
 
@@ -105,7 +110,26 @@ Once your collator is among the top positions you will become active and start g
 
 ## Self Stake
 
-You can self-stake more for your collator. In [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics) use the `parachainStaking` pallet and `candidateBondMore` method. You can get your staked coins back using `candidateBondLess` method.
+You can self-stake more or less for your collator.
+### Bond More
+
+1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
+2. Choose `parachainStaking` pallet.
+3. Choose `candidateBondMore(more)` function.
+4. Specify the additional amount to be bonded in the `more` field (do not forget about 10 decimals!).
+5. Submit the transaction.
+
+*You can get your staked coins back using `candidateBondLess` method.*
+
+![Bond More](/assets/bond_more.png "Bond More")
+
+### Bond less
+2. Choose `parachainStaking` pallet.
+3. Choose `candidateBondLess(less)` function.
+4. Specify the amount by which you want to decrease your bond in the `less` field (do not forget about 10 decimals!).
+5. Submit the transaction.
+
+![Bond Less](/assets/bond_less.png "Bond Less")
 
 ## Go Offline
 
