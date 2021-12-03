@@ -95,7 +95,7 @@ Create your collator candidate:
 3. Choose `joinCandidates(bond, candidate_count)` function.
 4. Put amount to bond in the `bond` field. For example 11000000000000 is 1100 PONT (we recommend to put at least 1100 PONT).
 
-**NOTE:** Do not forget about 10 decimals! You need to add ten zeros to the amount. For example, to put `1100 PONT` - enter `110000000000000000`
+**NOTE:** Do not forget about 10 decimals! You need to add ten zeros to the amount. For example, to put `1100 PONT` - enter `11000000000000`
 
 5. For `candidate_count` use value you copied in the previous step.
 6. Send transaction from your account.
