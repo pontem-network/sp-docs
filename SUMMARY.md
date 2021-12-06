@@ -25,8 +25,9 @@
 * [Introduction](staking/README.md)
 * [Become a Nominator (Stake PONT)](staking/nominator.md)
 * [Become a Collator](staking/collator.md)
+* [FAQ](staking/FAQ.md)
 
-## ⚙️ 03. MOVE VM
+## ⚙️ 04. MOVE VM
 
 * [Move VM](move\_vm/README.md)
 * [Pallet](move\_vm/pallet.md)
@@ -38,16 +39,16 @@
 * [Standard Library](move\_vm/stdlib.md)
 * [RPC](move\_vm/rpc.md)
 
-## 📘 04. MOVE LANGUAGE
+## 📘 05. MOVE LANGUAGE
 
 * [Introduction](lang/README.md)
 * [Learn Resources](lang/learn\_resources.md)
 
-## 🧰 05. TOOLSET
+## 🧰 06. TOOLSET
 
 * [Dove.toml manifest file format](toolset/dove\_toml\_manifest.md)
 
-## 🔧 06. TUTORIALS
+## 🔧 07. TUTORIALS
 
 * [Create account](tutorials/create\_account.md)
 * [Addresses & Access Control](tutorials/addresses\_access\_control.md)
@@ -55,7 +56,7 @@
 * [Errors Catching](tutorials/errors.md)
 * [Watch Resources](tutorials/watch\_resources.md)
 
-## 🔗 07. Resources
+## 🔗 08. Resources
 
 * [Site](https://pontem.network)
 * [Github](https://github.com/pontem-network)
