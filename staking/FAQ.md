@@ -134,22 +134,18 @@
 ### If you can't find an answer, you can always ask a question in one of our chats:
 
 
-👾Announcement Channel: https://t.me/pontemnetworkchannel
+[👾Announcement Channel](https://t.me/pontemnetworkchannel)
 
-👾Medium: https://pontem.medium.com
+[🤖Discord](https://discord.gg/GkzU2qwV) 
 
-👾Twitter: https://twitter.com/PontemNetwork
+[🤖Pontem Collators Channel](https://t.me/pontemnetworkcollators)
 
-🤖Discord https://discord.gg/GkzU2qwV
+[👾Russian Community Telegram](https://t.me/PontemNetworkRU)
 
-🤖Pontem Collators Channel: https://t.me/pontemnetworkcollators
+[👾Russian Community Collators Telegram](https://t.me/pontem_RU)
 
-👾Russian Community Telegram: https://t.me/PontemNetworkRU
+[👾Korean Community Telegram](https://t.me/Pontem_kor)
 
-👾Russian Community Collators Telegram: https://t.me/pontem_RU
+[👾Spanish Community Telegram](https://t.me/pontem_es)
 
-👾Korean Community Telegram: https://t.me/Pontem_kor
-
-👾Spanish Community Telegram: https://t.me/pontem_es
-
-👾Turkish Community Telegram: https://t.me/pontem_tr
+[👾Turkish Community Telegram](https://t.me/pontem_tr)
