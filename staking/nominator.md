@@ -91,6 +91,26 @@ Congratulations on staking your PONT! We hope to improve the process with our ow
 2. Ensure collator address is in 'candidate: AccountId'
 3. Add balance of PONT you want to add or subtract 
 
+### Stake More
+
+  1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
+  2. Choose `parachainStaking` pallet.
+  3. Choose `nominatorBondMore(candidate, more)` function.
+  4. Specify the additional amount to be bonded in the `more` field (do not forget about 10 decimals!).
+  5. Submit the transaction.
+
+![Bond More](/assets/faq_nominator_more.png "Bond More")
+
+### Stake less
+
+  1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
+  2. Choose `parachainStaking` pallet.
+  3. Choose `nominatorBondLess(candidate, less)` function.
+  4. Specify the amount by which you want to decrease your bond in the `less` field (do not forget about 10 decimals!).
+  5. Submit the transaction.
+
+![Bond Less](/assets/faq_nominator_less.png "Bond Less")
+
 ## Revoke Nomination
 
 To cancel nomitation for collator in [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics) use `revokeNomination` function in the `parachainStaking` pallet. =

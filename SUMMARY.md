@@ -25,7 +25,7 @@
 * [Introduction](staking/README.md)
 * [Become a Nominator (Stake PONT)](staking/nominator.md)
 * [Become a Collator](staking/collator.md)
-* [FAQ](staking/FAQ.md)
+* [Staking FAQ](staking/FAQ.md)
 
 ## ⚙️ 04. MOVE VM
 

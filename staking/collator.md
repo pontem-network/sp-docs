@@ -124,6 +124,7 @@ You can self-stake more or less for your collator.
 ![Bond More](/assets/bond_more.png "Bond More")
 
 ### Bond less
+1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
 2. Choose `parachainStaking` pallet.
 3. Choose `candidateBondLess(less)` function.
 4. Specify the amount by which you want to decrease your bond in the `less` field (do not forget about 10 decimals!).
