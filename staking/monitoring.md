@@ -6,7 +6,7 @@ You can get data such as the height of the chain, the number of connected peers 
 
 ## Preparation
 
-Make sure your repository with Pontem Boostrat is up to date:
+Make sure your repository with Pontem Boostrap is up to date:
 ```
 cd <path-to-your-pontem-bootstrap-dir>
 git pull
@@ -16,9 +16,10 @@ Check the `docker-compose.yml` file.
 cat docker-compose.yml
 ```
 Make sure that it contains these lines: 
+
 ![docker-compose.yml](/assets/docker_compose.png "docker-compose.yml")
 
-If you made changes to docker-compose.yml, restart the node:
+To be sure that the node is running with the right parameters, restart it:
 ```
 docker-compose up -d
 ```
@@ -29,3 +30,4 @@ Run the command:
 ```
 docker-compose -f monitoring.docker-compose.yml up -d
 ```
+After that open `<your-server-ip>:3000` in your browser. Login and password - `admin`.
