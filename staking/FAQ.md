@@ -28,6 +28,23 @@
   docker-compose run pontem-node pontem key insert --suri "<you_mnemonic>" --keystore-path /opt/pontem/keys --key-type nmbs
   ```
 
+- **parachainStaking.ToLowCandidateCount error**
+
+  The number of candidates has changed since you made the request. Simply repeat the query:
+
+  1. Navigate to [Pontem UI. Javascript](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/js)
+  2. Execute there following code (remove pre-defined code before):
+
+  ```js
+  // Simple script to get candidate pool size
+  const candidatePool = await api.query.parachainStaking.candidatePool();
+  console.log(`Candidate pool size is: ${candidatePool.length}`);
+  ```
+
+  Copy printed number after `Candidate pool size is:`.
+
+  ![Candidate Pool](/assets/candidate_pool.png "Candidate Pool")
+
 - **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
 
   Your node is on the candidate pool, but not yet selected
@@ -56,7 +73,7 @@
 
 - **How do I see the current stakes?**
 
-1. Navigate to [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
+  1. Navigate to [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
   2. Choose `parachainStaking` pallet under 'selected state query'.
   3. Choose `candidatePool(): ParachainStakingSetOrderedSetBond`
   5. Press the "+" button.
