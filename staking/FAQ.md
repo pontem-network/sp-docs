@@ -43,7 +43,7 @@
 
   Copy printed number after `Candidate pool size is:`.
 
-  ![Candidate Pool](/assets/candidate_pool.png "Candidate Pool")
+![Candidate Pool](/assets/candidate_pool.png "Candidate Pool")
 
 - **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
 
