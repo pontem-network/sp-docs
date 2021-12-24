@@ -1,26 +1,26 @@
 # Staking FAQ
 
-- **The number of peers has dropped to 0**
+- ## **The number of peers has dropped to 0**
   
   Try restarting the node, if you are using a virtual machine, try restarting that as well.
 
-- **parachainStaking.CandidateExists error**
+- ## **parachainStaking.CandidateExists error**
 
   You are already a Nominator/Collator (You cannot be a Nominator and Collator at the same time)
 
-- **parachainStaking.NominatorExists error**
+- ## **parachainStaking.NominatorExists error**
 
   You are already a Nominator/Collator (You cannot be a Nominator and Collator at the same time)
 
-- **parachainStaking.CandidateDNE (ParachainStaking -> candidateBondMore) error**
+- ## **parachainStaking.CandidateDNE (ParachainStaking -> candidateBondMore) error**
   
   You may not have enough tokens. Check your balance and change the amount.
 
-- **parachainStaking.NominatorDNE (ParachainStaking -> candidateBondMore) error**
+- ## **parachainStaking.NominatorDNE (ParachainStaking -> candidateBondMore) error**
 
   You may not have enough tokens. Check your balance and change the amount.
 
-- **Error in node logs: "No Nimbus keys available. We will not be able to author"**
+- ## **Error in node logs: "No Nimbus keys available. We will not be able to author"**
 
   You need to add the Nimbus key: 
   ```
@@ -28,7 +28,7 @@
   docker-compose run pontem-node pontem key insert --suri "<you_mnemonic>" --keystore-path /opt/pontem/keys --key-type nmbs
   ```
 
-- **parachainStaking.ToLowCandidateCount error**
+- ## **parachainStaking.ToLowCandidateCount error**
 
   The number of candidates has changed since you made the request. Simply repeat the query:
 
@@ -45,7 +45,7 @@
 
 ![Candidate Pool](/assets/candidate_pool.png "Candidate Pool")
 
-- **In the node logs i see error:**
+- ## **In the node logs I see error:**
 
   ```log
   [Parachain] panicked at 'Storage root must match that calculated.', /root/.cargo/git/checkouts/substrate-7e08433d4c370a21/57346f6/frame/executive/src/lib.rs:503:9
@@ -69,15 +69,15 @@
   docker-compose restart pontem-node
   ```
 
-- **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
+- ## **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
 
   Your node is on the candidate pool, but not yet selected
 
-- **I have successfully completed everything, but I am still on the candidate pool**
+- ## **I have successfully completed everything, but I am still on the candidate pool**
 
   Active status gets collators with the highest stake. Active collators are updated every round (1 round = 300 blocks, i.e. 300, 600, 900, and so on)
 
-- **Where can I see the pool of collator candidates?**
+- ## **Where can I see the pool of collator candidates?**
 
   1. Navigate to [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
   2. Choose `parachainStaking` pallet under 'selected state query'.
@@ -86,7 +86,7 @@
 
 ![Candidate pool](/assets/faq_candidate_pool.png "Candidate pool")
 
-- **Where can I find a list of active collators?**
+- ## **Where can I find a list of active collators?**
   
   1. Navigate to [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
   2. Choose `parachainStaking` pallet under 'selected state query'.
@@ -95,7 +95,7 @@
 
 ![Selected candidates](/assets/faq_selected_candidates.png "Selected candidates")
 
-- **How do I see the current stakes?**
+- ## **How do I see the current stakes?**
 
   1. Navigate to [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.pontem.network%2Fws#/chainstate)
   2. Choose `parachainStaking` pallet under 'selected state query'.
@@ -104,7 +104,7 @@
 
 ![Candidate pool](/assets/faq_candidate_pool.png "Candidate pool")
 
-- **Where can I see the reward?**
+- ## **Where can I see the reward?**
   
   Rewards can be seen at the end of each round in the block information. For example, the information about block [72900](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/explorer/query/0xe61823a1904246f1120c8cf56e52277e49b571e68971eb4c9ea47d7f3500a078):
 
@@ -112,15 +112,15 @@
 
  
 
-- **Is it possible to be a nominator and a collator at the same time?**
+- ## **Is it possible to be a nominator and a collator at the same time?**
   
   No, you can't.
 
-- **How are collator rewards calculated?**
+- ## **How are collator rewards calculated?**
 
   Information about rewards can be found [here](https://docs.pontem.network/03.-staking/staking)
 
-- **How to stake more as collator?**
+- ## **How to stake more as collator?**
 
   1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
   2. Choose `parachainStaking` pallet.
@@ -130,7 +130,7 @@
 
 ![Bond More](/assets/bond_more.png "Bond More")
 
-- **How to stake less as collator?**
+- ## **How to stake less as collator?**
 
   1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
   2. Choose `parachainStaking` pallet.
@@ -140,7 +140,7 @@
 
 ![Bond Less](/assets/bond_less.png "Bond Less")
 
-- **How to stake more as nominator?**
+- ## **How to stake more as nominator?**
 
   1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
   2. Choose `parachainStaking` pallet.
@@ -150,7 +150,7 @@
 
 ![Bond More](/assets/faq_nominator_more.png "Bond More")
 
-- **How to stake less as nominator?**
+- ## **How to stake less as nominator?**
 
   1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
   2. Choose `parachainStaking` pallet.
@@ -160,15 +160,15 @@
 
 ![Bond Less](/assets/faq_nominator_less.png "Bond Less")
 
-- **What number should I enter if I want to increase or decrease the amount of tokens?**
+- ## **What number should I enter if I want to increase or decrease the amount of tokens?**
 
   Add 10 zeros to the desired amount. For example, if you want to increase the collator stake by 1234 PONT, you need to enter `12340000000000`.
 
-- **How many active collators can there be?**
+- ## **How many active collators can there be?**
 
   At the moment - 61.
 
-- **Where can I get PONT for Testnet?**
+- ## **Where can I get PONT for Testnet?**
 
   From the [Pontem faucet bot](https://t.me/pontem_faucet_bot). You can get tokens once every 24 hours.
 
