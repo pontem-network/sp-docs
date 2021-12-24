@@ -59,7 +59,7 @@
   vim docker-compose.yml
   ```
 
-  In the `command` section add `--state-cache-size 1`. It should look something like this:
+  In the `command` section twice add `--state-cache-size 1`. It should look something like this:
 
 ![Docker-compose.yml](/assets/storage-root-error.png "Docker-compose.yml")
 
