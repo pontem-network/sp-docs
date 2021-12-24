@@ -45,6 +45,30 @@
 
 ![Candidate Pool](/assets/candidate_pool.png "Candidate Pool")
 
+- **In the node logs i see error:**
+
+  ```log
+  [Parachain] panicked at 'Storage root must match that calculated.', /root/.cargo/git/checkouts/substrate-7e08433d4c370a21/57346f6/frame/executive/src/lib.rs:503:9
+  [Parachain] Block prepare storage changes error: ...
+  [Parachain] 💔 Error importing block ...
+  ```
+
+  This relates to this [issue](https://github.com/Phala-Network/phala-blockchain/issues/551). The solution at this point is to add the `--state-cache-size 1` key to `docker-compose.yml`:
+
+  ```bash
+  vim docker-compose.yml
+  ```
+
+  In the `command` section add `--state-cache-size 1`. It should look something like this:
+
+![Docker-compose.yml](/assets/storage-root-error.png "Docker-compose.yml")
+
+  Restart Pontem:
+
+  ```
+  docker-compose restart pontem-node
+  ```
+
 - **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
 
   Your node is on the candidate pool, but not yet selected
