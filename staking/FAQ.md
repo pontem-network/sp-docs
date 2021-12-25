@@ -166,7 +166,7 @@
 
 - ## **How many active collators can there be?**
 
-  At the moment - 61.
+  At the moment - 101.
 
 - ## **Where can I get PONT for Testnet?**
 
