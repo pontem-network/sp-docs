@@ -193,6 +193,33 @@
 
   From the [Pontem faucet bot](https://t.me/pontem_faucet_bot). You can get tokens once every 24 hours.
 
+- ## **I want to move my node to another server. How do I do that?**
+
+  Before you start the migration, send the network a message that you are offline:
+
+  1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
+  2. Choose `parachainStaking` pallet.
+  3. Choose `goOffline` function.
+  4. Submit the transaction.
+
+![Go Offline](/assets/go_offline.png "Go Offline")
+
+  Stop the node:
+  ```
+  docker-compose down -v
+  ```
+  
+  Configure the node on the new server according to the [instructions](https://github.com/pontem-network/bootstrap), using your mnemonics.
+
+  After starting a new node:
+
+  1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
+  2. Choose `parachainStaking` pallet.
+  3. Choose `goOnline` function.
+  4. Submit the transaction.
+
+![Go Online](/assets/go_online.png "Go Online")
+
 ### If you can't find an answer, you can always ask a question in one of our chats:
 
 
