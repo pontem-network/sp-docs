@@ -20,14 +20,6 @@
 
   You may not have enough tokens. Check your balance and change the amount.
 
-- ## **Error in node logs: "No Nimbus keys available. We will not be able to author"**
-
-  You need to add the Nimbus key: 
-  ```
-  # Replace <you_mnemonic> with your mnemonic phrase.
-  docker-compose run pontem-node pontem key insert --suri "<you_mnemonic>" --keystore-path /opt/pontem/keys --key-type nmbs
-  ```
-
 - ## **parachainStaking.ToLowCandidateCount error**
 
   The number of candidates has changed since you made the request. Simply repeat the query:
@@ -44,6 +36,35 @@
   Copy printed number after `Candidate pool size is:`.
 
 ![Candidate Pool](/assets/candidate_pool.png "Candidate Pool")
+
+- ## **Error in node logs: "No Nimbus keys available. We will not be able to author"**
+
+  You need to add the Nimbus key: 
+  ```
+  # Replace <you_mnemonic> with your mnemonic phrase.
+  docker-compose run pontem-node pontem key insert --suri "<you_mnemonic>" --keystore-path /opt/pontem/keys --key-type nmbs
+  ```
+- ## **How can I see the logs of my node?**
+
+  To see all the logs:
+  ```
+  docker-compose logs
+  ```
+  To see only, for example, 50 lines of the log:
+  ```
+  docker-compose logs --tail 50
+  ```
+- ## **How do I know if my node is producing blocks?**
+
+  This is indicated by a message like this in the logs:
+  ```log
+  pontem-node-1    | 2021-12-24 22:30:24 [Parachain] PoV size { header: 0.205078125kb, extrinsics: 2.072265625kb, storage_proof: 8.35546875kb }
+  pontem-node-1    | 2021-12-24 22:30:24 [Parachain] 🈴 Produced proof-of-validity candidate. block_hash=0x137ab8e79de47a526607ae31fc3e4fe33c9e4dd76a29c042af65621c7599ec33
+  ```
+  To find this message run:
+  ```
+  docker-compose logs | grep -i 'Produced proof-of-validity candidate'
+  ```
 
 - ## **In the node logs I see error:**
 
@@ -66,7 +87,7 @@
   Restart Pontem:
 
   ```
-  docker-compose restart pontem-node
+  docker-compose up -d
   ```
 
 - ## **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
