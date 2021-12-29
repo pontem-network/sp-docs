@@ -80,7 +80,7 @@ To stake your PONT tokens do following steps:
 7. In `nominationCount` field put value from the [Get number of your nominations](#get-count-of-your-nominations) step.
 8. Send transaction
 
-![Stake PONT](/assets/author_mapping.png "Stake PONT")
+![Stake PONT](/assets/nominate.png "Stake PONT")
 
 
 Congratulations on staking your PONT! We hope to improve the process with our own wallet in the future.
