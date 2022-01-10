@@ -89,6 +89,14 @@
   ```
   docker-compose up -d
   ```
+  To automate this process, you can run node-restarter in a separate container (make sure that you have updated the repository: `git pull`). It will monitor log messages and, if an error is detected, it will automatically restart the node. To start the node-restarter:
+  ```
+  docker-compose -f restart.docker-compose.yml up -d
+  ```
+  To see if this error occurred and if the node was restarted:
+  ```
+  docker-compose -f restart.docker-compose.yml logs -f --tail 10
+  ```
 
 - ## **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
 
