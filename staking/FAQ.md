@@ -74,29 +74,13 @@
   [Parachain] 💔 Error importing block ...
   ```
 
-  This relates to this [issue](https://github.com/Phala-Network/phala-blockchain/issues/551). The solution at this point is to add the `--state-cache-size 1` key to `docker-compose.yml`:
+  This relates to this [issue](https://github.com/Phala-Network/phala-blockchain/issues/551). 
 
-  ```bash
-  vim docker-compose.yml
+  The optimal solution to this problem at the moment is to restart the node. To automate this process, do the following:
   ```
-
-  In the `command` section twice add `--state-cache-size 1`. It should look something like this:
-
-![Docker-compose.yml](/assets/storage-root-error.png "Docker-compose.yml")
-
-  Restart Pontem:
-
+  docker run -d --name autorestart-pontem --restart always -v /var/run/docker.sock:/var/run/docker.sock pontem/pontem-scripts:latest autorestart pontem-node 300 5
   ```
-  docker-compose up -d
-  ```
-  To automate this process, you can run node-restarter in a separate container (make sure that you have updated the repository: `git pull`). It will monitor log messages and, if an error is detected, it will automatically restart the node. To start the node-restarter:
-  ```
-  docker-compose -f restart.docker-compose.yml up -d
-  ```
-  To see if this error occurred and if the node was restarted:
-  ```
-  docker-compose -f restart.docker-compose.yml logs -f --tail 10
-  ```
+  Note: You no longer need to edit `docker-compose.yml` and add the key `--state-cache-size 1` to it, now the node will restart itself when errors occur thanks to the script you run
 
 - ## **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
 
