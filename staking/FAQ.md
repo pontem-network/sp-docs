@@ -14,11 +14,11 @@
 
 - ## **parachainStaking.CandidateDNE (ParachainStaking -> candidateBondMore) error**
   
-  You may not have enough tokens. Check your balance and change the amount.
+  This means that the candidate does not exist. You have to [create](https://docs.pontem.network/03.-staking/collator#become-collator) one first.
 
 - ## **parachainStaking.NominatorDNE (ParachainStaking -> candidateBondMore) error**
 
-  You may not have enough tokens. Check your balance and change the amount.
+  This means that the nominator does not exist. You have to [create](https://docs.pontem.network/03.-staking/nominator) one first.
 
 - ## **parachainStaking.ToLowCandidateCount error**
 
@@ -69,7 +69,7 @@
 - ## **In the node logs I see error:**
 
   ```log
-  [Parachain] panicked at 'Storage root must match that calculated.', /root/.cargo/git/checkouts/substrate-7e08433d4c370a21/57346f6/frame/executive/src/lib.rs:503:9
+  [Parachain] Thread 'tokio-runtime-worker' panicked at ...
   [Parachain] Block prepare storage changes error: ...
   [Parachain] 💔 Error importing block ...
   ```
@@ -78,8 +78,11 @@
 
   The optimal solution to this problem at the moment is to restart the node. To automate this process, do the following:
   ```
-  docker run -d --name autorestart-pontem --restart always -v /var/run/docker.sock:/var/run/docker.sock pontem/pontem-scripts:latest autorestart pontem-node 300 5
+  docker pull pontem/pontem-scripts:latest
+  docker run -i --rm --name autorestart-init -v /var/run/docker.sock:/var/run/docker.sock pontem/pontem-scripts:latest init-autorestart
   ```
+  About how the script works. This is a temporary solution that does NOT fix errors. The script checks logs every 5 minutes and restarts the node in case of an error. You may still see errors in the logs, but they will not affect the operation of the node. Our team is currently working on a solution to the problem.
+  
   Note: You no longer need to edit `docker-compose.yml` and add the key `--state-cache-size 1` to it, now the node will restart itself when errors occur thanks to the script you run
 
 - ## **I keep seeing a message in the logs: "Skipping candidate production because we are not eligible"**
