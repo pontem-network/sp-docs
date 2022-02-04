@@ -13,7 +13,7 @@ Key points to know:
 * Any network participant in the network who has the minimum required amount of PONT tokens can be registered as a collator.
 * Only the top collators at the current stage would be active and earn rewards.
 * Collators can self-stake PONT tokens.
-* Other users who don't want to run their own node can nominate (delegate) their PONT tokens to a maximum of 10 collators. These users are called nominators, and earn part of the rewards earned by the collator.
+* Other users who don't want to run their own node can nominate (delegate) their PONT tokens to a maximum of 25 collators. These users are called nominators, and earn part of the rewards earned by the collator.
 * The top collators are sorted by amount of self-staked collator’s PONT tokens plus the nominated tokens.
 * The list of collators updates each round.
 * Each collator has a maximum number of nominators.
@@ -28,7 +28,7 @@ We prepared a short reference sheet containing general definitions and actual pa
 
 * **Blocks In Round** - number of blocks per one round. Value: 300.
 * **Top amount** - number of top collators able to participate in staking. Value: 8.
-* **Maximum Nominators Per Collator** - number of nominators each collator can have at a given time. Value: 10.
+* **Maximum Nominators Per Collator** - number of nominators each collator can have at a given time. Value: 10. *(In general the limit is 45, but only the top 10 of them can get the reward).*
 * **Maximum Collators Per Nominator** - number of collators each nominator can vote for. Value: 25.
 * **Default Collator Commission** - default commission that a collator earns. Value: 20%. This value can only be changed by the root account currently.
 * **Default Parachain Bond Reserve Percentage** - the percent from the staking inflation that goes to the Parachain Bond Fund. Value: 30%.
