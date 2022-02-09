@@ -4,16 +4,16 @@ We've developed a toolchain for the Move VM and language which allows for:
 
 * **Compiling** Move code into bytecode.
 * **Testing** Move code with tests and formal verifications.
-* **Viewing** Move resources (stored data) from remote blockchain nodes.
-* **Disassembling** Move binary and even reading human readable results.
+* **Publishing** Move modules to the blockchain.
+* **Executing** Move transactions on the blockchain.
 
 The toolchain is implemented by the Dove tool and several separate binaries, which you can install following this tutorial.
 
 ## Installation
 
-All tools are stored in our [Move-Tools](https://github.com/pontem-network/move-tools) Github repository.
+All tools are stored in our [Dove](https://github.com/pontem-network/dove) Github repository.
 
-You can download all tools for your operating system from [releases page](https://github.com/pontem-network/move-tools/releases).
+You can download all tools for your operating system from [releases page](https://github.com/pontem-network/dove/releases).
 
 After downloading, rename tool(s) by removing version and os and moving binary to `/usr/local/bin/`.
 
@@ -49,10 +49,8 @@ Dove is a Move compiler and package manager. Using Dove you can create your own 
 Let's create your first project:
 
 ```sh
-dove new first_project --dialect pont  --address <address>
+dove new first_project
 ```
-
-* Replace `<address>` with your address.
 
 Navigate to `first_project` folder and examine what's automatically generated inside:
 
@@ -61,28 +59,17 @@ cd ./first_project
 ls -la
 ```
 
-* `Dove.toml` - configuration file.
-* `modules` - place modules here.
-* `scripts` - place scripts here.
-* `tests` - place tests here.
+* `Move.toml` - configuration file.
+* `sources` - place modules here.
 
 Let's examine what is contained in `Dove.toml`:
 
 ```toml
 [package]
-name = "first_project1"
-account_address = "<your address>"
-dialect = "pont"
-
-dependencies = [
-    { git = "https://github.com/pontem-network/move-stdlib", tag = "v0.3.0"}
-]
+name = "first_project"
 ```
 
 * `name` - name of project.
-* `account_address` - address of your account, used during compilation.
-* `dialect` - can be `diem`, or `pont` (SS58 Polkadot addresses).
-* `dependencies` - list of dependencies, git (tag or branch also supported) or local folder (use `path`).
 
 Let's create an empty script and build it:
 
@@ -111,23 +98,23 @@ dove build # Build script without providing arguments which can't be used in Sub
 2. With arguments:
 
 ```sh
-dove tx 'test()' # Build script with arguments.
+dove call 'test()' # Build script with arguments.
 ```
 
-Difference between the `build` and `tx` commands: 
+Difference between the `build` and `call` commands: 
 
 - If you want to just `build` your scripts, use `build`. However, this command is mainly used for building modules (modules are similar to smart contracts in Move).
  
-- if you want to simply send transactions to the Pontem node, use `tx` and provide arguments. 
+- if you want to simply send transactions to the Pontem node, use `call` and provide arguments. 
 
 {% hint style="info" %}
-Use the `tx` command only for scripts and use `build` for modules
+Use the `call` command only for scripts and use `build` for modules
 {% endhint %}
 
 For more information use the help function:
 
 ```sh
-dove tx --help
+dove call --help
 ```
 
 See your built artifacts in `./artifacts` folder:
@@ -139,14 +126,14 @@ ls -la ./artifacts/transactions # Script with arguments for pallet.
 
 ### Script Transaction
 
-Command `tx` allows you to create transactions for Polkadot or Kusama based chains with the Move Pallet.
+Command `call` allows you to create transactions for Polkadot or Kusama based chains with the Move Pallet.
 
-`tx` takes a script identifier, type parameters, and arguments to create a transaction file as an artifact of work:
+`call` takes a script identifier, type parameters, and arguments to create a transaction file as an artifact of work:
 
 Example:
 
 ```sh
-dove tx 'store_u64(60)'
+dove call 'store_u64(60)'
 ```
 
 This command searches for the script named 'store_u64' in the script directory. Then it compiles it and creates a transaction file.
@@ -162,14 +149,14 @@ This command will fail if:
 Example:
 
 ```sh
-dove tx 'create_account<0x01::PONT::PONT>()'
+dove call 'create_account<0x01::PONT::PONT>()'
 ```
 
 You're allowed to use SS58 address format and other types:
 
 ```sh
-dove tx 'create_account<gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih::MyToken::Token>()'
-dove tx 'create_account(gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih, 10, true, [10, 20, 30, 40])'
+dove call 'create_account<gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih::MyToken::Token>()'
+dove call 'create_account(gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih, 10, true, [10, 20, 30, 40])'
 ```
 
 Supported types:
@@ -177,26 +164,26 @@ Supported types:
 **Numbers (u8, u64, u128):**
 
 ```sh
-dove tx 'my_script(255, 18446744073709551615, 340282366920938463463374607431768211455)'
+dove call 'my_script(255, 18446744073709551615, 340282366920938463463374607431768211455)'
 ```
 
 **Boolean:**
 
 ```sh
-dove tx 'my_script(true, false)'
+dove call 'my_script(true, false)'
 ```
 
 **Addresses:**
 
 ```sh
-dove tx 'my_script(5GcFHawZJHgwymsu9X2F5Lt5sSX89TxxFgHAMJ7TnoUJKqJD, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F)'
+dove call 'my_script(5GcFHawZJHgwymsu9X2F5Lt5sSX89TxxFgHAMJ7TnoUJKqJD, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F)'
 ```
 
 **Vectors:**
 
 ```sh
-dove tx 'my_script([10, 20, 1024])' // Vector u64
-dove tx 'my_script([5GcFHawZJHgwymsu9X2F5Lt5sSX89TxxFgHAMJ7TnoUJKqJD, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F, 0x01])' // Vector addresses.
+dove call 'my_script([10, 20, 1024])' // Vector u64
+dove call 'my_script([5GcFHawZJHgwymsu9X2F5Lt5sSX89TxxFgHAMJ7TnoUJKqJD, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F, 0x01])' // Vector addresses.
 ```
 
 ### Executor
@@ -318,7 +305,7 @@ See more examples in [Bridge repository](https://github.com/pontem-network/bridg
 
 ### Signers
 
-Usually you have scripts that contains only one signer. A signer is an account where a signed transaction contains a script. When Diem builds a transaction using the `tx` command it adds information about signers to the transaction, so you shouldn't worry about these arguments.
+Usually you have scripts that contains only one signer. A signer is an account where a signed transaction contains a script. When Diem builds a transaction using the `call` command it adds information about signers to the transaction, so you shouldn't worry about these arguments.
  
 ### Root and Treasury signers
 
@@ -329,7 +316,7 @@ If we compare Pontem to Diem, Pontem is a permissionless network, so Pontem disa
 So, using Dove you can build a transaction using Treasury and Root signature by using `tr` and `dr` literals as arguments:
 
 ```sh
-dove tx 'my_script(dr, tr, ...the rest of arguments)'
+dove call 'my_script(dr, tr, ...the rest of arguments)'
 ```
 
 ### More
@@ -342,26 +329,6 @@ dove --help
 
 To continue with Dove and create your first scripts and modules read our [Move VM](../move_vm/scripts.md) pallet documentation.
 
-## Language Server
-
-**Language server is currently out of date and currently in process of migration in a separate project.**
-
 ## Resource viewer
 
 **Resource viewer is currently out of date and pending migration inside Dove in future versions.**
-
-## Disassembler
-
-Allows you to disassemble compiled `.mv` (modules/scripts) files.
-
-See help:
-
-```sh
-decompiler --help
-```
-
-Try to decompile .mv file:
-
-```sh
-decompiler --input <path to compiled module or script>
-```
