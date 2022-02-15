@@ -1,7 +1,7 @@
 # Packages 
 
 (Copied from [move official docs](https://github.com/diem/move/blob/main/language/changes/7-packages.md) 
-with some pontem-specific changes)
+with some Pontem-specific changes)
 
 ## Introduction
 
@@ -11,7 +11,7 @@ programmers to easily:
 * Define a package containing Move code;
 * Parameterize a package by named addresses;
 * Use a package in Move code and instantiate its named addresses;
-* Build packages; and
+* Build packages;
 * Work with a common interface around compiled Move artifacts.
 
 ## Package Layout and Manifest Syntax
