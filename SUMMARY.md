@@ -51,6 +51,11 @@
 * [dove build](dove/dove_build.md)
 * [dove test](dove/dove_test.md)
 * [dove prove](dove/dove_prove.md)
+* [dove new](dove/dove_new.md)
+* [dove key](dove/dove_key.md)
+* [dove deploy](dove/dove_deploy.md)
+* [dove call](dove/dove_call.md)
+* [dove view](dove/dove_view.md)
 
 ## 🔧 07. TUTORIALS
 
