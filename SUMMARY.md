@@ -44,18 +44,18 @@
 
 * [Introduction](lang/README.md)
 * [Packages](lang/packages.md)
-* [Named Addresses](lang/named_addresses.md)
+* [Named Addresses](lang/namedaddresses.md)
 
 ## 🧰 06. Dove
 
-* [dove build](dove/dove_build.md)
-* [dove test](dove/dove_test.md)
-* [dove prove](dove/dove_prove.md)
-* [dove new](dove/dove_new.md)
-* [dove key](dove/dove_key.md)
-* [dove deploy](dove/dove_deploy.md)
-* [dove call](dove/dove_call.md)
-* [dove view](dove/dove_view.md)
+* [dove build](dove/build.md)
+* [dove test](dove/test.md)
+* [dove prove](dove/prove.md)
+* [dove new](dove/new.md)
+* [dove key](dove/key.md)
+* [dove deploy](dove/deploy.md)
+* [dove call](dove/call.md)
+* [dove view](dove/view.md)
 
 ## 🔧 07. TUTORIALS
 
