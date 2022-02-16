@@ -43,11 +43,14 @@
 ## 📘 05. MOVE LANGUAGE
 
 * [Introduction](lang/README.md)
-* [Learn Resources](lang/learn\_resources.md)
+* [Packages](lang/packages.md)
+* [Named Addresses](lang/named_addresses.md)
 
-## 🧰 06. TOOLSET
+## 🧰 06. Dove
 
-* [Dove.toml manifest file format](toolset/dove\_toml\_manifest.md)
+* [dove build](dove/dove_build.md)
+* [dove test](dove/dove_test.md)
+* [dove prove](dove/dove_prove.md)
 
 ## 🔧 07. TUTORIALS
 
