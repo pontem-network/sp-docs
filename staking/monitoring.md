@@ -61,7 +61,7 @@ Copy your Diskord account ID. To do this - click on user settings, then on the t
 
 ![Discord copy user ID](/assets/discord_copy_user_id.png "Discord copy user ID")
 
-All that's left is to start the alerting itself. Go to the server where your node is running and execute the commands:
+All that's left is to start the alerting itself. Go to the server where your node is running and execute the commands (replace YOUR_USER_ID and YOUR_DISCORD_WEBHOOK with your values!):
 
 ```bash
 docker pull pontem/pontem-scripts:latest
