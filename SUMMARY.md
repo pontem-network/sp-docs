@@ -42,6 +42,7 @@
 
 * [Introduction](lang/README.md)
 * [Learn Resources](lang/learn\_resources.md)
+* [Move Playground](lang/playground.md)
 
 ## 🧰 05. TOOLSET
 
