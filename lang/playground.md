@@ -1,30 +1,29 @@
 # Move Playground
 
-Move Playground is web version of Move VM, Dove and basic IDE, which allows developer to write, test, build their Smart Contracts
-from the browser.
+The Move Playground is a web version of the Move VM, Dove and basic IDE. This allows developer to write, test, build their Smart Contracts in the browser.
 
 ## Quick Guide
 
 ### Create module
 
-1. Go to [Move Playground](https://playground.pontem.network/) and create new project (by click on **"+" near "Projects**").
-2. Put name of project into appeared input.
-3. Click on created project.
-4. Add new module to project by clicking on **"+"** near `sources` folder.
-5. Put name of the module in appeared input, e.g. `test_module.move` (file extension is must).
-6. Put there your Move code, e.g.:
+1. Go to [Move Playground](https://playground.pontem.network/) and create a new project by clicking on **"+" near "Projects**".
+2. Put the name of your project into the input field.
+3. Click on the created project.
+4. Add a new module to the project by clicking on **"+"** near the `sources` folder.
+5. Put the name of the module in the input field, e.g. `test_module.move` (file extension is required).
+6. Put your Move code inside, e.g.:
 
 ```rust
 module 0x01::TestModule {
 }
 ```
 
-Click on first button in the top menu (hammer and wrench) to build new module, close console.
+Click on the 🛠️ button in the top menu to build the new module then close the console.
 
 ### Run script
 
-1. Create new script similar to module (but in script folder), e.g. `test_script.move`.
-2. Put there following code:
+1. Create a new script similarly to how you created a module (but inside the script folder), e.g. `test_script.move`.
+2. Put the following code inside:
 
 ```rust
 script {
@@ -34,32 +33,32 @@ script {
 }
 ```
 
-3. Build it.
-4. Navigate to `Run` section in left menu. 
-5. In the bottom of the screen you can put script command to execute, e.g.: `test_script(100)`.
-6. Enjoy playing with arguments :) 
+3. Build it by clicking the 🛠️ button in the top menu.
+4. Navigate to the `Run` section in left menu. 
+5. In the bottom of the screen you can input a script command to execute, e.g.: `test_script(100)`.
+6. Enjoy experimenting with arguments 👩‍🔬 
 
 ### Custom addresses
  
-1. Click on the "chain" icon in the left menu.
-2. Add new address by entering name and address in field in apperead popup.
-3. Done. Use the named address in your code.
+1. Click on the 🔗 icon in the left menu.
+2. Add a new address by entering the name and address in the fields inside the popup.
+3. Use the named address in your code.
 
 ## Roadmap
 
-Playground is currently in alpha stage, current Roadmap is:
+Playground is currently in alpha stage. The current Roadmap is:
 
-    * Dependencies import from Github.
+    * import Dependencies from Github.
     * Pre-filled example project.
     * Tests in browser.
-    * Allow to watch stored resource.
-    * Support different Move VM networks.
-    * Move Proover in browser.
-    * Ability to save/share projects, code samples.   
+    * Allow watching a stored resource.
+    * Add support for different Move VM networks.
+    * Move Prover in browser.
+    * Ability to save/share projects and code samples.   
 
 ## Tech stack
 
-The Move Playground become possible because of:
+The Move Playground is possible due to:
 
     * [Move VM WASM](https://github.com/pontem-network/sp-move-vm) fork developed by our team.
     * [Dove Light](https://github.com/pontem-network/dove) - Dove package manager built for Web.
