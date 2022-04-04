@@ -66,6 +66,6 @@
 * [Substrate Documentation](https://substrate.dev)
 * [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=PontemNetwork.move-language)
 * [IntelliJ IDEA Extension](https://plugins.jetbrains.com/plugin/14721-move-language)
-* [Move Diem Documentation](https://developers.diem.com/main/docs/move-introduction)
+* [Move Diem Documentation](https://diem.github.io/move/introduction.html)
 * [Move Book EN](https://move-book.com)
 * [Move Book CN](https://move-book.com/cn/)
