@@ -4,13 +4,11 @@
 
 Many crypto developers are interested in using the Move language. The reasons for this are its high security and the emerging use cases that will grow as soon as crypto and non-crypto users are merged.
 
-We will lean on the prior developments and expertise of the Dfinance team, who were the first to integrate the Move VM into existing blockchains when working on the [Dfinance](https://dfinance.co) platform and now in Pontem.
-
 {% hint style="info" %}
 🧙‍♂️ The Move Language is the most secure smart contracts language and will probably become a standard after Solidity. 
 {% endhint %}
 
-It combines security by design (__formal verification from box, atomic resource model__) with ease of use, being Turing complete, safe and flexible. It is developed and used by Facebook's Diem (formerly known as Libra), which makes the Pontem Network compatible with the upcoming Diem Blockchain. 
+It combines security by design (__formal verification from box, atomic resource model__) with ease of use, being Turing complete, safe and flexible. It is developed and used by ex-Diem team transformed to Aptos.
 
 Although it has built-in security by design such as resource-oriented architecture and formal verification, Move VM still severely lacks toolsets and documentation. Therefore more research and development is still needed in this area and Pontem will help seed this ecosystem.
 
@@ -28,10 +26,5 @@ Because the Move language is very young, there is not much information about it,
 
 List of recommended resources:
 
-* [Move Diem Documentation](https://developers.diem.com/docs/welcome-to-diem) - official Move language documentation from Diem team.
-* [Move Book EN](https://move-book.com) - Move Book.
-* [Move Book CN](https://move-book.com/cn/) - Move Book Chinese version.
-
-Meanwhile in the current documentation you can find more advanced examples, tips and tricks. 
-
-Also look at our [tutorials](./../tutorials/README.md) to learn Move by examples.
+* [Move Documentation](https://developers.diem.com/docs/welcome-to-diem) - official Move language documentation.
+* [Aptos Documentation](https://aptos.dev/)

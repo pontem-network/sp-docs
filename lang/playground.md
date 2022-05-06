@@ -1,6 +1,6 @@
 # Move Playground
 
-The Move Playground is a web version of the Move VM, Dove and basic IDE. This allows developer to write, test, build their Smart Contracts in the browser.
+The Move Playground is a web version of the Move VM, Move CLI and basic IDE. This allows developer to write, test, build their Smart Contracts in the browser.
 
 ## Quick Guide
 
@@ -48,8 +48,6 @@ script {
 
 Playground is currently in alpha stage. The current Roadmap is:
 
-    * import Dependencies from Github.
-    * Pre-filled example project.
     * Tests in browser.
     * Allow watching a stored resource.
     * Add support for different Move VM networks.
@@ -63,5 +61,3 @@ The Move Playground is possible due to:
     * [Move VM WASM](https://github.com/pontem-network/sp-move-vm) fork developed by our team.
     * [Dove Light](https://github.com/pontem-network/dove) - Dove package manager built for Web.
     * [Monaco Editor](https://github.com/microsoft/monaco-editor) for frontend.
-
-
