@@ -1,6 +1,6 @@
 # Introduction
 
-![Move Langugage](/assets/move_lang.png "Move Language")
+![Move Langugage](/assets/move_lang_new.png "Move Language")
 
 Many crypto developers are interested in using the Move language. The reasons for this are its high security and the emerging use cases that will grow as soon as crypto and non-crypto users are merged.
 
