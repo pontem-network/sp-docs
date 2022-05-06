@@ -15,7 +15,7 @@ Move Language is a plugin for the Intellij IDE platform that enables developers 
 
 ## 1. Install Aptos CLI
 
-TODO
+The [Aptos CLI](https://github.com/aptos-labs/aptos-core/blob/main/crates/aptos/README.md#install-the-aptos-cli) is required for the Move Language plugin to work correctly. 
 
 ## 2. Install Intellij IDE and Move plugin
 
@@ -42,7 +42,7 @@ Open your IDE and click on “Install” button to download it, otherwise you ca
 4. Put path to Aptos CLI if needed. To get path of Aptos CLI in your local system just open Console/Terminal and run `which aptos`.
 5. Click on “Create”.
 
-![IDE Screen 2](//assets/ide_2.png)
+![IDE Screen 2](/assets/ide_2.png)
 
 1. In the new project, first open the `Move.toml` file.
 2. Open terminal in IDE and run the following command: `aptos init`.
@@ -56,7 +56,7 @@ Open your IDE and click on “Install” button to download it, otherwise you ca
     2. “New” → “Move File”.
     3. Choose the name (”Math”) and the type of file (”Module”).
     
-    ![IDE Screen 4](/assets/ide_4.png)
+![IDE Screen 4](/assets/ide_4.png)
     
 
 2. Put the following code into your module:
@@ -71,11 +71,11 @@ module Sender::Math {
 
 1. Build your project by clicking on the “Run” button (it depends on each IDE, but it’s generally always on the top right or left corner).
     
-    ![IDE Screen 5](/assets/ide_5.png)
+![IDE Screen 5](/assets/ide_5.png)
     
 2. See the newly built artifacts in the `build` folder and in the output of the IDE console.
     
-    ![IDE Screen 6](/assets/ide_6.png)
+![IDE Screen 6](/assets/ide_6.png)
     
 
 3.  If there are errors in your code, you can see it in the “Problems” console:
@@ -99,7 +99,7 @@ If you want to spare the search bot, follow these steps:
 1. Open file containing module, e.g. `Math.move`
 2. Right click on the name of the module on the top bar to open a context menu as in the screen below:
     
-    ![IDE Screen 8](/assets/ide_8.png)
+![IDE Screen 8](/assets/ide_8.png)
     
 3. Click on Run ‘Publish Math’
 
@@ -108,8 +108,7 @@ If you want to spare the search bot, follow these steps:
 1. Module should now be deployed. You can validate this in your console.
 2. Another option: you can use  the gutter button (the arrow icon) instead of opening the context menu.
     
-    ![IDE Screen 10](/assets/ide_10.png)
-    
+![IDE Screen 10](/assets/ide_10.png)    
 
 ## 5. Write tests
 
@@ -154,29 +153,29 @@ Fix it easily by adding a build configuration to your project:
 1. Click on “Add Configuration”. 
 2. Click on the “Plus” button.
     
-    ![IDE Screen 14](/assets/ide_14.png)
+![IDE Screen 14](/assets/ide_14.png)
     
 3. Choose “Move”.
     
-    ![IDE Screen 15](/assets/ide_15.png)
+![IDE Screen 15](/assets/ide_15.png)
     
     1. Fill the fields:
         1. Name: “Build”.
         2. Command: “move compile”.
         3. Working directory - your current directory.
         
-        ![IDE Screen 16](/assets/ide_16.png)
+![IDE Screen 16](/assets/ide_16.png)
         
     2. Click “Apply” and close the window.
     3. “Run” build
     
-    ![IDE Screen 17](/assets/ide_17.png)
+![IDE Screen 17](/assets/ide_17.png)
     
     ## Executable is not specified
     
     If you get an error like this:
     
-    ![IDE Screen 18](/assets/ide_18.png)
+![IDE Screen 18](/assets/ide_18.png)
     
     1. Open “Preferences” menu
     2. Navigate to “Languages & Frameworks”
@@ -184,4 +183,4 @@ Fix it easily by adding a build configuration to your project:
     4. Put path to Aptos CLI in your local system. 
     5. Click on “Apply” and close window.
     
-    ![IDE Screen 19](/assets/ide_19.png)
+![IDE Screen 19](/assets/ide_19.png)
