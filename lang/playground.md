@@ -1,5 +1,7 @@
 # Move Playground
 
+![Move Playground](/assets/playground.png "Move Playground")
+
 The Move Playground is a web version of the Move VM, Move CLI and basic IDE. This allows developer to write, test, build their Smart Contracts in the browser.
 
 ## Quick Guide
