@@ -36,30 +36,30 @@ Open your IDE and click on “Install” button to download it, otherwise you ca
 
 ## 3. Create and build your first Move Project
 
-1. In Main Menu choose “File” → “New Project”.
-2. Choose “Move” in the left Menu.
-3. Choose a name for your project, for example “MyFirstMoveProject”.
-4. Put path to Aptos CLI if needed. To get path of Aptos CLI in your local system just open Console/Terminal and run `which aptos`.
-5. Click on “Create”.
+* In Main Menu choose “File” → “New Project”.
+* Choose “Move” in the left Menu.
+* Choose a name for your project, for example “MyFirstMoveProject”.
+* Put path to Aptos CLI if needed. To get path of Aptos CLI in your local system just open Console/Terminal and run `which aptos`.
+* Click on “Create”.
 
 ![IDE Screen 2](/assets/ide_2.png)
 
-6. In the new project, first open the `Move.toml` file.
-7. Open terminal in IDE and run the following command: `aptos init`.
-8. Just skip all steps Aptos is asking you (this means press “Enter” each time to use the default configuration).
-9. Copy the address of the new generated account during `aptos init` to `Move.toml`, under the addresses section (see screenshot below for example): `Sender = “0xFFA7F40F44B93B24202E010E9E2BE0CB443FD964B27519EA68BE04BF3A00C3A1”`
+* In the new project, first open the `Move.toml` file.
+* Open terminal in IDE and run the following command: `aptos init`.
+* Just skip all steps Aptos is asking you (this means press “Enter” each time to use the default configuration).
+* Copy the address of the new generated account during `aptos init` to `Move.toml`, under the addresses section (see screenshot below for example): `Sender = “0xFFA7F40F44B93B24202E010E9E2BE0CB443FD964B27519EA68BE04BF3A00C3A1”`
 
 ![IDE Screen 3](/assets/ide_3.png)
 
-10. Now create a new Move module file, let’s call it `Math`:
-    1. Right Click on the “sources” folder.
-    2. “New” → “Move File”.
-    3. Choose the name (”Math”) and the type of file (”Module”).
+* Now create a new Move module file, let’s call it `Math`:
+    * Right Click on the “sources” folder.
+    * “New” → “Move File”.
+    * Choose the name (”Math”) and the type of file (”Module”).
     
 ![IDE Screen 4](/assets/ide_4.png)
     
 
-11. Put the following code into your module:
+* Put the following code into your module:
 
 ```jsx
 module Sender::Math {
@@ -69,16 +69,16 @@ module Sender::Math {
 }
 ```
 
-12. Build your project by clicking on the “Run” button (it depends on each IDE, but it’s generally always on the top right or left corner).
+* Build your project by clicking on the “Run” button (it depends on each IDE, but it’s generally always on the top right or left corner).
     
 ![IDE Screen 5](/assets/ide_5.png)
     
-13. See the newly built artifacts in the `build` folder and in the output of the IDE console.
+* See the newly built artifacts in the `build` folder and in the output of the IDE console.
     
 ![IDE Screen 6](/assets/ide_6.png)
     
 
-14.  If there are errors in your code, you can see it in the “Problems” console:
+* If there are errors in your code, you can see it in the “Problems” console:
 
 ![IDE Screen 7](/assets/ide_7.png)
 
@@ -88,33 +88,33 @@ In the case that you opened an existing project Aptos project, you will still ha
 
 If you want to spare the search bot, follow these steps:
 
-1. Open “Preferences” menu in the IDE Main Menu.
-2. Navigate to “Languages & Frameworks”.
-3. Choose “Move Language”.
-4. Put path to Aptos CLI in your local system. 
-5. Click “Apply” and save configuration.
+* Open “Preferences” menu in the IDE Main Menu.
+* Navigate to “Languages & Frameworks”.
+* Choose “Move Language”.
+* Put path to Aptos CLI in your local system. 
+* Click “Apply” and save configuration.
 
 ## 4. Deploy modules
 
-6. Open file containing module, e.g. `Math.move`.
-7. Right click on the name of the module on the top bar to open a context menu as in the screen below:
+* Open file containing module, e.g. `Math.move`.
+* Right click on the name of the module on the top bar to open a context menu as in the screen below:
     
 ![IDE Screen 8](/assets/ide_8.png)
     
-8. Click on Run ‘Publish Math’
+* Click on Run ‘Publish Math’
 
 ![IDE Screen 9](/assets/ide_9.png)
 
-9. Module should now be deployed. You can validate this in your console.
-10. Another option: you can use  the gutter button (the arrow icon) instead of opening the context menu.
+* Module should now be deployed. You can validate this in your console.
+* Another option: you can use  the gutter button (the arrow icon) instead of opening the context menu.
     
 ![IDE Screen 10](/assets/ide_10.png)    
 
 ## 5. Write tests
 
-1. Create the “tests” directory in the root of the project.
-2. Create a new test file: In top bar click “New” → “Move”, choose a name (”MathTest”) and choose type “Test”.
-3. Put the following code in the new test file:
+* Create the “tests” directory in the root of the project.
+* Create a new test file: In top bar click “New” → “Move”, choose a name (”MathTest”) and choose type “Test”.
+* Put the following code in the new test file:
 
 ```jsx
 #[test_only]
@@ -132,11 +132,11 @@ module Sender::MathTest {
 }
 ```
 
-4. Run a test on the whole module or test individual lines in the gutter with the green Run buttons:
+* Run a test on the whole module or test individual lines in the gutter with the green Run buttons:
 
 ![IDE Screen 11](/assets/ide_11.png)
 
-5. Or just right click on the “tests” folder and run all tests.
+* Or just right click on the “tests” folder and run all tests.
 
 ![IDE Screen 12](/assets/ide_12.png)
 
@@ -150,24 +150,24 @@ If you see there is no build configuration e.g. the ”Run” button is disabled
 
 Fix it easily by adding a build configuration to your project:
 
-1. Click on “Add Configuration”.
-2. Click on the “Plus” button.
+* Click on “Add Configuration”.
+* Click on the “Plus” button.
     
 ![IDE Screen 14](/assets/ide_14.png)
     
-3. Choose “Move”.
+* Choose “Move”.
     
 ![IDE Screen 15](/assets/ide_15.png)
     
-    1. Fill the fields:
-        1. Name: “Build”.
-        2. Command: “move compile”.
-        3. Working directory - your current directory.
-        
+* Fill the fields:
+  * Name: “Build”.
+  * Command: “move compile”.
+  * Working directory - your current directory.
+  
 ![IDE Screen 16](/assets/ide_16.png)
-        
-    2. Click “Apply” and close the window.
-    3. “Run” build.
+
+* Click “Apply” and close the window.
+* “Run” build.
     
 ![IDE Screen 17](/assets/ide_17.png)
     
@@ -176,11 +176,11 @@ Fix it easily by adding a build configuration to your project:
 If you get an error like this:
     
 ![IDE Screen 18](/assets/ide_18.png)
-    
-1. Open “Preferences” menu.
-2. Navigate to “Languages & Frameworks”.
-3. Choose “Move Language”:
-   1. Put path to Aptos CLI in your local system.
-   2. Click on “Apply” and close window.
+   
+* Open “Preferences” menu.
+* Navigate to “Languages & Frameworks”.
+* Choose “Move Language”:
+  * Put path to Aptos CLI in your local system.
+  * Click on “Apply” and close window.
     
 ![IDE Screen 19](/assets/ide_19.png)
