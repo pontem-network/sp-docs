@@ -1,6 +1,6 @@
 # Pontem Product Development Studios
 
-![Pontem x Aptos](assets/pontem-x-aptos.png "Pontem x Aptos")
+![Pontem x Aptos](/assets/pontem-x-aptos.png "Pontem x Aptos")
 
 Pontem is a product development studio working toward global financial inclusion powered by blockchains. We are partnered with Aptos to build foundational dApps and other infrastructure which enable adoption of their L1, such as development tooling, EVMs, AMMs, and more. The Move IntelliJ IDE and Move Playground are just the beginning.
 
