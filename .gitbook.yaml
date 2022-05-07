@@ -2,3 +2,6 @@ root: ./
 
 structure:
     readme: ./pontem/README.md
+
+redirects:  
+    04.-move-vm/move_vm: ./lang/README.md
