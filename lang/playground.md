@@ -50,16 +50,16 @@ script {
 
 Playground is currently in alpha stage. The current Roadmap is:
 
-    * Tests in browser.
-    * Allow watching a stored resource.
-    * Add support for different Move VM networks.
-    * Move Prover in browser.
-    * Ability to save/share projects and code samples.   
+* Tests in browser.
+* Allow watching a stored resource.
+* Add support for different Move VM networks.
+* Move Prover in browser.
+* Ability to save/share projects and code samples.   
 
 ## Tech stack
 
 The Move Playground is possible due to:
 
-    * [Move VM WASM](https://github.com/pontem-network/sp-move-vm) fork developed by our team.
-    * [Dove Light](https://github.com/pontem-network/dove) - Dove package manager built for Web.
-    * [Monaco Editor](https://github.com/microsoft/monaco-editor) for frontend.
+* [Move VM WASM](https://github.com/pontem-network/sp-move-vm) fork developed by our team.
+* [Dove Light](https://github.com/pontem-network/dove) - Dove package manager built for Web.
+* [Monaco Editor](https://github.com/microsoft/monaco-editor) for frontend.
