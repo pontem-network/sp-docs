@@ -16,5 +16,5 @@
 * [Github](https://github.com/pontem-network)
 * [Site](https://pontem.network)
 * [Aptos Documentation](https://aptos.dev/)
-* [Move Documentation](https://developers.diem.com/main/docs/move-introduction)
+* [Move Documentation](https://diem.github.io/move/introduction.html)
 * [IntelliJ IDE Extension](https://plugins.jetbrains.com/plugin/14721-move-language)
