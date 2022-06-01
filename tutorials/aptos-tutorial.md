@@ -58,7 +58,7 @@ aptos move init --name UserInfo
 ```
 This should be the resulting directory structure of our new Package:
 ```
-usercoin/
+userinfo/
 ├── sources/
 └── Move.toml
 ```
@@ -89,14 +89,35 @@ First time compilation could take a while, as it fetches the whole `aptos-core` 
 ```shell
 ~/userinfo $ ~/bin/aptos move compile
 {
-  "Result": [
-    "0000000000000000000000000000000000000000000000000000000000000042::UserInfo"
-  ]
+  "Result": []
 }
 ```
 
-TODO: talk about build/ directory
-TODO: talk about MoveStdlib and AptosFramework
+Fetched dependencies as well as build artifacts are stored in the `build/` directory at the package root. 
+
+```shell
+build/
+└── UserInfo
+    ├── bytecode_modules
+    ├── source_maps
+    └── sources
+        └── dependencies
+            ├── AptosFramework
+                ├── Account.move
+                ├── AccountUtils.move
+                ........
+            └── MoveStdlib
+                ├── ASCII.move
+                ├── Signer.move
+                ├── Vector.move
+                ........
+```
+
+`MoveStdlib` - standard library of the Move language, it consists of modules that are really indispensable, like functions 
+to work with vectors and signers. 
+
+`AptosFramework` - a set of modules specific to Aptos blockchain, like `Coin` module for ERC20-like, and `Account` 
+for the account metadata. 
 
 ### Resources and storage
 
@@ -129,6 +150,8 @@ add `acquires ResourceName` after the return type.
 
 ### Implementation
 
+#### InfoStore
+
 First, let's add an `InfoStore` resource struct where we're going to store our username in a field of type `String`. Resources 
 in Move are marked with `has key` ability. 
 
@@ -143,7 +166,13 @@ module Sender::UserInfo {
 }
 ```
 
-TODO: add text about String and bytestrings
+There's no text strings in Move, all text is represented as `vector<u8>` objects, sequences of bytes. To use them easier, 
+byte string literal were introduced, i.e. `b"MyUser", b"MyString"`.
+
+Later, `ASCII` module was added to the standard library, which provides a `String` struct that wraps `vector<u8>` and ensures that
+it contains only ASCII characters. In our usernames, we're going to use those.  
+
+#### Methods
 
 Now let's add getter and setter methods for the `username`:
 
