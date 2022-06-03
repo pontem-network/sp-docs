@@ -2,7 +2,7 @@
 
 Aptos is a Layer 1 blockchain that allows developers to create their smart-contracts in Move language. 
 
-TODO: expand on Aptos
+Aptos is focused on delivering the safest, fastest and most reliable production-ready Layer 1 blockchain to create creating universal and fair access to web3 for billions of people. Aptos recently announced a $200M Seed roundled by a16z crypto with participation from Multicoin Capital, Katie Haun, 3 Arrows Capital, ParaFi Capital and Coinbase Ventures, among others to scale the Aptos ecosystem. The team is comprised of the original creators, researchers, designers, and builders of Diem, the blockchain that was first built to serve this purpose. For more information on Aptos, please visit https://aptoslabs.com
 
 Move is a unique smart-contract language, which was created with a heavy focus on security. Inspired by Rust, 
 it has a lot of restrictions which prevent developers from shooting themselves in a foot and miss 
