@@ -258,7 +258,7 @@ module Sender::UserInfoTests {
         UserInfo::set_username(&user_account, username);
       
         let user_addr = Signer::address_of(&user_account);
-      // assert! macro for asserts, needs an expression and a failure error code
+        // assert! macro for asserts, needs an expression and a failure error code
         assert!(UserInfo::get_username(user_addr) == username, 1);
     }          
 }
