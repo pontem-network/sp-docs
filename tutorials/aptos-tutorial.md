@@ -54,7 +54,7 @@ to manage relationships between them.
 Package is a set of related Move modules which share common dependencies and often published
 to the same address in the Aptos blockchain.
 
-First, create a directory and initialize it with a Package using aptos-cli:
+First, create a directory and initialize it with a Package using aptos binary:
 
 ```shell
 mkdir userinfo
