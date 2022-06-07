@@ -89,7 +89,7 @@ Sender = "0x42"
 `move init` command automatically adds a dependency on the `AptosFramework` package. It also transitively adds a `MoveStdlib`
 dependency. Let's compile that empty package to make Aptos CLI fetch the dependencies, and inspect them. 
 
-First time compilation could take a while, as it fetches the whole `aptos-core` repo from the internet.
+First time compilation could take a while, as it fetches the whole `aptos-core` repo from Github.
 
 ```shell
 ~/userinfo $ ~/bin/aptos move compile
