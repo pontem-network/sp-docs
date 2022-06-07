@@ -251,14 +251,15 @@ module Sender::UserInfoTests {
     
     // this named parameter to the test attribute allows to provide a signer to the test function, 
     // it should be named the same way as parameter of the function
-    #[test(account = @0x42)]
-    fun test_getter_setter(account: signer) {
+    #[test(user_account = @0x42)]
+    fun test_getter_setter(user_account: signer) {
         // ASCII::string() function allows to create a `String` object from a bytestring  
         let username = ASCII::string(b"MyUser");
-        UserInfo::set_username(&account, username);
+        UserInfo::set_username(&user_account, username);
       
-        // assert! macro for asserts, needs an expression and a failure error code 
-        assert!(UserInfo::get_username(&account) == username, 1);
+        let user_addr = Signer::address_of(&user_account);
+      // assert! macro for asserts, needs an expression and a failure error code
+        assert!(UserInfo::get_username(user_addr) == username, 1);
     }          
 }
 ```
