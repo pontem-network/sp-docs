@@ -1,9 +1,16 @@
 # Aptos tutorial
 
-Aptos is a Layer 1 blockchain that allows developers to create their smart-contracts in Move language. Aptos is focused on delivering the safest, fastest and most reliable production-ready Layer 1 blockchain to create creating universal and fair access to web3 for billions of people. The team is comprised of the original creators, researchers, designers, and builders of Diem, the blockchain that was first built to serve this purpose. 
+Aptos is a Layer 1 blockchain that allows developers to create their smart-contracts in Move language. 
 
-Move is a unique smart-contract language, which was created with a heavy focus on security. Inspired by Rust, 
-it has a lot of restrictions which prevent developers from shooting themselves in a foot and miss 
+Aptos appears as the fastest, scalable and secure Layer 1 blockchain built by the original Meta Diem team 
+for production usage in real world financial systems. The key components of Aptos are AptosBFT consensus 
+and pure new Move language secured by design which allows to build safe realtime decentralized applications. 
+With the current tutorial you will start learning Move language and create your first smart contract for Aptos.
+
+### Move
+
+Move is a smart-contract language, which was created with a heavy focus on security. Inspired by Rust, 
+it has a lot of unique features that prevent developers from shooting themselves in a foot and miss 
 the critical vulnerability.
 
 In this tutorial, we're going to create a simple module that allows users to store their username in the blockchain. 
@@ -11,8 +18,8 @@ This will allows us to explore unique features of Move and prepare for the more 
 
 ### Aptos CLI
 
-First we need to install Aptos CLI. Go to the Aptos CLI releases page at 
-[https://github.com/aptos-labs/aptos-core/releases], and download zip archive for your OS. 
+First we need to install Aptos CLI. Go to the Aptos CLI releases page at
+https://github.com/aptos-labs/aptos-core/releases, and download zip archive for your OS. 
 
 Archive contains `aptos` binary, which is consists of:
 - `aptos move` namespace has everything related to the Move language:
@@ -148,9 +155,9 @@ add `acquires ResourceName` after the return type.
 
 ### Implementation
 
-#### InfoStore
+#### UserProfile
 
-First, let's add an `InfoStore` resource struct where we're going to store our username in a field of type `String`. Resources 
+First, let's add an `UserProfile` resource struct where we're going to store our username in a field of type `String`. Resources 
 in Move are marked with `has key` ability. 
 
 ```move
@@ -160,7 +167,7 @@ module Sender::UserInfo {
     // and automatically available to all the package code
     use Std::ASCII::String;
     
-    struct InfoStore has key { username: String }
+    struct UserProfile has key { username: String }
 }
 ```
 
@@ -174,52 +181,53 @@ it contains only ASCII characters. In our usernames, we're going to use those.
 
 Now let's add getter and setter methods for the `username`:
 
-Let's implement getter first. We need to retrieve `InfoStore` object from the user global storage. For that, we will use
-`borrow_global()` method.  To be able to retrieve an address from the `&signer`, there's a method `address_of` 
-in the standard library `Signer` module.  
+Let's implement getter first. We need to retrieve `UserProfile` object from the user global storage. For that, we will use
+`borrow_global()` method, which needs an address of the user store as a parameter. This also allows us to fetch username 
+of any other user.   
 
-We also add `acquires InfoStore` explained before. 
+We also add `acquires UserProfile` explained before. 
 
 ```move
 module Sender::UserInfo {
     use Std::ASCII::String;
     use Std::Signer;
     
-    struct InfoStore has key { username: String }
+    struct UserProfile has key { username: String }
     
-    public fun get_username(account: &signer): String acquires InfoStore {
-      let account_addr = Signer::address_of(account);
-      borrow_global<InfoStore>(account_addr);
+    public fun get_username(user_addr: address): String acquires UserProfile {
+        // no need for the semicolon at the end, last expression is the returning one (just like in Rust)
+        borrow_global<UserProfile>(user_addr).username
     }
 }
 ```
 
 Implementation of the setter is a bit more involved. We need to create an if-statement with two branches:
-* first for the case when there's no `InfoStore` in the global storage. We need to create one with the correct username
+* first for the case when there's no `UserProfile` in the global storage. We need to create one with the correct username
 * second is just to update username inside the existing `UserInfo`
+
+We also need `&signer` here, as we want to only allow users themserves to change their profile. 
 
 ```move
 module Sender::UserInfo {
     use Std::ASCII::String;
     use Std::Signer;
-    
-    struct InfoStore has key { username: String }
-    
-    public fun get_username(account: &signer): String acquires InfoStore {
-        let account_addr = Signer::address_of(account);
-        borrow_global<InfoStore>(account_addr);
+
+    struct UserProfile has key { username: String }
+
+    public fun get_username(user_addr: address): String acquires UserProfile {
+        borrow_global<UserProfile>(user_addr).username
     }
-  
-    public fun set_username(account: &signer, username: String) acquires InfoStore {
-        let account_addr = Signer::address_of(account);
+
+    public fun set_username(user_account: &signer, username: String) acquires UserProfile {
+        let user_addr = Signer::address_of(user_account);
         // `exists` just to check whether resource is present in storage
-        if (!exists<InfoStore>(account_addr)) {
-            let info_store = InfoStore { username: username };
-            move_to(account, info_store);
+        if (!exists<UserProfile>(user_addr)) {
+          let info_store = UserProfile{ username: username };
+          move_to(user_account, info_store);
         } else {
-            // `borrow_global_mut` is to fetch mutable reference, we can change resources in storage that way 
-            let existing_info_store = borrow_global_mut<InfoStore>(account_addr);
-            existing_info_store.username = username;
+          // `borrow_global_mut` is to fetch mutable reference, we can change resources in storage that way 
+          let existing_info_store = borrow_global_mut<UserProfile>(user_addr);
+          existing_info_store.username = username;
         }
     }
 }
@@ -231,9 +239,11 @@ Now, let's write a test for our module to make sure everything works correctly. 
 but it's a nice convention to store those in the `tests/{$MODULE_NAME}Tests.move` module. 
 
 Create a `tests/` directory to the root of the package, and add `UserInfoTests.move` there. Test functions are marked 
-with `#[test]` attribute, this way Move knows it's a test and can apply special treatment:
+with `#[test]` attribute, this way Move knows it's a test and can apply special treatment. 
+We also mark module itself with `#[test_only]` attribute, to remove it from the public namespace. 
 
 ```move
+#[test_only]
 module Sender::UserInfoTests {
     use Std::ASCII;
   
