@@ -469,7 +469,7 @@ To execute `set_username` script we need to utilize `aptos move run` command, in
 If the transaction executed successfully you will see output similar to provided above.
 Now you can query your username, in case of current tutorial the URL to query resource would be so:
  
-[https://fullnode.devnet.aptoslabs.com/accounts/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B/resource/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B::UserInfo::UserProfile]
+https://fullnode.devnet.aptoslabs.com/accounts/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B/resource/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B::UserInfo::UserProfile
 
 But to interact with the module deployed by you: replace address of account and address of module resource in url with your own.
 
