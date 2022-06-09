@@ -291,11 +291,11 @@ Test result: OK. Total tests: 1; passed: 1; failed: 0
 
 Let's deploy our module to Aptos blockchain and make it available for everyone. 
 
-We must initialize a new Aptos account and deployment configuration using the `init` command. 
+We must initialize a new Aptos account and deployment configuration using the `aptos init` command. 
 
 During execution of the command a new Aptos account will be created and test coins would be deposited to it, so we can cover costs of `UserInfo` module publication.
 
-Use default parameters proposed by terminal:
+Use default parameters proposed by the command:
 
 ```shell
 ~/userinfo $ ~/bin/aptos init
@@ -317,7 +317,7 @@ Aptos is now set up for account 7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A
 }
 ```
 
-The deployment config which contains the private key of the new account would be created in `.aptos/config.yaml`. Don't share your private key with anyone! If you want to change configuration or account, just run `init` again, the configuration will be overwritten.
+The deployment config which contains the private key of the new account would be created in `.aptos/config.yaml` in the root of the project. Don't share your private key with anyone! If you want to change configuration or account, just run `aptos init` again, the configuration will be overwritten.
 
 Copy new generated address, in our example it's `0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B` (don't forget to add `0x` prefix to the start of the address) and replace `Sender` address in `Move.toml`.
 
@@ -328,7 +328,7 @@ You will get something like this but with your own address:
 Sender = "0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B"
 ```
 
-Finally let's deploy the module using `move publish` command:
+Finally let's deploy the module using `aptos move publish` command:
 
 ```shell
 ~/userinfo $ ~/bin/aptos move publish
@@ -398,7 +398,7 @@ You should get a similar output that means our module is published.
 
 After we deployed the `UserInfo` module we can send a transaction to Aptos blockchain which will call the `UserInfo::set_username` function and set the username for our account.
 
-To execute `set_username` script we need to utilize `move run` command, in current example i will use username `AptosDev` as username for my account, has to be provided as argument. Also, `function-id` should contain a path to the deployed contract and function name, in your case the path would be different, because you use your own account.
+To execute `set_username` script we need to utilize `aptos move run` command, in current example i will use username `AptosDev` as username for my account, has to be provided as argument. Also, `function-id` should contain a path to the deployed contract and function name, in your case the path would be different, because you use your own account.
 
 ```shell
 ~/userinfo $ ~/bin/aptos move run --function-id 0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B::UserInfo::set_username --args string:"AptosDev"
