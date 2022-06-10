@@ -27,8 +27,7 @@ This will allow us to explore unique features of Move and prepare for more compl
 
 ### Aptos CLI
 
-First we need to install the Aptos CLI for tools to interact with Aptos. Go to the Aptos CLI releases page at
-https://github.com/aptos-labs/aptos-core/releases, and download the zip file for your OS. 
+First we need to install the Aptos CLI for tools to interact with Aptos. Go to the Aptos CLI [releases page](https://github.com/aptos-labs/aptos-core/releases), and download the zip file for your OS. 
 
 The archive contains the `aptos` binary, which consists of:
 - `aptos move` namespace has everything related to the Move language:
@@ -48,7 +47,7 @@ Put the archive somewhere in your `$PATH`.
 Optionally, you can also install Pontem's Move extension for CLion or PyCharm (all 2021.1+ versions are supported), 
 and add the Intellij-Move plugin there. It provides support for the Move language.
 
-To do this, go to https://www.jetbrains.com/pycharm/download/ and follow instructions for your operating system.
+To do this, go to [https://www.jetbrains.com/pycharm/download/](https://www.jetbrains.com/pycharm/download/) and follow instructions for your operating system.
 
 After you install it, go to File -> Settings, select `Plugins` on the left, then `Marketplace` and 
 search for the `Move language`.      
