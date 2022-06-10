@@ -22,3 +22,5 @@
 * [Aptos Documentation](https://aptos.dev/)
 * [Move Documentation](https://diem.github.io/move/introduction.html)
 * [IntelliJ IDE Extension](https://plugins.jetbrains.com/plugin/14721-move-language)
+* [Discord](https://discord.gg/44QgPFHYqs)
+* [Telegram](https://t.me/pontemnetworkchat)
