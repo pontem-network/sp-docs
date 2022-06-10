@@ -53,6 +53,8 @@ To do this, go to https://www.jetbrains.com/pycharm/download/ and follow instruc
 After you install it, go to File -> Settings, select `Plugins` on the left, then `Marketplace` and 
 search for the `Move language`.      
 
+Alternatively you can use [Pontem Playground](https://playground.pontem.network), yet it doesn't support all features we are discussing in the current tutorial.
+
 ### Creating a new project
 
 Move projects are called Packages, and contain multiple Modules. 
