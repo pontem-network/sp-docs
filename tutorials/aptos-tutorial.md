@@ -20,7 +20,7 @@ The key feature of Move is the ability to define custom resource types with sema
 logic. A resource can never be copied, double spent or implicitly discarded, only moved between program storage
 locations. These safety guarantees are enforced statically by Move’s type system. 
 
-You can read the Move whitepaper here: https://developers.diem.com/papers/diem-move-a-language-with-programmable-resources/2019-06-18.pdf 
+You can read the Move whitepaper here: [https://developers.diem.com/papers/diem-move-a-language-with-programmable-resources/2019-06-18.pdf](https://developers.diem.com/papers/diem-move-a-language-with-programmable-resources/2019-06-18.pdf) 
 
 In this tutorial, we're going to create a simple module that allows users to store their username in the blockchain. 
 This will allow us to explore unique features of Move and prepare for more complex projects. 
@@ -482,7 +482,7 @@ To execute the `set_username` script we need to utilize the `aptos move run` com
 If the transaction is executed successfully, you will see an output similar to the one above.
 Now you can query your username. In this example, the URL to the query resource would be:
  
-https://fullnode.devnet.aptoslabs.com/accounts/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B/resource/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B::UserInfo::UserProfile
+[https://fullnode.devnet.aptoslabs.com/accounts/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B/resource/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B::UserInfo::UserProfile](https://fullnode.devnet.aptoslabs.com/accounts/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B/resource/0x7EBD304E2E7E7C2147D14A605072480473256B75D5CC7A9A794C0C5BC2F1E17B::UserInfo::UserProfile)
 
 To interact with the module deployed by you: replace the address of the account and the address of the module resource in the url with your own.
 
