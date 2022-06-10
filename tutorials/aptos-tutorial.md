@@ -4,8 +4,9 @@ Aptos is a Layer 1 blockchain that allows developers to create their smart-contr
 
 Aptos is focused on delivering the safest and most production-ready Layer 1 blockchain in the world. 
 The team is comprised of the original creators, researchers, designers, and builders of Diem,
-the blockchain that was first built at Meta to support scalable web2 use cases and high throughput activity. 
-The key components of Aptos are AptosBFT consensus and the new Move language  which allows developers to build safe 
+the blockchain that was first built at Meta.
+
+The key components of Aptos are AptosBFT consensus and the new Move language which allows developers to build safe 
 and scalable decentralized applications. 
 
 With this tutorial you will start learning Move language and create your first smart contract for Aptos.
@@ -14,9 +15,11 @@ With this tutorial you will start learning Move language and create your first s
 
 Move is a smart-contract language created with a heavy focus on security. Built on Rust, 
 it inherits features that prevent developers from inadvertently introducting critical vulnerabilities. 
+
 The key feature of Move is the ability to define custom resource types with semantics inspired by linear
 logic. A resource can never be copied, double spent or implicitly discarded, only moved between program storage
 locations. These safety guarantees are enforced statically by Move’s type system. 
+
 You can read the Move whitepaper here: https://developers.diem.com/papers/diem-move-a-language-with-programmable-resources/2019-06-18.pdf 
 
 In this tutorial, we're going to create a simple module that allows users to store their username in the blockchain. 
@@ -27,7 +30,7 @@ This will allow us to explore unique features of Move and prepare for more compl
 First we need to install the Aptos CLI for tools to interact with Aptos. Go to the Aptos CLI releases page at
 https://github.com/aptos-labs/aptos-core/releases, and download the zip file for your OS. 
 
-the archive contains the `aptos` binary, which consists of:
+The archive contains the `aptos` binary, which consists of:
 - `aptos move` namespace has everything related to the Move language:
    * compiler
    * test runner
@@ -481,4 +484,4 @@ https://fullnode.devnet.aptoslabs.com/accounts/0x7EBD304E2E7E7C2147D14A605072480
 
 To interact with the module deployed by you: replace the address of the account and the address of the module resource in the url with your own.
 
-Enjoy! Please share your feedback and more tutorial requests in our Discord and Telegram.
+Enjoy! Please share your feedback and more tutorial requests in our [Discord](https://discord.gg/44QgPFHYqs) and [Telegram](https://t.me/pontemnetworkchat).
