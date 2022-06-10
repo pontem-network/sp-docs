@@ -11,7 +11,11 @@
 * [Move Playground](lang/playground.md)
 * [Intellij IDE Extension](lang/intellij_ide_extension.md)
 
-## 🔗 02. Resources
+## 📚 02. Tutorials
+
+* [Aptos Tutorial](tutorials/aptos-tutorial.md)
+
+## 🔗 03. Resources
 
 * [Github](https://github.com/pontem-network)
 * [Site](https://pontem.network)
