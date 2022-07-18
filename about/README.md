@@ -8,7 +8,7 @@ The burgeoning ecosystem of Move-based, inclusion-focused infrastructure is wher
 
 ### Application protocols
 
-We are going to first build the next generation of dApps with streamlined experiences enabled by Aptos and Move. This will fuel mainstream adoption globally for both customers and institutions. Starting with the key foundational protocol of an AMM for correlated and uncorrelated pairs. This will enable liquidity and discoverability for for protocol tokens in the Aptos ecosystem.
+We are going to first build the next generation of dApps with streamlined experiences enabled by Aptos and Move. This will fuel mainstream adoption globally for both customers and institutions. Starting with the key foundational protocol of an AMM for correlated and uncorrelated pairs. This will enable liquidity and discoverability for protocol tokens in the Aptos ecosystem.
 
 ### Developer tooling
 
