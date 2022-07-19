@@ -186,6 +186,10 @@ Let's give it a try.
 
 ### Getting a Value From a Specified Address
 
+| ![get_u128() example script.](/assets/move-code-playground-tutorial-images/getu128.jpg "get_u128() example script") |
+|:--|
+| *Fig.5 - get_u128(0x5) example script.* |
+
 1. In the 'Run' command prompt, type `get_u128(0x5)`. 
 2. To execute the script, press 'enter'.
 3. This script will attempt to get a u128-type value from the `0x5` address.
@@ -242,6 +246,10 @@ This is an obvious error, but it is helpful to show that our demo address `0x5` 
 
 
 ### Storing a Value at a Specified Address
+
+| ![store_u128() example script.](/assets/move-code-playground-tutorial-images/storeu128.jpg "store_u128() example script") |
+|:--|
+| *Fig.6 - store_u128(0x5) example script.* |
 
 To demonstrate how this looks in Move, we are going to run a basic script that allows us to store a simple value (of type u128) at an address `0x5` and then to retrieve it later.
 
