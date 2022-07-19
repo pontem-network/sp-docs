@@ -61,19 +61,19 @@ Clicking on the left navigation panel's 'Dependencies' icon reveals that the Mov
 
 *Note: When building your own projects, you may need to add these manually.*
 
-| Description       | Url                                       | Rev                           | Subdir |
-| -------------     | -------------                             |:-------------                :|--------|
-| Aptos Framework   | https://github.com/aptos-labs/aptos-core  | 367608ab5cf726039ff44bfdac1f2177210b1440     | aptos-move/framework/aptos-framework/ |
-| Move Std&nbsp;Lib | https://github.com/aptos-labs/aptos-core  | 367608ab5cf726039ff44bfdac1f2177210b1440     | aptos-move/framework/move-stdlib/     |
+| Description     | Url                                      | Rev                                      | Subdir                                |
+|-----------------|------------------------------------------|------------------------------------------|---------------------------------------|
+| Aptos Framework | https://github.com/aptos-labs/aptos-core | 367608ab5cf726039ff44bfdac1f2177210b1440 | aptos-move/framework/aptos-framework/ |
+| Move Std Lib    | https://github.com/aptos-labs/aptos-core | 367608ab5cf726039ff44bfdac1f2177210b1440 | aptos-move/framework/move-stdlib/     |
 
 #### Addresses
 Clicking on the left navigation panel's 'Addresses' icon reveals that the Move Code Playground comes pre-loaded with one Address:
 
 *Note: When building your own projects, you may need to add these manually.*
 
-| Name     | Address    | Description                                        |
-| ---------| -----------|----------------------------------------------------|
-| Sender   | 0x1        | Default address for use as a stand-in for storing this package's modules.     |
+| Name   | Address | Description                                                               |
+|--------|---------|---------------------------------------------------------------------------|
+| Sender | 0x1     | Default address for use as a stand-in for storing this package's modules. |
 
 <div style="background:rgb(252, 249, 233);padding:1px 0px 10px 20px;border-radius:5px;">
 
@@ -165,7 +165,7 @@ error[E02010]: invalid name
   │             ^ Invalid local variable name 'A'. Local variable names must start with 'a'..'z' (or '_')
 ```
 
-Change the `let A ` back to a `let _ `, hit 'Build' and we are back in business. 
+Change the `let A` back to a `let _`, hit 'Build' and we are back in business. 
 
 Let's move on to running our first script.
 
