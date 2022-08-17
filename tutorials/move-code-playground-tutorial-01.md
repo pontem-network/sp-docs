@@ -1,6 +1,6 @@
 # Introduction to the Move Code Playground
 
-&nbsp; ![Welcome to the Move Code Playground.](/assets/move-code-playground-tutorial-images/welcome.png "Welcome to the Move Code Playground.") 
+&nbsp; ![Welcome to the Move Code Playground.](/assets/move-code-playground-tutorial-images/welcome.png "This is a sample image.") 
 
 ## Testing Your First Move Project
 In this guide, you’ll use the Pontem Network [Move Code Playground](https://playground.pontem.network/) to play with an example Move project. Along the way, we'll walk through the key features of this browser-based IDE to help jump start your own Move projects.
