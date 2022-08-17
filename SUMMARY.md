@@ -14,6 +14,7 @@
 ## 📚 02. Tutorials
 
 * [Aptos Tutorial](tutorials/aptos-tutorial.md)
+* [Move Playground](tutorials/move-code-playground-tutorial-01.md)
 
 ## 🔗 03. Resources
 
