@@ -8,9 +8,8 @@ Welcome to the Pontem Wallet documentation. With this documentation, you will un
 
 You can find the current version of the wallet in the [Google Chrome Store](https://chrome.google.com/webstore/detail/pontem-wallet/phkbamefinggmakgklpkljjmgibohnba) and newest version in the [Github](https://github.com/pontem-network/pontem-wallet/releases). 
 
-[![Download From Chrome Store](/assets/chrome-store.png "Download From Chrome Store")](https://chrome.google.com/webstore/detail/pontem-wallet/phkbamefinggmakgklpkljjmgibohnba)
+[![Download From Chrome Store](/assets/chrome-store.png "Download From Chrome Store")](https://chrome.google.com/webstore/detail/pontem-wallet/phkbamefinggmakgklpkljjmgibohnba) [![Download From Github](/assets/github-store.png "Download From Github")](https://github.com/pontem-network/pontem-wallet/releases).
 
-[![Download From Github](/assets/github-store.png "Download From Github")](https://github.com/pontem-network/pontem-wallet/releases).
 
 To have all recent changes and bug fixes use Github version as it takes time to reach Chrome Store due to Google Review policy.
 
