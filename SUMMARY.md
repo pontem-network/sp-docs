@@ -5,17 +5,23 @@
 * [Pontem Product Development Studios](about/README.md)
 * [Team](about/team.md)
 
-## 📘 01. Move Language
+## 👛  01. Wallet
+
+* [Introduction](wallet/README.md)
+* [Getting Started](wallet/README.md#getting-started)
+* [API Reference](wallet/API.md)
+
+## 📘 02. Move Language
 
 * [Introduction](lang/README.md)
 * [Move Playground](lang/playground.md)
 * [Intellij IDE Extension](lang/intellij_ide_extension.md)
 
-## 📚 02. Tutorials
+## 📚 03. Tutorials
 
 * [Aptos Tutorial](tutorials/aptos-tutorial.md)
 
-## 🔗 03. Resources
+## 🔗 04. Resources
 
 * [Github](https://github.com/pontem-network)
 * [Site](https://pontem.network)
