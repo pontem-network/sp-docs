@@ -15,6 +15,10 @@ To have all recent changes and bug fixes use Github version as it takes time to 
 
 ## Getting Started
 
+Before starting, please download v1.2.0 [dev release](https://github.com/pontem-network/pontem-wallet/releases/tag/v1.2.0) or higher if it is still not in Chrome Webstore.
+
+Use the v1.2.0 Pontem wallet release during this documentation or higher.
+
 ### Provider Browser Detection
 
 When the page is loaded, the provider is integrated into the site page. You can check it this way:
