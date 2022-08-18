@@ -8,7 +8,7 @@
 ## 👛  01. Wallet
 
 * [Introduction](wallet/README.md)
-* [Getting Started](wallet/README.md#getting-started)
+* [Getting Started](wallet/getting_started.md)
 * [API Reference](wallet/API.md)
 
 ## 📘 02. Move Language
