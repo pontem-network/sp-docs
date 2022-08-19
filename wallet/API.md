@@ -50,7 +50,7 @@ To request a signature and send a transaction to the blockchain, use the `signAn
 
 ```js
 const payload = {
-  type: "script_function_payload",
+  type: "entry_function_payload",
   function: "0x1::coin::transfer",
   type_arguments: ["0x1::aptos_coin::AptosCoin"],
   arguments: ["0xeb442855143ce3e26babc6152ad98e9da7db7f0820f08be3d006535b663a6292", "1000"]
@@ -58,7 +58,6 @@ const payload = {
 const otherOptions = {
   max_gas_amount: '1000',
   gas_unit_price: '1',
-  gas_currency_code: 'XUS',
   expiration_timestamp_secs: '1646793600',
   sequence_number: '10'
 }
