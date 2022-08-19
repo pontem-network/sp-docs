@@ -1,6 +1,6 @@
 # Getting Started
 
-Before starting, please download v1.3.0 [dev release](https://github.com/pontem-network/pontem-wallet/releases/tag/v1.2.0) or higher if it is still not in Chrome Webstore.
+Before starting, please download v1.3.0 [dev release](https://github.com/pontem-network/pontem-wallet/releases/tag/v1.3.0) or higher if it is still not in Chrome Webstore.
 
 Use the v1.3.0 Pontem wallet release during this documentation or higher.
 
