@@ -10,6 +10,7 @@
 * [Introduction](wallet/README.md)
 * [Getting Started](wallet/getting_started.md)
 * [API Reference](wallet/API.md)
+* [Wallet Adapter](wallet/wallet-adapter.md)
 
 ## 📘 02. Move Language
 

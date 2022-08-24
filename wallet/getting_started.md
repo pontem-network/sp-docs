@@ -1,8 +1,10 @@
 # Getting Started
 
-Before starting, please download v1.3.0 [dev release](https://github.com/pontem-network/pontem-wallet/releases/tag/v1.3.0) or higher if it is still not in Chrome Webstore.
+Use the v1.3.0 or higher version of Pontem Wallet to go through the current docs.
 
-Use the v1.3.0 Pontem wallet release during this documentation or higher.
+## Wallets Adapter
+
+If you want to use [Aptos Wallet Adapter](https://github.com/hippospace/aptos-wallet-adapter), navigate to the [Wallet Adapter documentation](./wallet-adapter.md) and skip the current doc.
 
 ### Provider Browser Detection
 
