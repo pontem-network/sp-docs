@@ -2,7 +2,7 @@
 
 The wallet adapter helps you to integrate many different wallets at once and use the same interface to interact with any supported wallet.
 
-Developed by Hippo team, main repository - https://github.com/hippospace/aptos-wallet-adapter.
+Developed by Hippo team, main repository - [https://github.com/hippospace/aptos-wallet-adapter](https://github.com/hippospace/aptos-wallet-adapter).
 
 Supports:
 
