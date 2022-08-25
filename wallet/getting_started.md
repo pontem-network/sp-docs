@@ -4,7 +4,7 @@ Use the v1.3.0 or higher version of Pontem Wallet to go through the current docs
 
 ## Wallets Adapter
 
-If you want to use [Aptos Wallet Adapter](https://github.com/hippospace/aptos-wallet-adapter), navigate to the [Wallet Adapter documentation](./wallet-adapter.md) and skip the current doc.
+If you want to use [Aptos Wallet Adapter](https://github.com/hippospace/aptos-wallet-adapter), navigate to the [Wallet Adapter documentation](./wallet_adapter.md) and skip the current doc.
 
 ### Provider Browser Detection
 
