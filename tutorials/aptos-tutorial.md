@@ -84,11 +84,13 @@ address in the Aptos blockchain.
 
 ```toml
 [package]
-name = "UserInfo"
-version = "0.0.0"
+name = 'UserInfo'
+version = '1.0.0'
 
-[dependencies]
-AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "devnet" }
+[dependencies.AptosFramework]
+git = 'https://github.com/aptos-labs/aptos-core.git'
+rev = 'devnet'
+subdir = 'aptos-move/framework/aptos-framework'
 
 [addresses]
 sender = "0x42"
@@ -321,7 +323,7 @@ Enter your private key as a hex literal (0x...) [Current: None | No input: Gener
 
 No key given, generating key...
 
-Account E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42 doesn't exist, creating it and funding it with 10000 coins
+Account 6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42 doesn't exist, creating it and funding it with 10000 coins
 Aptos is now set up for account 6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42!  Run `aptos help` for more information about commands
 {
   "Result": "Success"
@@ -505,7 +507,7 @@ To execute the `set_username` function we need to utilize the `aptos move run` c
 If the transaction is executed successfully, you will see an output similar to the one above.
 Now you can query your username. In this example, the URL to the query resource would be:
  
-[https://fullnode.devnet.aptoslabs.com/accounts/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42/resource/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42::user_info::UserProfile](https://fullnode.devnet.aptoslabs.com/accounts/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42/resource/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42::user_info::UserProfile)
+[https://fullnode.devnet.aptoslabs.com/v1/accounts/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42/resource/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42::user_info::UserProfile](https://fullnode.devnet.aptoslabs.com/v1/accounts/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42/resource/0x6E81B91A98226A2622B6993B9D14D3244FA8AFACF622AA3CB11A32C799E93C42::user_info::UserProfile)
 
 To interact with the module deployed by you: replace the address of the account and the address of the module resource in the url with your own.
 
