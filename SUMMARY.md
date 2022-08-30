@@ -11,6 +11,7 @@
 * [Getting Started](wallet/getting_started.md)
 * [API Reference](wallet/API.md)
 * [Wallet Adapter](wallet/wallet_adapter.md)
+* [Demo](wallet/wallet_demo.md)
 
 ## 📘 02. Move Language
 
