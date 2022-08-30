@@ -53,32 +53,6 @@ window.pontem.account()
 ### Sign and Submit Transaction
 
 To request a signature and send a transaction to the blockchain, use the `signAndSubmit` method.
-`payload` - mandatory parameter containing the transaction body.
-`otherOptions` - optional parameter that overrides transaction parameters.
-
-```javascript
-const payload = {
-  type: "entry_function_payload",
-  function: "0x1::coin::transfer",
-  type_arguments: ["0x1::aptos_coin::AptosCoin"],
-  arguments: ["0xeb442855143ce3e26babc6152ad98e9da7db7f0820f08be3d006535b663a6292", "1000"]
-};
-const otherOptions = {
-  max_gas_amount: '1000',
-  gas_unit_price: '1',
-  expiration_timestamp_secs: '1646793600',
-  sequence_number: '10'
-}
-window.pontem.signAndSubmit(payload, otherOptions)
-  .then(tx => {
-    console.log('Transaction', tx)
-  })
-  .catch(e => console.log('Error', e))
-```
-
-### Sign and Submit Transaction
-
-To request a signature and send a transaction to the blockchain, use the `signAndSubmit` method.
 
 `payload` - mandatory parameter containing the transaction body.<br>
 `otherOptions` - optional parameter that overrides transaction parameters.
@@ -103,7 +77,7 @@ window.pontem.signAndSubmit(payload, otherOptions)
   .catch(e => console.log('Error', e))
 ```
 
-### Sign Transaction ![API Sign Transaction](https://badgen.net/badge/included%20in/<=1.4.0)
+### Sign Transaction ![API Sign Transaction](https://badgen.net/badge/included%20in/>=1.4.0)
 To request a signature of transaction, use the `signTransaction` method.
 
 `payload` - mandatory parameter containing the transaction body.<br>
@@ -129,7 +103,7 @@ window.pontem.signTransaction(payload, otherOptions)
   .catch(e => console.log('Error', e))
 ```
 
-### Sign Message ![API Sign Transaction](https://badgen.net/badge/included%20in/<=1.4.0)
+### Sign Message ![API Sign Message](https://badgen.net/badge/included%20in/>=1.4.0)
 To request a signature of message, use the `signMessage` method.
 
 ```javascript
