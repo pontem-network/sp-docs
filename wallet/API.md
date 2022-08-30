@@ -5,7 +5,7 @@
 For the initial connection to the wallet, use the connect method. It requests access to the site from the user and returns the current account address.
 If you already have access to the site, it will also return the current account address.
 
-```js
+```javascript
 window.pontem.connect()
   .then(address => console.log(`Access for address ${address} allowed by user`))
   .catch(e => console.log('Access denied by user', e))
@@ -17,7 +17,7 @@ To keep track of when a user changed their account, use the `onChangeAccount` me
 When the account is changed, it calls the method you passed in the first argument.
 If the user at some point revokes the extension's access to the site, then this method will also be called.
 
-```js
+```javascript
 window.pontem.onChangeAccount((address) => {
   if(address) {
     console.log('New selected account: ', address);
@@ -31,7 +31,7 @@ window.pontem.onChangeAccount((address) => {
 
 To get the address of the current account, use the `account` method.
 
-```js
+```javascript
 window.pontem.account()
   .then(address => {
     if(address) {
@@ -48,7 +48,7 @@ To request a signature and send a transaction to the blockchain, use the `signAn
 `payload` - mandatory parameter containing the transaction body.
 `otherOptions` - optional parameter that overrides transaction parameters.
 
-```js
+```javascript
 const payload = {
   type: "entry_function_payload",
   function: "0x1::coin::transfer",

@@ -10,7 +10,7 @@ If you want to use [Aptos Wallet Adapter](https://github.com/hippospace/aptos-wa
 
 When the page is loaded, the provider is integrated into the site page. You can check it this way:
 
-```js
+```javascript
 if (typeof window.pontem !== 'undefined') {
   console.log('Pontem Wallet is installed!');
 }
@@ -18,7 +18,7 @@ if (typeof window.pontem !== 'undefined') {
 
 After that, you need to request access to the site from the user, for this use the connect method:
 
-```js
+```javascript
 window.pontem.connect()
     .then(address => console.log(`Access for address ${address} allowed by user`))
     .catch(e => console.log('Access denied by user', e))
