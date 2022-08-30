@@ -26,10 +26,18 @@
 
 ## 🔗 04. Resources
 
-* [Github](https://github.com/pontem-network)
+* [Liquidswap](https://liquidswap.com)
+* [Pontem Aptos Wallet](https://chrome.google.com/webstore/detail/pontem-wallet/phkbamefinggmakgklpkljjmgibohnba)
 * [Site](https://pontem.network)
+
+## 🧑‍🔬 05. Dev Resources
+
+* [Github](https://github.com/pontem-network)
 * [Aptos Documentation](https://aptos.dev/)
 * [Move Documentation](https://diem.github.io/move/introduction.html)
 * [IntelliJ IDE Extension](https://plugins.jetbrains.com/plugin/14721-move-language)
+
+## 🦄 06. Community
+
 * [Discord](https://discord.gg/44QgPFHYqs)
 * [Telegram](https://t.me/pontemnetworkchat)
