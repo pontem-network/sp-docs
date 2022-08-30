@@ -5,8 +5,8 @@
 Welcome to the Pontem Wallet documentation. With this documentation, you will understand how to integrate Pontem Wallet into your web page and how to interact with it.
 
 ## Extension
-![Chrome Web Store](https://badgen.net/chrome-web-store/v/phkbamefinggmakgklpkljjmgibohnba?label=Chrome%20Web%20Store)
-![Github](https://badgen.net/github/release/pontem-network/pontem-wallet?label=GitHub)
+[<img src="https://badgen.net/chrome-web-store/v/phkbamefinggmakgklpkljjmgibohnba?label=Chrome%20Web%20Store" height="20"/>](https://badgen.net/chrome-web-store/v/phkbamefinggmakgklpkljjmgibohnba?label=Chrome%20Web%20Store)
+[<img src="https://badgen.net/github/release/pontem-network/pontem-wallet?label=GitHub" height="20"/>](https://badgen.net/github/release/pontem-network/pontem-wallet?label=GitHub)
 
 You can find the current version of the wallet in the [Google Chrome Store](https://chrome.google.com/webstore/detail/pontem-wallet/phkbamefinggmakgklpkljjmgibohnba) and newest version in the [Github](https://github.com/pontem-network/pontem-wallet/releases). 
 
