@@ -32,15 +32,16 @@ npm install @manahippo/aptos-wallet-adapter
 ```typescript
 import React from "react";
 import {
-  WalletProvider,
+  PontemWalletAdapter, // Import Pontem Wallet Adapter.
   HippoWalletAdapter,
   ...
-  PontemWalletAdapter, // Import Pontem Wallet Adapter.
+  WalletProvider,
 } from '@manahippo/aptos-wallet-adapter';
 
 const wallets = () => [
+  new PontemWalletAdapter(),
   new HippoWalletAdapter(),
-  new PontemWalletAdapter(), // Add Pontem Wallet Adapter to list of supported wallets.
+   // Add Pontem Wallet Adapter to list of supported wallets.
   ...
   new HippoExtensionWalletAdapter(),
 ];
@@ -54,21 +55,21 @@ const wallets = () => [
 ```typescript
 import React from "react";
 import {
-  WalletProvider,
-  HippoWalletAdapter,
   PontemWalletAdapter,
+  HippoWalletAdapter,
   AptosWalletAdapter,
   HippoExtensionWalletAdapter,
   MartianWalletAdapter,
   FewchaWalletAdapter,
+  WalletProvider,
 } from '@manahippo/aptos-wallet-adapter';
 
 const wallets = () => [
-  new HippoWalletAdapter(),
   new PontemWalletAdapter(),
   new MartianWalletAdapter(),
   new AptosWalletAdapter(),
   new FewchaWalletAdapter(),
+  new HippoWalletAdapter(),
   new HippoExtensionWalletAdapter(),
 ];
 
@@ -101,11 +102,17 @@ const { connected, account, ...rest } = useWallet();
   wallet: Wallet | null; - Selected wallet
   account(): AccountKeys | null; - Wallet info: address, publicKey, authKey
   connected: boolean; - check the website is connected yet
+  connecting: boolean; - true while adapter waits connect() to finish
+  disconnecting: boolean; - true while adapter waits disconnect() to finish
   connect(walletName: string): Promise<void>; - trigger connect popup
   disconnect(): Promise<void>; - trigger disconnect action
   signAndSubmitTransaction(
     transaction: TransactionPayload
   ): Promise<PendingTransaction>; - function to sign and submit the transaction to chain
+  signTransaction(transaction: TransactionPayload): Promise<SubmitTransactionRequest>;
+  - function to sign the transaction, but not submit
+  signMessage(message: string): Promise<string> - function to sign message
+  
 */
 ```
 
