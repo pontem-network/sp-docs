@@ -30,7 +30,7 @@ window.pontem.isConnected()
   .catch(e => console.log('Error', e))
 ```
 
-### Disconnecting ![API Check Connection Status](https://badgen.net/badge/included%20in/>=1.5.0)
+### Disconnecting ![API Disconnecting](https://badgen.net/badge/included%20in/>=1.5.0)
 To disconnect the current account from the site, use the `disconnect` method.
 
 > Important: all methods that require permission from the user will stop working, but the entry in the "Connected Sites" list of the account will not disappear. Only the user can remove access completely through the UI.<br>
@@ -72,7 +72,7 @@ window.pontem.account()
   })
 ```
 
-### Get Public Key of the Current Account
+### Get Public Key of the Current Account ![API Get Public Key](https://badgen.net/badge/included%20in/>=1.5.0)
 
 To get the public key of the current account , use the `publicKey` method.
 
