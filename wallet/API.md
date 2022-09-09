@@ -6,7 +6,7 @@ To get the installed extension version, use the following code.
 
 ```javascript
 const extensionVersion = window.pontem.version;
-console.log(`Pontem Wallet v${extensionVersion}`); // 1.3.0
+console.log(`Pontem Wallet v${extensionVersion}`); // 1.5.0
 ```
 ### Connect
 
@@ -19,7 +19,29 @@ window.pontem.connect()
   .catch(e => console.log('Access denied by user', e))
 ```
 
-### Change active account
+### Check Connection Status ![API Check Connection Status](https://badgen.net/badge/included%20in/>=1.5.0)
+To check if any wallet is connected to the page, use the `isConnected` method.
+
+```javascript
+window.pontem.isConnected()
+  .then(result => {
+    console.log('isConnected', result) // true or false
+  })
+  .catch(e => console.log('Error', e))
+```
+
+### Disconnecting ![API Check Connection Status](https://badgen.net/badge/included%20in/>=1.5.0)
+To disconnect the current account from the site, use the `disconnect` method.
+
+> Important: all methods that require permission from the user will stop working, but the entry in the "Connected Sites" list of the account will not disappear. Only the user can remove access completely through the UI.<br>
+If you call the `disconnect()` method and then `connect()`, the user will not be asked for permission again. This will only happen if the user manually removes access through the UI
+
+```javascript
+window.pontem.disconnect()
+  .catch(e => console.log('Error', e))
+```
+
+### Change Active Account Event
 
 To keep track of when a user changed their account, use the `onChangeAccount` method.
 When the account is changed, it calls the method you passed in the first argument.
@@ -35,7 +57,7 @@ window.pontem.onChangeAccount((address) => {
 })
 ```
 
-### Get current account
+### Get Current Account
 
 To get the address of the current account, use the `account` method.
 
@@ -50,6 +72,17 @@ window.pontem.account()
   })
 ```
 
+### Get Public Key of the Current Account
+
+To get the public key of the current account , use the `publicKey` method.
+
+```javascript
+window.pontem.publicKey()
+  .then(key => {
+    console.log('Public key: ', key);
+  })
+```
+
 ### Sign and Submit Transaction
 
 To request a signature and send a transaction to the blockchain, use the `signAndSubmit` method.
@@ -59,7 +92,6 @@ To request a signature and send a transaction to the blockchain, use the `signAn
 
 ```javascript
 const payload = {
-  type: "entry_function_payload",
   function: "0x1::coin::transfer",
   type_arguments: ["0x1::aptos_coin::AptosCoin"],
   arguments: ["0xeb442855143ce3e26babc6152ad98e9da7db7f0820f08be3d006535b663a6292", "1000"]
@@ -85,7 +117,6 @@ To request a signature of transaction, use the `signTransaction` method.
 
 ```javascript
 const payload = {
-  type: "entry_function_payload",
   function: "0x1::coin::transfer",
   type_arguments: ["0x1::aptos_coin::AptosCoin"],
   arguments: ["0xeb442855143ce3e26babc6152ad98e9da7db7f0820f08be3d006535b663a6292", "1000"]
@@ -109,7 +140,7 @@ To request a signature of message, use the `signMessage` method.
 ```javascript
 window.pontem.signMessage('My super secret message for sign')
   .then(result => {
-    console.log('Transaction', result)
+    console.log('Signed Message', result)
   })
   .catch(e => console.log('Error', e))
 ```
