@@ -41,7 +41,7 @@ window.pontem.disconnect()
   .catch(e => console.log('Error', e))
 ```
 
-### Change Active Account Event
+### Change Active Account Event 
 
 To keep track of when a user changed their account, use the `onChangeAccount` method.
 When the account is changed, it calls the method you passed in the first argument.
@@ -55,6 +55,41 @@ window.pontem.onChangeAccount((address) => {
     console.log('The user has selected an account that is not allowed to access');
   }
 })
+```
+
+### Change Active Network Event ![API Change Active Network Event](https://badgen.net/badge/included%20in/>=1.6.0)
+
+To keep track of when a user changed network, use the `onChangeNetwork` method.
+When the network is changed, it calls the method you passed in the first argument.
+
+```javascript
+window.pontem.onChangeNetwork((network) => {
+  console.log(network);
+  // { api: 'https://fullnode.devnet.aptoslabs.com/v1/', chainId: '31', name: 'Aptos devnet' }
+})
+```
+
+### Get Current Network ![API Get Current Network](https://badgen.net/badge/included%20in/>=1.6.0)
+
+To get the current connected network, use the `network` method.
+
+```javascript
+window.pontem.network()
+  .then(network => {
+    console.log(network);
+    // { api: 'https://fullnode.devnet.aptoslabs.com/v1/', chainId: '31', name: 'Aptos devnet' }
+  })
+```
+
+### Get Current ChainId ![API Get Current Network](https://badgen.net/badge/included%20in/>=1.6.0)
+
+To get the current chainId, use the `chainId` method.
+
+```javascript
+window.pontem.chainId()
+  .then(chainId => {
+    console.log(chainId); // 31
+  })
 ```
 
 ### Get Current Account
