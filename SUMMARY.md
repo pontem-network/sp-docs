@@ -29,6 +29,7 @@
 * [Liquidswap](https://liquidswap.com)
 * [Pontem Aptos Wallet](https://chrome.google.com/webstore/detail/pontem-wallet/phkbamefinggmakgklpkljjmgibohnba)
 * [Site](https://pontem.network)
+* [Public nodes](public-nodes.md)
 
 ## 🧑‍🔬 05. Dev Resources
 
