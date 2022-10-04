@@ -125,6 +125,9 @@ To request a signature and send a transaction to the blockchain, use the `signAn
 `payload` - mandatory parameter containing the transaction body.<br>
 `otherOptions` - optional parameter that overrides transaction parameters.
 
+>Included in >=1.7.0.<br>
+You can also pass a UInt8Array as transaction arguments, or an array with a `UInt8Array`. This forms a vector, or a vector of vectors.
+
 ```javascript
 const payload = {
   function: "0x1::coin::transfer",
@@ -149,6 +152,8 @@ To request a signature of transaction, use the `signTransaction` method.
 
 `payload` - mandatory parameter containing the transaction body.<br>
 `otherOptions` - optional parameter that overrides transaction parameters.
+
+You can also pass a UInt8Array as transaction arguments, or an array with a `UInt8Array`. This forms a vector, or a vector of vectors.
 
 ```javascript
 const payload = {
@@ -177,7 +182,7 @@ window.pontem.signMessage({
   address: true, // set true if you want include current address to message
   application: true, // // set true if you want include current application to message
   chainId: true, // set true if you want include current chain id to message
-  message: 'a message i trust',
+  message: 'a message i trust', // message like string or Uint8Array
   nonce: 'random nonce' // random nonce like string
 })
   .then(result => {
