@@ -6,7 +6,7 @@ To get the installed extension version, use the following code.
 
 ```javascript
 const extensionVersion = window.pontem.version;
-console.log(`Pontem Wallet v${extensionVersion}`); // 1.5.0
+console.log(`Pontem Wallet v${extensionVersion}`); // 2.0.0
 ```
 ### Connect
 
@@ -169,11 +169,17 @@ window.pontem.signTransaction(payload, otherOptions)
   .catch(e => console.log('Error', e))
 ```
 
-### Sign Message ![API Sign Message](https://badgen.net/badge/included%20in/>=1.4.0)
+### Sign Message ![API Sign Message](https://badgen.net/badge/included%20in/>=1.7.0)
 To request a signature of message, use the `signMessage` method.
 
 ```javascript
-window.pontem.signMessage('My super secret message for sign')
+window.pontem.signMessage({
+  address: true, // set true if you want include current address to message
+  application: true, // // set true if you want include current application to message
+  chainId: true, // set true if you want include current chain id to message
+  message: 'a message i trust',
+  nonce: 'random nonce' // random nonce like string
+})
   .then(result => {
     console.log('Signed Message', result)
   })
