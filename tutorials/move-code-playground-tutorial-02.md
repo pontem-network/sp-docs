@@ -1,7 +1,7 @@
 &nbsp;
 
 # Working with Coins
-&nbsp; ![Welcome to the Move Code Playground.](/assets/move-code-playground-tutorial-images/welcome.png "Coins in the Move Code Playground.") 
+&nbsp; ![Welcome to the Move Code Playground.](/assets/move-code-playground-tutorial-images/placeholder-image.jpg "Coins in the Move Code Playground.") 
 ## Your First Playground Coin
 In this guide, you’ll use the Pontem Network [Move Code Playground](https://playground.pontem.network/) (MCP) to mint, store, and transfer movable coins. This tutorial will build on what we learned in the previous MCP tutorial to improve our Move programming skills and learn the basics of token logic.
 
@@ -223,7 +223,7 @@ The important takeaway in this message is that a value of `0` of the resource ty
 
 
 #### To Mint Coins
-| ![mint() script.](/assets/move-code-playground-tutorial-images/scriptMint.jpg "mint() script") |
+| ![mint() script.](/assets/move-code-playground-tutorial-images/scriptMint50Coins.jpg "mint() script") |
 |:--|
 | *Fig.2 - mint() script.* |
 
