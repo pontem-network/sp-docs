@@ -1,3 +1,5 @@
+:exclamation:_You are reviewing an outdated version of the Pontem Wallet documentation! We recommend switching to the most recent version from the new_ [_official website_](https://docs.pontemwallet.xyz/)! :warning:<br>
+
 The wallet adapter helps you to integrate many different wallets at once and use the same interface to interact with any supported wallet.
 
 Developed by Hippo team, main repository - [https://github.com/hippospace/aptos-wallet-adapter](https://github.com/hippospace/aptos-wallet-adapter).
