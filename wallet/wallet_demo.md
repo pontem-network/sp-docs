@@ -1,3 +1,5 @@
+:exclamation:_You are reviewing an outdated version of the Pontem Wallet documentation! We recommend switching to the most recent version from the new_ [_official website_](https://docs.pontemwallet.xyz/)! :warning:<br>
+
 # Wallet Demo
 
 We prepared two demos: one with a wallet adapter and another one just using native Pontem Wallet integration.
